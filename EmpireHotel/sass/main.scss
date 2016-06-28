@@ -1,3 +1,17 @@
-body
-{
-}
+/*
+============================================================================
+Name: App for Empire Hotel
+Description: Main css
+Version: 1.0
+============================================================================
+*/
+
+/* reset style */
+@import "compass/reset";
+
+/* image path */
+$imgPath: "../images/";
+
+/* color variables used throughout the application */
+$backgroundColor: #fff;
+
