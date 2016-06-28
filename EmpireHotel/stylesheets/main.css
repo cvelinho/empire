@@ -6,7 +6,6 @@ Version: 1.0
 ============================================================================
 */
 /* reset style */
-/* line 5, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,48 +27,85 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Users/Visit-6/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
+/* import fonts partial sass*/
+@font-face {
+  font-family: "Brandon_reg";
+  src: url('/fonts/Brandon_reg.eot?1467147418');
+  src: url('/fonts/Brandon_reg.eot?&1467147418#iefix') format('embedded-opentype'), url('/fonts/Brandon_reg.woff?1467147418') format('woff'), url('/fonts/Brandon_reg.ttf?1467147418') format('truetype');
+  font-weight: "Brandon_reg.svg#Brandon_reg";
+  font-style: svg;
+}
+@font-face {
+  font-family: "Brandon_bld";
+  src: url('/fonts/Brandon_bld.eot?1467117274');
+  src: url('/fonts/Brandon_bld.eot?&1467117274#iefix') format('embedded-opentype'), url('/fonts/Brandon_bld.woff?1467117304') format('woff'), url('/fonts/Brandon_bld.ttf?1467117292') format('truetype');
+  font-weight: "Brandon_bld.svg#Brandon_bld";
+  font-style: svg;
+}
 /* image path */
 /* color variables used throughout the application */
+/* default font-families */
+/* default font-sizes */
+/*
+============================================================================
+Global (body, heading)
+============================================================================
+*/
+* {
+  outline: none !important;
+}
+
+body {
+  font: 13px "Brandon_reg";
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+/*
+============================================================================
+Media queries
+============================================================================
+*/
+/* Smartphone Design  ----------- */
+/* Tablet Design  ----------- */
+/* Desktop S  ----------- */

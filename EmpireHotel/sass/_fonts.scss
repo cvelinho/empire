@@ -1,0 +1,5 @@
+@import "compass/css3/font-face";
+
+@include font-face("Brandon_reg", font-files("Brandon_reg.woff", woff, "Brandon_reg.ttf", truetype), "Brandon_reg.eot", "Brandon_reg.svg#Brandon_reg", svg);
+
+@include font-face("Brandon_bld", font-files("Brandon_bld.woff", woff, "Brandon_bld.ttf", truetype), "Brandon_bld.eot", "Brandon_bld.svg#Brandon_bld", svg);

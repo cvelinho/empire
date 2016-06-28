@@ -9,9 +9,58 @@ Version: 1.0
 /* reset style */
 @import "compass/reset";
 
+/* import fonts partial sass*/
+@import "fonts";
+
 /* image path */
 $imgPath: "../images/";
 
-/* color variables used throughout the application */
-$backgroundColor: #fff;
 
+/* color variables used throughout the application */
+$white					: #fff;
+$black					: #000;
+$gray					: #7a7c7b;
+$client-color			: #cd700b;
+
+$body-bg-color			: #fff;
+
+/* default font-families */
+$defaultFontFamily		: 'Brandon_reg';
+$boldFontFamily			: 'Brandon_bld';
+
+/* default font-sizes */
+$defaultFontSize		: 13px;
+$h1FontSize				: 48pt;
+$h2FontSize				: 42pt;
+$h3FontSize				: 36pt;
+$p1FontSize				: 27pt;
+$p2FontSize				: 20pt;
+$p3FontSize				: 16pt;
+
+/*
+============================================================================
+Global (body, heading)
+============================================================================
+*/
+* { outline: none !important; }
+
+body { font: $defaultFontSize $defaultFontFamily; font-weight: normal; line-height: 1.2; }
+body { background-color: $body-bg-color; color: $black; }
+
+
+/*
+============================================================================
+Media queries
+============================================================================
+*/
+/* Smartphone Design  ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 630px) {
+}
+
+/* Tablet Design  ----------- */
+@media only screen and (min-device-width : 631px) and (max-device-width : 1040px) {
+}
+
+/* Desktop S  ----------- */
+@media only screen and (min-device-width : 1040px) and (max-device-width : 1710px) {
+}
