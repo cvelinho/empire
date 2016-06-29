@@ -65,15 +65,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* import fonts partial sass*/
 @font-face {
   font-family: "Brandon_reg";
-  src: url('/fonts/Brandon_reg.eot?1467147418');
-  src: url('/fonts/Brandon_reg.eot?&1467147418#iefix') format('embedded-opentype'), url('/fonts/Brandon_reg.woff?1467147418') format('woff'), url('/fonts/Brandon_reg.ttf?1467147418') format('truetype');
+  src: url('/fonts/Brandon_reg.eot?1467186378');
+  src: url('/fonts/Brandon_reg.eot?&1467186378#iefix') format('embedded-opentype'), url('/fonts/Brandon_reg.woff?1467186378') format('woff'), url('/fonts/Brandon_reg.ttf?1467186378') format('truetype');
   font-weight: "Brandon_reg.svg#Brandon_reg";
   font-style: svg;
 }
 @font-face {
   font-family: "Brandon_bld";
-  src: url('/fonts/Brandon_bld.eot?1467117274');
-  src: url('/fonts/Brandon_bld.eot?&1467117274#iefix') format('embedded-opentype'), url('/fonts/Brandon_bld.woff?1467117304') format('woff'), url('/fonts/Brandon_bld.ttf?1467117292') format('truetype');
+  src: url('/fonts/Brandon_bld.eot?1467186378');
+  src: url('/fonts/Brandon_bld.eot?&1467186378#iefix') format('embedded-opentype'), url('/fonts/Brandon_bld.woff?1467186378') format('woff'), url('/fonts/Brandon_bld.ttf?1467186378') format('truetype');
   font-weight: "Brandon_bld.svg#Brandon_bld";
   font-style: svg;
 }
@@ -90,15 +90,152 @@ Global (body, heading)
   outline: none !important;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font: 13px "Brandon_reg";
-  font-weight: normal;
-  line-height: 1.2;
 }
 
 body {
   background-color: #fff;
-  color: #000;
+}
+
+/* ------------------------------------ CUSTOM ---------------------------------- */
+.left, .block-left {
+  float: left;
+}
+
+.right, .block-right {
+  float: right;
+}
+
+/* ------------------------------- DEFAULT CONFIG ------------------------------- */
+/* ------------------------------ FONTS / HEADLINE ------------------------------ */
+/*body font family*/
+/*body font size*/
+/*body font color*/
+/*body font weight*/
+/*body line height*/
+/*link color*/
+/*link decoration*/
+/*link hover color*/
+/*link hover decoration*/
+/*link headline color*/
+/*h1 font family*/
+/*h1 font size*/
+/*h1 font weight*/
+/*h1 font color*/
+/*h1 font color*/
+/*h1 text transform */
+/*h1 small font size*/
+/*h1 small font weight*/
+/*h2 font family*/
+/*h2 font size*/
+/*h2 font weight*/
+/*h2 font color*/
+/*h2 text transform */
+/*h3 font family*/
+/*h3 font size*/
+/*h3 font weight*/
+/*h3 font color*/
+/* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
+/* -------------------------------- OTHER COLORS -------------------------------- */
+/* ------------------------------- APP NAVIGATION ------------------------------- */
+/* ---------------------------- GLOBAL ROUNDED CORNERS --------------------------- */
+/*rounded corners*/
+/* --------------------------------- BASE BUTTON -------------------------------- */
+/* ------------------------ TEXT INPUT, SELECT, TEXTAREA ------------------------ */
+/* --------------------------------- SIDEBAR BOX -------------------------------- */
+/* -------------------------------- DEVICE SIZES -------------------------------- */
+/*large*/
+/*small*/
+/* -------------------------------- SMALL DEVICE -------------------------------- */
+/*h1 font size*/
+/*h2 font size*/
+/*h3 font size*/
+/* ---------------------------------- FRAMEWORK --------------------------------- */
+/*------ MAIN ------*/
+.block-main {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+  /*------ WRAPPER ------*/
+}
+.block-main .block-wrapper {
+  background-color: #f7f7f7;
+  margin: 0 100px;
+  padding: 0 60px;
+  /*------ HEADER ------*/
+}
+.block-main .block-wrapper .block-header {
+  position: relative;
+  height: 208px;
+  display: block;
+  /* Logo */
+  /* Description-Contact */
+  /* Search form */
+  /* Language menu */
+}
+.block-main .block-wrapper .block-header .header-logo {
+  width: 100px;
+  height: 148px;
+  margin-bottom: 10px;
+}
+.block-main .block-wrapper .block-header .header-logo img {
+  width: 100%;
+  height: 105px;
+  margin-top: 33px;
+}
+.block-main .block-wrapper .block-header .header-contact {
+  padding-top: 5px;
+}
+.block-main .block-wrapper .block-header .header-contact p {
+  font-size: 15px;
+  color: #7a7c7b;
+}
+.block-main .block-wrapper .block-header .header-search-form {
+  height: 148px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+.block-main .block-wrapper .block-header .header-search-form button {
+  margin-top: 84px;
+}
+.block-main .block-wrapper .block-header .header-language {
+  padding-top: 5px;
+}
+.block-main .block-wrapper .block-header .header-language nav {
+  display: block;
+}
+.block-main .block-wrapper .block-header .header-language nav ul li {
+  display: inline-block;
+  padding: 0 7px;
+  font-size: 15px;
+  color: #7a7c7b;
+}
+.block-main .block-wrapper .block-header .header-language nav ul li a {
+  font-size: 15px;
+}
+.block-main .block-wrapper .block-header .header-language nav ul li a.active {
+  color: #cd700b;
+}
+
+.btn {
+  display: block;
+  background-color: #cd700b;
+  color: #fff;
+  height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  font-size: 15px;
+  padding: 0 40px;
+  font-weight: bold;
+}
+.btn:active {
+  padding-top: 1px;
 }
 
 /*

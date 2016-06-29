@@ -22,11 +22,15 @@ $black					: #000;
 $gray					: #7a7c7b;
 $client-color			: #cd700b;
 
+$font-color             : #7a7c7b;
+
 $body-bg-color			: #fff;
 
 /* default font-families */
 $defaultFontFamily		: 'Brandon_reg';
 $boldFontFamily			: 'Brandon_bld';
+
+$body-font-color        : #7a7c7b;
 
 /* default font-sizes */
 $defaultFontSize		: 13px;
@@ -44,8 +48,117 @@ Global (body, heading)
 */
 * { outline: none !important; }
 
-body { font: $defaultFontSize $defaultFontFamily; font-weight: normal; line-height: 1.2; }
-body { background-color: $body-bg-color; color: $black; }
+html, body{ height:100%; }
+body { font: $defaultFontSize $defaultFontFamily; }
+body { background-color: $body-bg-color; }
+
+
+/* ------------------------------------ CUSTOM ---------------------------------- */
+.left, .block-left { float: left; }
+.right, .block-right { float: right; }
+
+/* ------------------------------- DEFAULT CONFIG ------------------------------- */
+
+/* ------------------------------ FONTS / HEADLINE ------------------------------ */
+/*body font family*/		$body-font-family:					Brandon_reg, Arial;
+/*body font size*/			$body-font-size:					15px;
+/*body font color*/			$body-font-color:					#000;
+/*body font weight*/		$body-font-weight:					300;
+/*body line height*/		$body-line-height:					1.2em;
+
+/*link color*/				$link-font-color:					#7d9e14;
+/*link decoration*/			$link-text-decoration:				none;
+/*link hover color*/		$link-hover-font-color:				#7d9e14;
+/*link hover decoration*/	$link-hover-text-decoration:		underline;
+/*link headline color*/		$link-headline-font-color:			#000;
+
+/*h1 font family*/			$h1-font-family:					Brandon_reg, Arial;
+/*h1 font size*/			$h1-font-size:						48pt;
+/*h1 font weight*/			$h1-font-weight:					normal;
+/*h1 font color*/			$h1-font-color:						#000;
+/*h1 font color*/			$h1-font-highlight-color:			inherit;
+/*h1 text transform */		$h1-font-transform:					uppercase;
+
+/*h1 small font size*/		$h1-small-font-size:				46pt;
+/*h1 small font weight*/	$h1-small-font-weight:				normal;
+
+/*h2 font family*/			$h2-font-family:					Brandon_reg, Arial;
+/*h2 font size*/			$h2-font-size:						42pt;
+/*h2 font weight*/			$h2-font-weight:					normal;
+/*h2 font color*/			$h2-font-color:						#000;
+/*h2 text transform */		$h2-font-transform:					uppercase;
+
+/*h3 font family*/			$h3-font-family:					Brandon_reg, Arial;
+/*h3 font size*/			$h3-font-size:						36pt;
+/*h3 font weight*/			$h3-font-weight:					bold;
+/*h3 font color*/			$h3-font-color:						#000;
+/* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
+/* -------------------------------- OTHER COLORS -------------------------------- */
+/* ------------------------------- APP NAVIGATION ------------------------------- */
+
+/* ---------------------------- GLOBAL ROUNDED CORNERS --------------------------- */
+/*rounded corners*/			$global-rounded-corners:			2px;
+/* --------------------------------- BASE BUTTON -------------------------------- */
+/* ------------------------ TEXT INPUT, SELECT, TEXTAREA ------------------------ */
+
+/* --------------------------------- SIDEBAR BOX -------------------------------- */
+/* -------------------------------- DEVICE SIZES -------------------------------- */
+/*large*/					$fw-device-large:                   1040px;
+/*small*/					$fw-device-small:                   630px;
+
+/* -------------------------------- SMALL DEVICE -------------------------------- */
+
+/*h1 font size*/			$h1-small-dev-font-size:            20px;
+/*h2 font size*/			$h2-small-dev-font-size:            16px;
+/*h3 font size*/			$h3-small-dev-font-size:            14px;
+
+/* ---------------------------------- FRAMEWORK --------------------------------- */
+/*------ MAIN ------*/
+.block-main { width: 100%; margin: 0px auto; position: relative;
+
+    /*------ WRAPPER ------*/
+    .block-wrapper { background-color: #f7f7f7; margin: 0 100px; padding: 0 60px;
+
+        /*------ HEADER ------*/
+        .block-header { position: relative; height: 208px; display: block;
+            /* Logo */
+            .header-logo { width: 100px; height: 148px; margin-bottom: 10px;
+                img { width: 100%; height: 105px; margin-top: 33px; }
+            }    
+            /* Description-Contact */
+            .header-contact { padding-top: 5px;
+                p { font-size: 15px; color: #7a7c7b; } 
+            }
+
+            /* Search form */
+            .header-search-form { height: 148px; margin-bottom: 10px; text-align: right;
+                button { margin-top: 84px;}
+            }
+            
+            /* Language menu */
+            .header-language { padding-top: 5px;
+                nav { display: block;
+                    ul {
+                        li { display: inline-block; padding: 0 7px; font-size: 15px; color: #7a7c7b;
+                            a { font-size: 15px; 
+                                &.active { color: #cd700b; }
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
+
+
+
+
+
+.block-btn {}
+.btn { display: block; background-color: #cd700b; color: #fff; height: 36px; text-align: center; text-transform: uppercase; border: none; font-size: 15px; padding: 0 40px; font-weight: bold;
+    &:active { padding-top: 1px; }
+}
 
 
 /*
