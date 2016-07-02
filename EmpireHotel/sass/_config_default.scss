@@ -9,7 +9,10 @@ $hr-border-style:                       solid;
 $hr-border-color:                       #dedede;
 
 /* ------------------------------ FONTS / HEADLINE ------------------------------ */
-$body-font-family:					    Brandon_reg, Arial;
+$body-font-family:					    Brandon_light, Arial;
+$body-font-family-medium:               Brandon_med;
+$body-font-family-regular:              Brandon_reg;
+$body-font-family-bold:                 Brandon_bld;
 $body-font-size:					    16px;
 $body-font-color:					    #7a7c7b;
 $body-background-color:                 #fff;
@@ -42,14 +45,23 @@ $h3-font-family:					    $body-font-family;
 $h3-font-size:						    36px;
 $h3-font-weight:					    normal;
 $h3-font-color:						    #cd700b;
-$h3-font-transform:					    uppercase;
+$h3-font-transform:					    none;
 
 $p1-font-size:                          27px;
 $p2-font-size:                          20px;
 $p3-font-size:                          16px;
 
+$description-font-size:					$body-font-size;
+$description-font-family:				$body-font-family-regular;
+$description-font-color:                $body-font-color;
+
 /* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
+
 /* -------------------------------- OTHER COLORS -------------------------------- */
+$accent-light-color:                    #f7f7f7;
+$accent-dark-color:                     #7a7c7b;
+$selected-dark-color:                   #cd700b;
+
 /* ------------------------------- APP NAVIGATION ------------------------------- */
 
 /* ---------------------------- GLOBAL ROUNDED CORNERS --------------------------- */
@@ -78,14 +90,23 @@ $button-pressed-text-color:				$button-hover-color;
 $button-pressed-shadow:					none;
 
 /* ------------------------ TEXT INPUT, SELECT, TEXTAREA ------------------------ */
-$form-border:                       #7a7c7b;
-$form-border-width:                 2px;
-$form-font-color:                   #7a7c7b;
-$form-background-color:             #f7f7f7;
-$form-shadow:                       none;
-$form-rounded-corners:              0;
+$form-border:                           #7a7c7b;
+$form-border-width:                     2px;
+$form-font-color:                       #7a7c7b;
+$form-background-color:                 #f7f7f7;
+$form-shadow:                           none;
+$form-rounded-corners:                  0;
 
 /* --------------------------------- SIDEBAR BOX -------------------------------- */
+$sidebar-box-width:                     315px;
+
+$sidebar-box-font-size:                 20px;
+$sidebar-box-font-family:               $body-font-family-regular;  
+$sidebar-box-font-weight:               normal;
+$sidebar-box-font-transform:            uppercase;
+$sidebar-box-font-color:                #7a7c7b;
+$sidebar-box-text-decoration:           underline;
+$sidebar-box-active-font-color:         #cd700b;
 
 
 /* -------------------------------- DEVICE SIZES -------------------------------- */

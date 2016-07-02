@@ -6,78 +6,237 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     <link href="stylesheets/main.css" rel="stylesheet" media="all" />
-
+    <link href="stylesheets/font-awesome.min.css" rel="stylesheet" />
 </head>
 
 <body>
-<!-- MAIN -->
-<div class="block-main">
-    <!-- WRAPPER -->
-    <div class="block-wrapper">
+    <!-- MAIN FRAMEWORK-->
+    <div class="main-framework">
+    
+        <!-- FRAMEWORK -->
+        <div class="framework-wrapper">
 
-        <!-- HEADER -->
-        <div class="block-header">
-            <header>
-                <div class="block-left">
-                    <!-- LOGO -->
-                    <div class="header-logo">
-                        <img src="images/logo.png" alt="logo title" />
-                    </div>
+            <!-- HEADER -->
+            <div class="header-wrapper">
+                <header>
+                    <div class="block-left">
+                        <!-- LOGO -->
+                        <div class="header-logo">
+                            <img src="images/logo.png" alt="logo title"/>
+                        </div>
 
-                    <!-- DESCRIPTION/CONTACT -->
-                    <div class="header-contact">
-                        <span class="contact-name">The Empire Hotel</span>
-                        <span class="contact-address">44 West 63rd Street New York, NY 10023</span>
-                        <span class="contact-phone">Tel: 212.265.7400</span>
-                        <span class="contact-fax">Fax: 212.265.7401</span>
-                    </div>
-                </div>
-
-                <div class="block-right">
-                    <!-- SEARCH FORM -->
-                    <div class="header-search-form">
-                        <div class="block-btn">
-                            <button class="button right">Book room</button>
+                        <!-- DESCRIPTION/CONTACT -->
+                        <div class="header-contact">
+                            <span class="contact-name">The Empire Hotel</span>
+                            <span class="contact-address">44 West 63rd Street New York, NY 10023</span>
+                            <span class="contact-phone">Tel: 212.265.7400</span>
+                            <span class="contact-fax">Fax: 212.265.7401</span>
                         </div>
                     </div>
 
-                    <!-- LANGUAGE MENU -->
-                    <div class="header-language">
-                        <nav>
+                    <div class="block-right">
+                        <!-- TODO: create for mobile navigation; on default hide/ media query job :) -->
+                        <!-- BARS -->
+                        <a href="#menu" class="menu-link" style="display: none;">
+                            <i class="fa fa-bars text-bars"></i>
+                        </a>
+                        <!-- NAVIGATION MENU -->
+                        <nav id="menu" role="navigation" style="display: none;">
                             <ul>
-                                <li><span>Language:</span></li>
-                                <li><a class="active">English</a></li>
-                                <li><a>Française</a></li>
-                                <li><a>Español</a></li>
-                                <li><a>Deutsch</a></li>
-                                <li><a>Italiano</a></li>
-                                <li><a>日本語</a></li>
-                                <li><a>中文</a></li>
+                                <li><a href="home.html" class="active">Home</a></li>
+                                <li><a href="rooms.html">Rooms</a></li>
+                                <li><a href="packages.html">Packages</a></li>
+                                <li><a href="specials.html">Specials</a></li>
+                                <li><a href="todo.html">Things to do</a></li>
+                                <li><a href="eat-drink.html">Eat & drink</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="pool.html">Pool deck</a></li>
+                                <li><a href="meetings.html">Meetings & events</a></li>
+                                <li><a href="weedings.html">Weedings & celebrations</a></li>
+                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
+
+                        <!-- SEARCH FORM -->
+                        <div class="header-search-form">
+                            <div class="block-btn">
+                                <button class="button right">Book room</button>
+                            </div>
+                        </div>
+
+                        <!-- LANGUAGE MENU -->
+                        <div class="header-language">
+                            <nav>
+                                <ul>
+                                    <li><span>Language:</span></li>
+                                    <li><a class="active">English</a></li>
+                                    <li><a>Française</a></li>
+                                    <li><a>Español</a></li>
+                                    <li><a>Deutsch</a></li>
+                                    <li><a>Italiano</a></li>
+                                    <li><a>日本語</a></li>
+                                    <li><a>中文</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                </div>    
-            </header>
-        </div>
+                </header>
+            </div>
 
-        <!-- CONTENT -->
+            <!-- MAIN -->
+            <div class="main-wrapper">
 
-        <div class="block-content">
+                <!-- SIDEBAR -->
+                <div class="sidebarbox-wrapper">
+                    <aside>
+                        <ul>
+                            <li><a href="home.html" class="active">Home</a></li>
+                            <li><a href="rooms.html">Rooms</a></li>
+                            <li><a href="packages.html">Packages</a></li>
+                            <li><a href="specials.html">Specials</a></li>
+                            <li><a href="todo.html">Things to do</a></li>
+                            <li><a href="eat-drink.html">Eat & drink</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="pool.html">Pool deck</a></li>
+                            <li><a href="meetings.html">Meetings & events</a></li>
+                            <li><a href="weedings.html">Weedings & celebrations</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </aside>
+                </div>
 
-            <aside class="block-sidebarbox">
-                
-            </aside>
+                <!-- MAIN CONTENT -->
+                <div class="main-content-wrapper">
 
-            <div class="block-main-content">
-                
+                    <div class="loby-image">
+                        <img src="images/home/img1.jpg"/>
+                    </div>
+
+                    <div class="scroll-down">
+                        <span>Scroll down</span>
+                    </div>
+
+                    <div class="inner-wrapper">
+                        <div class="inner-section">
+
+                            <section>
+                                <h1>Welcome to the Empire Hotel</h1>
+                                <div class="clr"></div>
+                                <h3>Discover all that New York City has to offer.</h3>
+                                <div class="clr"></div>
+
+                                <p class="p1 col-2">
+                                    Residing at the gateway to the Upper West Side, the Empire Hotel reflects the earth tones and modernism of our famed neighbors. The New York hotel offers sophisticated comfort and bold decor among many of their upscale amenities and superior guest services.
+
+                                    The Empire Hotel's coveted location puts guests within convenient proximity to some of New York's top attractions. For instance, just across the street, guests can overlook the renowned Lincoln Center, host to some of the top live performances and major events in the world all year-round. In the opposite direction, guests will find Central Park and Columbus Circle less than a few short blocks away.
+
+                                    Unwind at The Empire Hotel in style and comfort after a long day in the city. Each of the Upper West Side guestrooms is finely decorated, offers premium bedding and designer toiletries. In addition, the Central Park hotel also offers a popular rooftop bar and lounge, a seasonal rooftop pool, a lobby bar, and a mezzanine level of ballrooms to host your events, weddings or meetings.
+
+                                    Come stay at The Empire Hotel to discover all that Manhattan has to offer!
+                                </p>
+                            </section>
+
+                            <section class="col-counter">
+                                <h1>Hotel Amenities</h1>
+                                <div class="clr"></div>
+                                <article>
+                                    <p class="p2">426 Richly Appointed Guest Rooms</p>
+                                    <p class="p2">Accessible Rooms (ADA)</p>
+                                    <p class="p2">Italian Linens</p>
+                                    <p class="p2">Rooftop Bar & Lounge</p>
+                                    <p class="p2">Ed's Chowder House</p>
+                                    <p class="p2">Lobby Bar</p>
+                                    <p class="p2">Wireless High Speed Internet</p>
+                                    <p class="p2">Complimentary Fitness Center</p>
+                                    <p class="p2">Meeting Space for up to 250 People</p>
+                                    <p class="p2">In-Room Dining</p>
+
+                                    <p class="p2">Multilingual Staff</p>
+                                    <p class="p2">Full Concierge Service</p>
+                                    <p class="p2">Flat Screen TV</p>
+                                    <p class="p2">iPod Docking Stations with Speakers</p>
+                                    <p class="p2">Full In-Room Mini Bar</p>
+                                    <p class="p2">Oversized Towels</p>
+                                    <p class="p2">Turn Down Service</p>
+                                    <p class="p2">In-Room Safe</p>
+                                    <p class="p2">Valet Parking ($60 For Overnight), Plus Tax</p>
+                                    <p class="p2">C.O. Bigelow Luxury Bathroom Amenities</p>
+
+                                    <p class="p2">Overnight Shoe Service</p>
+                                    <p class="p2">Secretarial Services</p>
+                                    <p class="p2">Notary Public</p>
+                                    <p class="p2">Courier Service</p>
+                                    <p class="p2">Chauffeur Driven SUVs, Sedans and Stretch Limousine Services</p>
+                                    <p class="p2">24-Hour Security</p>
+                                    <p class="p2">Same Day Laundry Service</p>
+                                    <p class="p2">2-Hour Rush Laundry Service</p>
+                                    <p class="p2">On Site Pressingmenities</p>
+                                </article>
+                            </section>
+
+                            <section class="col-2">
+                                <article>
+                                    <div class="col-item">
+                                        <div>
+                                            <img src="images/home/img2.jpg" />
+                                            <div class="clr"></div>
+                                            <h2>Spend Valentines eve at the Empire Hotel</h2>
+                                            <div class="clr"></div>
+                                            <h3>10pm thru 1am, $120 Champagne </h3>
+                                            <div class="clr"></div>
+                                            <p class="p1">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. <a href="#">Mauris massa</a>. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                            </p>    
+                                        </div>
+                                    </div>
+                                    <div class="col-item">
+                                        <div>
+                                            <img src="images/home/img3.jpg" />
+                                            <div class="clr"></div>
+                                            <h2>
+                                                Get up to <span>20%</span> off your stay
+                                            </h2>
+                                            <div class="clr"></div>
+                                            <h3>Book two or more week nights to get 20% off</h3>
+                                            <div class="clr"></div>
+                                            <p class="p1">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. <a href="#">Mauris massa</a>.
+                                            </p>    
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                            <div class="clr"></div>
+
+                            <section class="col-2">
+                                <h2>THE EMPIRE HOTEL</h2>
+                                <div class="clr"></div>
+                                <article>
+                                    <div class="col-item">
+                                        <p>44 West 63rd Street</p>
+                                        <p>New York NY 10023</p>
+                                        <p><a href="http://www.EmpireHotelNYC.com"></a></p>
+                                    </div>
+
+                                    <div class="col-item">
+                                        <p class="p2">FOR RESERVATIONS:</p>
+                                        <p class="icon-phone">(855) 265-7400</p>
+                                        <p class="icon-mail"><a href="mailto:Reservations@EmpireHotelNYC.com">Reservations@EmpireHotelNYC.com</a></p>
+                                    </div>
+                                    
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
     </div>
-
-</div>
-
+    <!-- EOF MAIN FRAMEWORK -->
 </body>
 
 </html>
