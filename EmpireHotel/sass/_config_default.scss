@@ -1,0 +1,99 @@
+/* ---------------------------------- FRAMEWORK --------------------------------- */
+$framework-maxwidth:                    100%;       /*1710px*/
+$framework-full-background:			    #f7f7f7;
+$framework-margin-right:                100px;
+$framework-margin-left:                 100px;
+
+$hr-border-width:                       1px;
+$hr-border-style:                       solid;
+$hr-border-color:                       #dedede;
+
+/* ------------------------------ FONTS / HEADLINE ------------------------------ */
+$body-font-family:					    Brandon_reg, Arial;
+$body-font-size:					    16px;
+$body-font-color:					    #7a7c7b;
+$body-background-color:                 #fff;
+$body-font-weight:					    normal;
+$body-line-height:					    100%;
+
+$link-font-color:					    #cd700b;
+$link-text-decoration:				    none;
+$link-hover-font-color:				    #cd700b;
+$link-hover-text-decoration:		    underline;
+$link-headline-font-color:			    #cd700b;
+
+$h1-font-family:					    $body-font-family;
+$h1-font-size:						    48px;
+$h1-font-weight:					    normal;
+$h1-font-color:						    #402107;
+$h1-font-highlight-color:			    inherit;
+$h1-font-transform:					    uppercase;
+
+$h1-small-font-size:				    46px;
+$h1-small-font-weight:				    normal;
+
+$h2-font-family:					    $body-font-family;
+$h2-font-size:						    42px;
+$h2-font-weight:					    normal;
+$h2-font-color:						    #402107;
+$h2-font-transform:					    uppercase;
+
+$h3-font-family:					    $body-font-family;
+$h3-font-size:						    36px;
+$h3-font-weight:					    normal;
+$h3-font-color:						    #cd700b;
+$h3-font-transform:					    uppercase;
+
+$p1-font-size:                          27px;
+$p2-font-size:                          20px;
+$p3-font-size:                          16px;
+
+/* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
+/* -------------------------------- OTHER COLORS -------------------------------- */
+/* ------------------------------- APP NAVIGATION ------------------------------- */
+
+/* ---------------------------- GLOBAL ROUNDED CORNERS --------------------------- */
+$global-rounded-corners:			    0px;
+
+/* --------------------------------- BASE BUTTON -------------------------------- */
+$button-rounded-corners:				0px;
+$button-shadow:							none;
+
+$button-text-color:						#fff;
+$button-text-shadow:					none;
+$button-text-align:                     center;
+$button-font-size:						$body-font-size;
+$button-font-family:					$body-font-family;
+$button-font-weight:					bold;
+$button-font-transform:					uppercase;
+
+$button-border:                         none;
+$button-background-color:               #cd700b;
+$button-hover-background:				#cd700b;
+$button-hover-color:					$button-text-color;
+
+$button-pressed-border:					#cd700b;
+$button-pressed-background:				#cd700b;
+$button-pressed-text-color:				$button-hover-color;
+$button-pressed-shadow:					none;
+
+/* ------------------------ TEXT INPUT, SELECT, TEXTAREA ------------------------ */
+$form-border:                       #7a7c7b;
+$form-border-width:                 2px;
+$form-font-color:                   #7a7c7b;
+$form-background-color:             #f7f7f7;
+$form-shadow:                       none;
+$form-rounded-corners:              0;
+
+/* --------------------------------- SIDEBAR BOX -------------------------------- */
+
+
+/* -------------------------------- DEVICE SIZES -------------------------------- */
+/*large*/					$fw-device-large:                   1040px;
+/*small*/					$fw-device-small:                   630px;
+
+/* -------------------------------- SMALL DEVICE -------------------------------- */
+
+/*h1 font size*/			$h1-small-dev-font-size:            20px;
+/*h2 font size*/			$h2-small-dev-font-size:            16px;
+/*h3 font size*/			$h3-small-dev-font-size:            14px; 
