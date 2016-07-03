@@ -59,10 +59,22 @@ $description-font-color:                $body-font-color;
 
 /* -------------------------------- OTHER COLORS -------------------------------- */
 $accent-light-color:                    #f7f7f7;
+$accent-lighter-color:                  #e4e5e5;
 $accent-dark-color:                     #7a7c7b;
 $selected-dark-color:                   #cd700b;
 
+$footer-background-color:               #fff;
+$footer-border-color:                   #e4e5e5;
+
 /* ------------------------------- APP NAVIGATION ------------------------------- */
+$nav-background:                        transparent;
+
+$nav-font-size:                         20px;
+$nav-font-family:                       $body-font-family;
+$nav-font-transform:                    uppercase;
+$nav-font-color:                        #7a7c7b;
+$nav-text-decoration:                   underline;
+$nav-active-font-color:                 #cd700b;
 
 /* ---------------------------- GLOBAL ROUNDED CORNERS --------------------------- */
 $global-rounded-corners:			    0px;
@@ -89,6 +101,27 @@ $button-pressed-background:				#cd700b;
 $button-pressed-text-color:				$button-hover-color;
 $button-pressed-shadow:					none;
 
+/* --------------------------------- LIGHT BUTTON ------------------------------- */
+$button-light-background-color:         transparent;
+
+$button-light-outer-border:				transparent;
+$button-light-outer-bottom-border:		transparent;
+$button-light-inner-top-border:			transparent;
+$button-light-inner-bottom-border:		transparent;
+
+$button-light-text-color:				#cd700b;
+$button-light-text-shadow:				none;
+$button-light-font-weight:              bold;
+$button-light-font-transform:           $button-font-transform;
+
+$button-light-hover-background:			transparent;
+
+$button-light-pressed-border:			#999;
+$button-light-pressed-background:		#ccc;
+$button-light-pressed-text-color:		$button-light-text-color;
+$button-light-pressed-shadow:			none;
+
+
 /* ------------------------ TEXT INPUT, SELECT, TEXTAREA ------------------------ */
 $form-border:                           #7a7c7b;
 $form-border-width:                     2px;
@@ -97,8 +130,11 @@ $form-background-color:                 #f7f7f7;
 $form-shadow:                           none;
 $form-rounded-corners:                  0;
 
+$form-text-transform:                   uppercase;
+$form-placeholder-color:                $accent-lighter-color;
+
 /* --------------------------------- SIDEBAR BOX -------------------------------- */
-$sidebar-box-width:                     315px;
+$sidebar-box-width:                     405px;
 
 $sidebar-box-font-size:                 20px;
 $sidebar-box-font-family:               $body-font-family-regular;  
