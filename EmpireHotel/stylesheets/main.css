@@ -86,35 +86,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*h2 font size*/
 /*h3 font size*/
 /* import fonts partial sass*/
-@font-face {
-  font-family: "Brandon_light";
-  src: url('/fonts/Brandon_light.eot?1467537446');
-  src: url('/fonts/Brandon_light.eot?&1467537446#iefix') format('embedded-opentype'), url('/fonts/Brandon_light.woff?1467537446') format('woff'), url('/fonts/Brandon_light.ttf?1467537446') format('truetype');
-  font-weight: "Brandon_light.svg#Brandon_light";
-  font-style: svg;
-}
-@font-face {
-  font-family: "Brandon_reg";
-  src: url('/fonts/Brandon_reg.eot?1467186378');
-  src: url('/fonts/Brandon_reg.eot?&1467186378#iefix') format('embedded-opentype'), url('/fonts/Brandon_reg.woff?1467186378') format('woff'), url('/fonts/Brandon_reg.ttf?1467186378') format('truetype');
-  font-weight: "Brandon_reg.svg#Brandon_reg";
-  font-style: svg;
-}
-@font-face {
-  font-family: "Brandon_med";
-  src: url('/fonts/Brandon_med.eot?1467537446');
-  src: url('/fonts/Brandon_med.eot?&1467537446#iefix') format('embedded-opentype'), url('/fonts/Brandon_med.woff?1467537446') format('woff'), url('/fonts/Brandon_med.ttf?1467537446') format('truetype');
-  font-weight: "Brandon_med.svg#Brandon_med";
-  font-style: svg;
-}
-@font-face {
-  font-family: "Brandon_bld";
-  src: url('/fonts/Brandon_bld.eot?1467186378');
-  src: url('/fonts/Brandon_bld.eot?&1467186378#iefix') format('embedded-opentype'), url('/fonts/Brandon_bld.woff?1467186378') format('woff'), url('/fonts/Brandon_bld.ttf?1467186378') format('truetype');
-  font-weight: "Brandon_bld.svg#Brandon_bld";
-  font-style: svg;
-}
+/*@import "fonts";*/
 /* image path */
+/* TODO: fonts are missing */
+@font-face {
+  font-family: 'Brandon_light';
+  src: url("../fonts/Brandon_light.eot");
+  src: url("../fonts/Brandon_light.eot?#iefix") format("embedded-opentype"), url("../fonts/Brandon_light.woff") format("woff"), url("../fonts/Brandon_light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* ------------------------------------ CUSTOM ---------------------------------- */
 * {
   outline: none !important;
@@ -126,12 +107,12 @@ html, body {
 }
 
 body {
-  font: 16px Brandon_light, Arial;
+  font: 16px "Brandon_light", Arial;
   background-color: #fff;
 }
 
 a {
-  font-family: Brandon_light, Arial;
+  font-family: "Brandon_light", Arial;
   color: #cd700b;
 }
 
@@ -168,7 +149,7 @@ img {
 }
 
 h1 {
-  font-family: Brandon_light, Arial;
+  font-family: "Brandon_light", Arial;
   font-size: 48px;
   font-weight: normal;
   color: #402107;
@@ -185,7 +166,7 @@ h1:before {
 }
 
 h2 {
-  font-family: Brandon_light, Arial;
+  font-family: "Brandon_light", Arial;
   font-size: 42px;
   font-weight: normal;
   color: #402107;
@@ -194,12 +175,12 @@ h2 {
   position: relative;
 }
 h2 span {
-  font-family: Brandon_med;
+  font-family: "Brandon_light";
   color: #cd700b;
 }
 
 h3 {
-  font-family: Brandon_light, Arial;
+  font-family: "Brandon_light", Arial;
   font-size: 36px;
   font-weight: normal;
   color: #cd700b;
@@ -251,7 +232,7 @@ h3 {
 }
 
 label {
-  font-family: Brandon_med;
+  font-family: "Brandon_light";
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -268,8 +249,8 @@ label {
 }
 .main-framework .framework-wrapper {
   background-color: #f7f7f7;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 0px;
+  margin-right: 0px;
   height: 100%;
   display: table;
   /*------ HEADER WRAPPER ------*/
@@ -300,7 +281,7 @@ label {
   margin-top: 33px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-contact span {
-  font-family: Brandon_reg;
+  font-family: Brandon_light;
   font-size: 16px;
   color: #7a7c7b;
 }
@@ -330,7 +311,7 @@ label {
 }
 .main-framework .framework-wrapper .header-wrapper header .header-search-form {
   height: 148px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-align: right;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-search-form button {
@@ -345,7 +326,7 @@ label {
   padding: 0 6px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li span, .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li a {
-  font-family: Brandon_reg;
+  font-family: Brandon_light;
   color: #7a7c7b;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li a {
@@ -374,7 +355,7 @@ label {
   display: block;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a {
-  font-family: Brandon_reg;
+  font-family: Brandon_light;
   font-size: 20px;
   color: #7a7c7b;
   text-transform: uppercase;
@@ -437,20 +418,36 @@ label {
   padding: 0 30px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container .heading-title {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section {
-  margin-bottom: 180px;
   /* SECTION HERO */
   /* SECTION AMENTITIES */
   /* SECTION DEAL PROMOTIONS */
   /* SECTION INFO */
 }
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-default .col-counter {
+  column-count: 2;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-default .booking-button {
+  float: right;
+  margin-top: 60px;
+  margin-bottom: 180px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-hero {
+  margin-bottom: 180px;
+}
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-hero .col-counter {
   column-count: 2;
 }
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-amenities {
+  margin-bottom: 180px;
+}
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-amenities .col-counter {
   column-count: 3;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info {
+  margin-bottom: 180px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter {
   display: table;
@@ -495,6 +492,9 @@ label {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(3):nth-last-child(1) .items, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(3):nth-last-child(1) .items {
   padding-left: 10px;
 }
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .product-image {
+  margin-bottom: 60px;
+}
 .main-framework .framework-wrapper .footer-wrapper footer {
   position: relative;
   border-top: 1px solid #e4e5e5;
@@ -503,7 +503,7 @@ label {
   padding-left: 405px;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container {
-  padding: 60px 30px;
+  padding: 60px 60px 60px 30px;
   font-size: 20px;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section {
@@ -554,7 +554,7 @@ label {
   color: #7a7c7b;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .items h2 {
-  font-family: Brandon_reg;
+  font-family: Brandon_light;
   font-size: 20px;
   color: #cd700b;
 }
@@ -562,7 +562,7 @@ label {
   display: block;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container ul li a {
-  font-family: Brandon_light, Arial;
+  font-family: "Brandon_light", Arial;
   font-size: 20px;
   color: #7a7c7b;
   text-transform: uppercase;
@@ -583,7 +583,7 @@ label {
   bottom: 2px;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container form input[type="text"] {
-  font-family: Brandon_light, Arial;
+  font-family: "Brandon_light", Arial;
   font-size: 20px;
   border: 1px solid #e4e5e5;
   color: #7a7c7b;
@@ -596,7 +596,7 @@ label {
   text-transform: uppercase;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container form button {
-  font-family: Brandon_light, Arial;
+  font-family: "Brandon_light", Arial;
   font-size: 20px;
   background-color: transparent;
   border: transparent;

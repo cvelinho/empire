@@ -19,11 +19,22 @@ Version: 1.0
 
 
 /* import fonts partial sass*/
-@import "fonts";
+/*@import "fonts";*/
 
 
 /* image path */
 $imgPath: "../images/";
+
+/* TODO: fonts are missing */
+@font-face {
+  font-family: 'Brandon_light';
+  src: url('../fonts/Brandon_light.eot');
+  src: url('../fonts/Brandon_light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Brandon_light.woff') format('woff'),
+       url('../fonts/Brandon_light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 /* ------------------------------------ CUSTOM ---------------------------------- */
@@ -105,7 +116,7 @@ label { font-family: $body-font-family-medium; }
                 }
 
                 /* Search form */
-                .header-search-form { height: 148px; margin-bottom: 10px; text-align: right;
+                .header-search-form { height: 148px; margin-bottom: 5px; text-align: right;
                     button { margin-top: 84px; }
                 }
             
@@ -160,24 +171,30 @@ label { font-family: $body-font-family-medium; }
                 .inner-wrapper { width: 100%; position: relative;
                     .inner-container { padding: 0 30px;
 
-                        .heading-title { margin-bottom: 35px; }
+                        .heading-title { margin-bottom: 40px; }
 
-                        section { margin-bottom: 180px;
+                        section { 
+							
+							&.section-default {
+								.col-counter { column-count: 2; }
+
+								.booking-button { float: right; margin-top: 60px; margin-bottom: 180px; }
+							}
 
                             /* SECTION HERO */
-                            &.section-hero {
+                            &.section-hero { margin-bottom: 180px;
                                 .col-counter { column-count: 2; }
                             }
 
                             /* SECTION AMENTITIES */
-                            &.section-amenities {
+                            &.section-amenities { margin-bottom: 180px;
                                 .col-counter { column-count: 3; }
                             }
 
                             /* SECTION DEAL PROMOTIONS */
                             /* SECTION INFO */
                             &.section-deal-promotions,
-                            &.section-info {
+                            &.section-info { margin-bottom: 180px;
                                 .col-counter { display: table; width: 100%;
                                     /* 1 item */
                                     > div:nth-child(1):nth-last-child(1) {
@@ -222,6 +239,8 @@ label { font-family: $body-font-family-medium; }
 
                         }
                     }
+
+					.product-image { margin-bottom: 60px; }
                 }
             }
         }
@@ -229,11 +248,11 @@ label { font-family: $body-font-family-medium; }
         /*------ FOOTER WRAPPER ------*/
         .footer-wrapper {
             footer { position: relative; border-top: $hr-border-width $hr-border-style $footer-border-color; border-bottom: $hr-border-width $hr-border-style $hr-border-color; background-color: $footer-background-color; padding-left: $sidebar-box-width;
-                .footer-container { padding: 60px 30px; font-size: 20px;
+                .footer-container { padding: 60px 60px 60px 30px; font-size: 20px;
                     
                     section { position: relative;
                         /* SECTION INFO */
-                        &.section-footer-nav {
+                        &.section-footer-nav { 
                             .col-counter { display: table; width: 100%;
                                 /* 1 item */
                                 > div:nth-child(1):nth-last-child(1) {
