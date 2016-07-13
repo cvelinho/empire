@@ -86,16 +86,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*h2 font size*/
 /*h3 font size*/
 /* import fonts partial sass*/
-/*@import "fonts";*/
-/* image path */
-/* TODO: fonts are missing */
 @font-face {
-  font-family: 'Brandon_light';
-  src: url("../fonts/Brandon_light.eot");
-  src: url("../fonts/Brandon_light.eot?#iefix") format("embedded-opentype"), url("../fonts/Brandon_light.woff") format("woff"), url("../fonts/Brandon_light.ttf") format("truetype");
+  font-family: "Brandon_light";
+  src: url('../fonts/Brandon_light.eot?1467747082');
+  src: url('../fonts/Brandon_light.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467747082') format('woff'), url('../fonts/Brandon_light.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+/*@include font-face("Brandon_light", font-files("Brandon_light.woff", woff, "Brandon_light.ttf", truetype), "Brandon_light.eot", "Brandon_light.svg#Brandon_light", svg);*/
+@font-face {
+  font-family: "Brandon_reg";
+  src: url('../fonts/Brandon_reg.eot?1467747083');
+  src: url('../fonts/Brandon_reg.eot?&1467747083#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467747083') format('woff'), url('../fonts/Brandon_reg.ttf?1467747083') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*@include font-face("Brandon_reg", font-files("Brandon_reg.woff", woff, "Brandon_reg.ttf", truetype), "Brandon_reg.eot", "Brandon_reg.svg#Brandon_reg", svg);*/
+@font-face {
+  font-family: "Brandon_med";
+  src: url('../fonts/Brandon_med.eot?1467747082');
+  src: url('../fonts/Brandon_med.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467747082') format('woff'), url('../fonts/Brandon_med.ttf?1467747082') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*@include font-face("Brandon_med", font-files("Brandon_med.woff", woff, "Brandon_med.ttf", truetype), "Brandon_med.eot", "Brandon_med.svg#Brandon_med", svg);*/
+@font-face {
+  font-family: "Brandon_bld";
+  src: url('../fonts/Brandon_bld.eot?1467747082');
+  src: url('../fonts/Brandon_bld.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467747082') format('woff'), url('../fonts/Brandon_bld.ttf?1467747082') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*@include font-face("Brandon_bld", font-files("Brandon_bld.woff", woff, "Brandon_bld.ttf", truetype), "Brandon_bld.eot", "Brandon_bld.svg#Brandon_bld", svg);*/
+/* image path */
 /* ------------------------------------ CUSTOM ---------------------------------- */
 * {
   outline: none !important;
@@ -175,7 +198,7 @@ h2 {
   position: relative;
 }
 h2 span {
-  font-family: "Brandon_light";
+  font-family: "Brandon_med";
   color: #cd700b;
 }
 
@@ -232,7 +255,7 @@ h3 {
 }
 
 label {
-  font-family: "Brandon_light";
+  font-family: "Brandon_med";
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -253,6 +276,7 @@ label {
   margin-right: 0px;
   height: 100%;
   display: table;
+  width: 100%;
   /*------ HEADER WRAPPER ------*/
   /* MAIN WRAPPER */
   /*------ FOOTER WRAPPER ------*/
@@ -281,7 +305,7 @@ label {
   margin-top: 33px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-contact span {
-  font-family: Brandon_light;
+  font-family: Brandon_reg;
   font-size: 16px;
   color: #7a7c7b;
 }
@@ -326,7 +350,7 @@ label {
   padding: 0 6px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li span, .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li a {
-  font-family: Brandon_light;
+  font-family: Brandon_reg;
   color: #7a7c7b;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li a {
@@ -349,20 +373,24 @@ label {
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside {
   display: block;
-  margin-top: -16px;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li {
   display: block;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a {
-  font-family: Brandon_light;
+  font-family: Brandon_reg;
   font-size: 20px;
   color: #7a7c7b;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
-  line-height: 50px;
   position: relative;
+  line-height: 0px;
+}
+.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a:after {
+  content: "";
+  display: block;
+  margin-bottom: 30px;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a.active, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a:hover {
   color: #cd700b;
@@ -383,23 +411,32 @@ label {
   width: calc(100% - 405px);
   padding: 60px 60px 0 0;
   margin: 0px;
+  /* PRODUCT CONTROL */
   /* INNER WRAPPER */
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .block-image img {
-  width: 100%;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control {
+  line-height: 0px;
+  /* instead of img block display */
+  /* IMAGE CONTROL */
+  /* SCROLLTO CCONTROL */
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .scroll-down {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .image-control img {
+  display: block;
+  width: 100%;
+  max-height: 990px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control {
   text-align: center;
   height: 180px;
   padding-top: 50px;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .scroll-down span {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control span {
   display: block;
   text-transform: uppercase;
   color: #cd700b;
   font-size: 20px;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .scroll-down span:after {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control span:after {
   content: "";
   background-image: url("../images/icons/icon-arrow-down.png");
   background-repeat: no-repeat;
@@ -492,6 +529,10 @@ label {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(3):nth-last-child(1) .items, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(3):nth-last-child(1) .items {
   padding-left: 10px;
 }
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .image-control {
+  line-height: 0px;
+  margin-bottom: 60px;
+}
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .product-image {
   margin-bottom: 60px;
 }
@@ -554,7 +595,7 @@ label {
   color: #7a7c7b;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .items h2 {
-  font-family: Brandon_light;
+  font-family: Brandon_reg;
   font-size: 20px;
   color: #cd700b;
 }

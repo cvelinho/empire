@@ -10,8 +10,8 @@ $hr-border-color:                       #dedede;
 
 /* ------------------------------ FONTS / HEADLINE ------------------------------ */
 $body-font-family:					    'Brandon_light', Arial;
-$body-font-family-medium:               'Brandon_light';
-$body-font-family-regular:              Brandon_light;
+$body-font-family-medium:               'Brandon_med';
+$body-font-family-regular:              Brandon_reg;
 $body-font-family-bold:                 Brandon_light;
 $body-font-size:					    16px;
 $body-font-color:					    #7a7c7b;
@@ -87,7 +87,7 @@ $button-text-color:						#fff;
 $button-text-shadow:					none;
 $button-text-align:                     center;
 $button-font-size:						$body-font-size;
-$button-font-family:					$body-font-family;
+$button-font-family:					$body-font-family-bold;
 $button-font-weight:					bold;
 $button-font-transform:					uppercase;
 
