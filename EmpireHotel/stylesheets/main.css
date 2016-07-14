@@ -171,6 +171,12 @@ img {
   width: 100%;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid #dedede;
+  margin: 90px 0;
+}
+
 h1 {
   font-family: "Brandon_light", Arial;
   font-size: 48px;
@@ -179,6 +185,7 @@ h1 {
   text-transform: uppercase;
   display: inline;
   position: relative;
+  line-height: 38px;
 }
 h1:before {
   content: "";
@@ -467,7 +474,7 @@ label {
   padding: 0 30px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container .heading-title {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section {
   /* SECTION HERO */
@@ -481,7 +488,6 @@ label {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-default .booking-button {
   float: right;
   margin-top: 60px;
-  margin-bottom: 180px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-hero {
   margin-bottom: 180px;
@@ -514,9 +520,6 @@ label {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(1):nth-last-child(2),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(2):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(1):nth-last-child(2),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(1) {
-  	                                    /*width: 50%;
-                                          display: table-cell;
-                                          vertical-align: top;*/
   float: left;
   display: block;
   margin-right: 3.57866%;
@@ -531,9 +534,6 @@ label {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(3):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(1):nth-last-child(3),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(2),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(3):nth-last-child(1) {
-  	                                    /*width: 33.3333%;
-                                          display: table-cell;
-                                          vertical-align: top;*/
   float: left;
   display: block;
   margin-right: 3.57866%;
@@ -594,32 +594,26 @@ label {
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(1):nth-last-child(2),
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(2):nth-last-child(1) {
-  width: 50%;
-  display: table-cell;
-  vertical-align: top;
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 48.21067%;
+  margin-bottom: 3.57866%;
 }
-.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(1):nth-last-child(2) .items {
-  padding-right: 30px;
-}
-.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(2):nth-last-child(1) .items {
-  padding-left: 30px;
+.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(2):nth-last-child(1) {
+  margin-right: 0;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(1):nth-last-child(3),
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(2):nth-last-child(2),
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(3):nth-last-child(1) {
-  width: 33.3333%;
-  display: table-cell;
-  vertical-align: top;
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 30.94756%;
+  margin-bottom: 3.57866%;
 }
-.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(1):nth-last-child(3) .items {
-  padding-right: 10px;
-}
-.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(2):nth-last-child(2) .items {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(3):nth-last-child(1) .items {
-  padding-left: 10px;
+.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(3):nth-last-child(1) {
+  margin-right: 0;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .items {
   color: #7a7c7b;
