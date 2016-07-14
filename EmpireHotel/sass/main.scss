@@ -47,11 +47,11 @@ h1 { font-family: $h1-font-family; font-size: $h1-font-size; font-weight: $h1-fo
 h2 { font-family: $h2-font-family; font-size: $h2-font-size; font-weight: $h2-font-weight; color: $h2-font-color; text-transform: $h2-font-transform; display: inline; position: relative;
     span { font-family: $body-font-family-medium; color: $selected-dark-color; }
 }
-h3 { font-family: $h3-font-family; font-size: $h3-font-size; font-weight: $h3-font-weight; color: $h3-font-color; text-transform: $h3-font-transform; display: inline; position: relative; }
+h3 { font-family: $h3-font-family; font-size: $h3-font-size; font-weight: $h3-font-weight; color: $h3-font-color; text-transform: $h3-font-transform; display: inline; position: relative; line-height: $h3-line-height; }
 
-.p1 { font-size: $p1-font-size; color: $body-font-color; }
-.p2 { font-size: $p2-font-size; color: $body-font-color; }
-.p3 { font-size: $p3-font-size; color: $body-font-color; }
+.p1 { font-size: $p1-font-size; color: $body-font-color; line-height: $p1-line-height; }
+.p2 { font-size: $p2-font-size; color: $body-font-color; line-height: $p2-line-height; }
+.p3 { font-size: $p3-font-size; color: $body-font-color; line-height: $p3-line-height; }
 
 .clr { clear: both; }
 
@@ -85,11 +85,11 @@ label { font-family: $body-font-family-medium; }
         .header-wrapper { position: relative; height: 208px; border-bottom: $hr-border-width $hr-border-style $hr-border-color;
             header { padding: 0 60px;
                 /* Logo */
-                .header-logo { width: 100px; height: 148px; margin-bottom: 5px;
+                .header-logo { width: 100px; height: 148px;
                     img { width: 100%; height: 105px; margin-top: 33px; }
                 }    
                 /* Description-Contact */
-                .header-contact {
+                .header-contact { line-height: $p3-line-height;
                     span { font-family: $description-font-family; font-size: $description-font-size; color: $description-font-color;
                         &:first-child { padding-left: 0px;
                             &:before { padding-right: 0px; }
@@ -104,12 +104,12 @@ label { font-family: $body-font-family-medium; }
                 }
 
                 /* Search form */
-                .header-search-form { height: 148px; margin-bottom: 5px; text-align: right;
+                .header-search-form { height: 148px; text-align: right;
                     button { margin-top: 84px; }
                 }
             
                 /* Language menu */
-                .header-language {
+                .header-language { line-height: $p3-line-height;
                     nav { display: block; font-size: $body-font-size; 
                         ul {
                             li { display: inline-block; padding: 0 6px; 
@@ -154,8 +154,8 @@ label { font-family: $body-font-family-medium; }
 					}
 
 					/* SCROLLTO CCONTROL */
-					.scrollto-control { text-align: center; height: 180px; padding-top: 50px;
-						span { display: block; text-transform: uppercase; color: $selected-dark-color; font-size: 20px;
+					.scrollto-control { text-align: center; display: table; width: 100%; height: 180px; 
+						span { /*display: block;*/ font-family: $body-font-family-regular; text-transform: uppercase; color: $selected-dark-color; font-size: 20px; display: table-cell; vertical-align: middle; 
 							&:after { content: ""; background-image: url("../images/icons/icon-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: 100%; height: 38px; display: block; text-align: center; margin-top: 15px; }
 						}
 					}
@@ -195,39 +195,61 @@ label { font-family: $body-font-family-medium; }
                                     > div:nth-child(1):nth-last-child(1) {
 	                                    width: 100%;
                                         vertical-align: top;
+                                        position: relative;
                                     }
 
                                     /* 2 items */
                                     > div:nth-child(1):nth-last-child(2),
                                     > div:nth-child(2):nth-last-child(1) {
-	                                    width: 50%;
+	                                    /*width: 50%;
                                         display: table-cell;
-                                        vertical-align: top;
+                                        vertical-align: top;*/
+                                        float: left;
+                                        display: block;
+                                        margin-right: 3.57866%;
+                                        width: 48.21067%;
+                                        margin-bottom: 3.57866%;
                                     }
-                                    > div:nth-child(1):nth-last-child(2) .items {
-                                        padding-right: 30px;
-                                    }
-                                    > div:nth-child(2):nth-last-child(1) .items {
-                                        padding-left: 30px;
+                                    > div:nth-child(1):nth-last-child(2) {}
+                                    > div:nth-child(2):nth-last-child(1) {
+                                        margin-right: 0;
                                     }
 
                                     /* 3 items */
                                     > div:nth-child(1):nth-last-child(3),
                                     > div:nth-child(2):nth-last-child(2),
                                     > div:nth-child(3):nth-last-child(1) {
-	                                    width: 33.3333%;
+	                                    /*width: 33.3333%;
                                         display: table-cell;
-                                        vertical-align: top;
+                                        vertical-align: top;*/
+                                        float: left;
+                                        display: block;
+                                        margin-right: 3.57866%;
+                                        width: 30.94756%;
+                                        margin-bottom: 3.57866%;
                                     }
-                                    > div:nth-child(1):nth-last-child(3) .items {
-                                        padding-right: 10px;
+                                    > div:nth-child(1):nth-last-child(3) {}
+                                    > div:nth-child(2):nth-last-child(2) {}
+                                    > div:nth-child(3):nth-last-child(1) {
+                                        margin-right: 0;
                                     }
-                                    > div:nth-child(2):nth-last-child(2) .items {
-                                        padding-left: 10px;
-                                        padding-right: 10px;
+
+                                    /* 4 items */
+                                    > div:nth-child(1):nth-last-child(4),
+                                    > div:nth-child(2):nth-last-child(3),
+                                    > div:nth-child(3):nth-last-child(2),
+                                    > div:nth-child(4):nth-last-child(1) {
+                                        float: left;
+                                        display: block;
+                                        margin-right: 3.57866%;
+                                        width: 22.316%;
+                                        margin-bottom: 3.57866%;
                                     }
-                                    > div:nth-child(3):nth-last-child(1) .items {
-                                        padding-left: 10px;
+                                    > div:nth-child(1):nth-last-child(4) {}
+                                    > div:nth-child(2):nth-last-child(3) {}
+                                    > div:nth-child(3):nth-last-child(2) {}
+                                    > div:nth-child(4):nth-last-child(1) {
+                                        margin-right: 0;
                                     }
                                 }
                             }

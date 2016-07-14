@@ -88,32 +88,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* import fonts partial sass*/
 @font-face {
   font-family: "Brandon_light";
-  src: url('../fonts/Brandon_light.eot?1467747082');
-  src: url('../fonts/Brandon_light.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467747082') format('woff'), url('../fonts/Brandon_light.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_light.eot?1467537446');
+  src: url('../fonts/Brandon_light.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467537446') format('woff'), url('../fonts/Brandon_light.ttf?1467537446') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_light", font-files("Brandon_light.woff", woff, "Brandon_light.ttf", truetype), "Brandon_light.eot", "Brandon_light.svg#Brandon_light", svg);*/
 @font-face {
   font-family: "Brandon_reg";
-  src: url('../fonts/Brandon_reg.eot?1467747083');
-  src: url('../fonts/Brandon_reg.eot?&1467747083#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467747083') format('woff'), url('../fonts/Brandon_reg.ttf?1467747083') format('truetype');
+  src: url('../fonts/Brandon_reg.eot?1467186378');
+  src: url('../fonts/Brandon_reg.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467186378') format('woff'), url('../fonts/Brandon_reg.ttf?1467186378') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_reg", font-files("Brandon_reg.woff", woff, "Brandon_reg.ttf", truetype), "Brandon_reg.eot", "Brandon_reg.svg#Brandon_reg", svg);*/
 @font-face {
   font-family: "Brandon_med";
-  src: url('../fonts/Brandon_med.eot?1467747082');
-  src: url('../fonts/Brandon_med.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467747082') format('woff'), url('../fonts/Brandon_med.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_med.eot?1467537446');
+  src: url('../fonts/Brandon_med.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467537446') format('woff'), url('../fonts/Brandon_med.ttf?1467537446') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_med", font-files("Brandon_med.woff", woff, "Brandon_med.ttf", truetype), "Brandon_med.eot", "Brandon_med.svg#Brandon_med", svg);*/
 @font-face {
   font-family: "Brandon_bld";
-  src: url('../fonts/Brandon_bld.eot?1467747082');
-  src: url('../fonts/Brandon_bld.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467747082') format('woff'), url('../fonts/Brandon_bld.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_bld.eot?1467186378');
+  src: url('../fonts/Brandon_bld.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467186378') format('woff'), url('../fonts/Brandon_bld.ttf?1467186378') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -210,21 +210,25 @@ h3 {
   text-transform: none;
   display: inline;
   position: relative;
+  line-height: 48px;
 }
 
 .p1 {
   font-size: 27px;
   color: #7a7c7b;
+  line-height: 36px;
 }
 
 .p2 {
   font-size: 20px;
   color: #7a7c7b;
+  line-height: 27px;
 }
 
 .p3 {
   font-size: 16px;
   color: #7a7c7b;
+  line-height: 30px;
 }
 
 .clr {
@@ -297,12 +301,14 @@ label {
 .main-framework .framework-wrapper .header-wrapper header .header-logo {
   width: 100px;
   height: 148px;
-  margin-bottom: 5px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-logo img {
   width: 100%;
   height: 105px;
   margin-top: 33px;
+}
+.main-framework .framework-wrapper .header-wrapper header .header-contact {
+  line-height: 30px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-contact span {
   font-family: Brandon_reg;
@@ -335,11 +341,13 @@ label {
 }
 .main-framework .framework-wrapper .header-wrapper header .header-search-form {
   height: 148px;
-  margin-bottom: 5px;
   text-align: right;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-search-form button {
   margin-top: 84px;
+}
+.main-framework .framework-wrapper .header-wrapper header .header-language {
+  line-height: 30px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-language nav {
   display: block;
@@ -427,14 +435,18 @@ label {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control {
   text-align: center;
+  display: table;
+  width: 100%;
   height: 180px;
-  padding-top: 50px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control span {
-  display: block;
+  /*display: block;*/
+  font-family: Brandon_reg;
   text-transform: uppercase;
   color: #cd700b;
   font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control span:after {
   content: "";
@@ -492,42 +504,60 @@ label {
   /* 1 item */
   /* 2 items */
   /* 3 items */
+  /* 4 items */
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(1):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(1):nth-last-child(1) {
   width: 100%;
   vertical-align: top;
+  position: relative;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(1):nth-last-child(2),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(2):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(1):nth-last-child(2),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(1) {
-  width: 50%;
-  display: table-cell;
-  vertical-align: top;
+  	                                    /*width: 50%;
+                                          display: table-cell;
+                                          vertical-align: top;*/
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 48.21067%;
+  margin-bottom: 3.57866%;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(1):nth-last-child(2) .items, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(1):nth-last-child(2) .items {
-  padding-right: 30px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(2):nth-last-child(1) .items, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(1) .items {
-  padding-left: 30px;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(2):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(1) {
+  margin-right: 0;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(1):nth-last-child(3),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(2):nth-last-child(2),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(3):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(1):nth-last-child(3),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(2),
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(3):nth-last-child(1) {
-  width: 33.3333%;
-  display: table-cell;
-  vertical-align: top;
+  	                                    /*width: 33.3333%;
+                                          display: table-cell;
+                                          vertical-align: top;*/
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 30.94756%;
+  margin-bottom: 3.57866%;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(1):nth-last-child(3) .items, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(1):nth-last-child(3) .items {
-  padding-right: 10px;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(3):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(3):nth-last-child(1) {
+  margin-right: 0;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(2):nth-last-child(2) .items, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(2) .items {
-  padding-left: 10px;
-  padding-right: 10px;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(1):nth-last-child(4),
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(2):nth-last-child(3),
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(3):nth-last-child(2),
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(4):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(1):nth-last-child(4),
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(3),
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(3):nth-last-child(2),
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(4):nth-last-child(1) {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 22.316%;
+  margin-bottom: 3.57866%;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(3):nth-last-child(1) .items, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(3):nth-last-child(1) .items {
-  padding-left: 10px;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(4):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(4):nth-last-child(1) {
+  margin-right: 0;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .image-control {
   line-height: 0px;
