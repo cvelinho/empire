@@ -88,32 +88,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* import fonts partial sass*/
 @font-face {
   font-family: "Brandon_light";
-  src: url('../fonts/Brandon_light.eot?1467747082');
-  src: url('../fonts/Brandon_light.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467747082') format('woff'), url('../fonts/Brandon_light.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_light.eot?1467537446');
+  src: url('../fonts/Brandon_light.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467537446') format('woff'), url('../fonts/Brandon_light.ttf?1467537446') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_light", font-files("Brandon_light.woff", woff, "Brandon_light.ttf", truetype), "Brandon_light.eot", "Brandon_light.svg#Brandon_light", svg);*/
 @font-face {
   font-family: "Brandon_reg";
-  src: url('../fonts/Brandon_reg.eot?1467747083');
-  src: url('../fonts/Brandon_reg.eot?&1467747083#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467747083') format('woff'), url('../fonts/Brandon_reg.ttf?1467747083') format('truetype');
+  src: url('../fonts/Brandon_reg.eot?1467186378');
+  src: url('../fonts/Brandon_reg.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467186378') format('woff'), url('../fonts/Brandon_reg.ttf?1467186378') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_reg", font-files("Brandon_reg.woff", woff, "Brandon_reg.ttf", truetype), "Brandon_reg.eot", "Brandon_reg.svg#Brandon_reg", svg);*/
 @font-face {
   font-family: "Brandon_med";
-  src: url('../fonts/Brandon_med.eot?1467747082');
-  src: url('../fonts/Brandon_med.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467747082') format('woff'), url('../fonts/Brandon_med.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_med.eot?1467537446');
+  src: url('../fonts/Brandon_med.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467537446') format('woff'), url('../fonts/Brandon_med.ttf?1467537446') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_med", font-files("Brandon_med.woff", woff, "Brandon_med.ttf", truetype), "Brandon_med.eot", "Brandon_med.svg#Brandon_med", svg);*/
 @font-face {
   font-family: "Brandon_bld";
-  src: url('../fonts/Brandon_bld.eot?1467747082');
-  src: url('../fonts/Brandon_bld.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467747082') format('woff'), url('../fonts/Brandon_bld.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_bld.eot?1467186378');
+  src: url('../fonts/Brandon_bld.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467186378') format('woff'), url('../fonts/Brandon_bld.ttf?1467186378') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -167,6 +167,12 @@ br {
   float: right;
 }
 
+.center, .block-center, .col-center {
+  float: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
 img {
   width: 100%;
 }
@@ -175,6 +181,16 @@ hr {
   border: 0;
   border-top: 1px solid #dedede;
   margin: 90px 0;
+}
+hr.top {
+  border-color: #cd700b;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+hr.hr-30 {
+  margin: 30px 0;
 }
 
 h1 {
@@ -272,6 +288,56 @@ label {
 /* ------------------------------------------------------------------------------ */
 /* --------------------------------- FRAMEWORK ---------------------------------- */
 /* ------------------------------------------------------------------------------ */
+/* DEFAULT COLUMN COUNTER */
+.col-counter {
+  /*display: table; width: 100%;*/
+  /* 1 item */
+  /* 2 items */
+  /* 3 items */
+  /* 4 items */
+}
+.col-counter > div:nth-child(1):nth-last-child(1) {
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+.col-counter > div:nth-child(1):nth-last-child(2),
+.col-counter > div:nth-child(2):nth-last-child(1) {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 48.21067%;
+  margin-bottom: 3.57866%;
+}
+.col-counter > div:nth-child(2):nth-last-child(1) {
+  margin-right: 0;
+}
+.col-counter > div:nth-child(1):nth-last-child(3),
+.col-counter > div:nth-child(2):nth-last-child(2),
+.col-counter > div:nth-child(3):nth-last-child(1) {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 30.94756%;
+  margin-bottom: 3.57866%;
+}
+.col-counter > div:nth-child(3):nth-last-child(1) {
+  margin-right: 0;
+}
+.col-counter > div:nth-child(1):nth-last-child(4),
+.col-counter > div:nth-child(2):nth-last-child(3),
+.col-counter > div:nth-child(3):nth-last-child(2),
+.col-counter > div:nth-child(4):nth-last-child(1) {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 22.316%;
+  margin-bottom: 3.57866%;
+}
+.col-counter > div:nth-child(4):nth-last-child(1) {
+  margin-right: 0;
+}
+
 /* ---------------------------------- FRAMEWORK --------------------------------- */
 /*------ MAIN FRAMEWORK ------*/
 .main-framework {
@@ -428,6 +494,9 @@ label {
   margin: 0px;
   /* PRODUCT CONTROL */
   /* INNER WRAPPER */
+  /** SECTION SISTER HOTELS **/
+  /** SECTION PACKAGES **/
+  /** SECTION TODO **/
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control {
   line-height: 0px;
@@ -469,11 +538,12 @@ label {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper {
   width: 100%;
   position: relative;
+  /* INNER CONTAINER */
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container {
   padding: 0 30px;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container .heading-title {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container .heading-control {
   margin-bottom: 60px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section {
@@ -563,8 +633,123 @@ label {
   line-height: 0px;
   margin-bottom: 60px;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .product-image {
-  margin-bottom: 60px;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels {
+  margin-bottom: 180px;
+  display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels .title-info {
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels .title-info:before {
+  display: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels .title-info span {
+  font-family: "Brandon_light", Arial;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels h3 {
+  font-family: Brandon_reg;
+  font-size: 42px;
+  font-weight: normal;
+  color: #402107;
+  text-transform: capitalize;
+  display: inline;
+  position: relative;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels h3:before {
+  content: "";
+  border-bottom: 1px solid #cd700b;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels a {
+  text-decoration: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels article {
+  margin-top: 35px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels article .heading-control {
+  margin-bottom: 10px !important;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels article .image-control {
+  margin-bottom: 35px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels article .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages {
+  margin-bottom: 180px;
+  display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items {
+  display: -webkit-box;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .image-control {
+  width: 640px;
+  height: 400px;
+  display: table-cell;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .side-control {
+  vertical-align: top;
+  display: table-cell;
+  padding-left: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .side-control .heading-control {
+  margin-bottom: 40px !important;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .side-control .booking-button {
+  float: right;
+  margin-top: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo {
+  margin-bottom: 0;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items {
+  display: -webkit-box;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .image-control {
+  width: 640px;
+  height: 430px;
+  display: table-cell;
+  /*line-height: 0;*/
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control {
+  vertical-align: top;
+  display: table-cell;
+  padding-left: 60px;
+  /*.booking-button { float: right; margin-top: 60px; }*/
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control .heading-control {
+  margin-bottom: 40px !important;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control .link-control {
+  float: right;
+  margin-top: 50px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control .link-control a {
+  text-decoration: none;
 }
 .main-framework .framework-wrapper .footer-wrapper footer {
   position: relative;
@@ -694,6 +879,27 @@ label {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+/* ---------------------------------- PAGINATION --------------------------------- */
+.pagination-wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.pagination-wrapper ul {
+  text-align: center;
+  line-height: 20px;
+}
+.pagination-wrapper ul li {
+  display: inline-block;
+}
+.pagination-wrapper ul li a {
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.pagination-wrapper ul li a.active {
+  font-family: "Brandon_med";
 }
 
 /* -------------------------------- SOCIAL MEDIA -------------------------------- */

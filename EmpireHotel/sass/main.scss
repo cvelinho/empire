@@ -38,10 +38,14 @@ br { content: ""; display: block; margin-bottom: 35px; }
 
 .left, .block-left, .col-left { float: left; }
 .right, .block-right, .col-left { float: right; }
+.center, .block-center, .col-center { float: none; text-align: center; margin: 0 auto; }
 
 img { width: 100%; }
 
-hr { border: 0; border-top: $hr-border-width $hr-border-style $hr-border-color; margin: 90px 0; }
+hr { border: 0; border-top: $hr-border-width $hr-border-style $hr-border-color; margin: 90px 0;
+    &.top { border-color: $selected-dark-color; width: 60%; margin-left: auto; margin-right: auto; margin-bottom: 60px; }
+    &.hr-30 { margin: 30px 0;  }
+}
 
 h1 { font-family: $h1-font-family; font-size: $h1-font-size; font-weight: $h1-font-weight; color: $h1-font-color; text-transform: $h1-font-transform; display: inline; position: relative; line-height: 38px;
     &:before { content: ""; border-bottom: 2px solid $selected-dark-color; position: absolute; width: 100%; bottom: 2px; }
@@ -74,6 +78,64 @@ label { font-family: $body-font-family-medium; }
 /* ------------------------------------------------------------------------------ */
 /* --------------------------------- FRAMEWORK ---------------------------------- */
 /* ------------------------------------------------------------------------------ */
+/* DEFAULT COLUMN COUNTER */
+.col-counter { /*display: table; width: 100%;*/
+    /* 1 item */
+    > div:nth-child(1):nth-last-child(1) {
+	    width: 100%;
+        vertical-align: top;
+        position: relative;
+    }
+
+    /* 2 items */
+    > div:nth-child(1):nth-last-child(2),
+    > div:nth-child(2):nth-last-child(1) {
+        float: left;
+        display: block;
+        margin-right: 3.57866%;
+        width: 48.21067%;
+        margin-bottom: 3.57866%;
+    }
+    > div:nth-child(1):nth-last-child(2) {}
+    > div:nth-child(2):nth-last-child(1) {
+        margin-right: 0;
+    }
+
+    /* 3 items */
+    > div:nth-child(1):nth-last-child(3),
+    > div:nth-child(2):nth-last-child(2),
+    > div:nth-child(3):nth-last-child(1) {
+        float: left;
+        display: block;
+        margin-right: 3.57866%;
+        width: 30.94756%;
+        margin-bottom: 3.57866%;
+    }
+    > div:nth-child(1):nth-last-child(3) {}
+    > div:nth-child(2):nth-last-child(2) {}
+    > div:nth-child(3):nth-last-child(1) {
+        margin-right: 0;
+    }
+
+    /* 4 items */
+    > div:nth-child(1):nth-last-child(4),
+    > div:nth-child(2):nth-last-child(3),
+    > div:nth-child(3):nth-last-child(2),
+    > div:nth-child(4):nth-last-child(1) {
+        float: left;
+        display: block;
+        margin-right: 3.57866%;
+        width: 22.316%;
+        margin-bottom: 3.57866%;
+    }
+    > div:nth-child(1):nth-last-child(4) {}
+    > div:nth-child(2):nth-last-child(3) {}
+    > div:nth-child(3):nth-last-child(2) {}
+    > div:nth-child(4):nth-last-child(1) {
+        margin-right: 0;
+    }
+}
+
 
 /* ---------------------------------- FRAMEWORK --------------------------------- */
 
@@ -137,7 +199,7 @@ label { font-family: $body-font-family-medium; }
 								&:after { content: ""; display: block; margin-bottom: 30px; }
                                 &.active, &:hover { color: $sidebar-box-active-font-color; /*text-decoration: $sidebar-box-text-decoration;*/
                                     /* smooth decoration */
-                                    &:before { content: ""; border-bottom: 1px solid $selected-dark-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 2px; }					
+                                    &:before { content: ""; border-bottom: 1px solid $selected-dark-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 2px; }
                                 }
                             }
                         }
@@ -166,9 +228,10 @@ label { font-family: $body-font-family-medium; }
 
                 /* INNER WRAPPER */
                 .inner-wrapper { width: 100%; position: relative;
+                    /* INNER CONTAINER */
                     .inner-container { padding: 0 30px;
 
-                        .heading-title { margin-bottom: 60px; }
+                        .heading-control { margin-bottom: 60px; }
 
                         section { 
 							
@@ -251,14 +314,73 @@ label { font-family: $body-font-family-medium; }
                             }
 
 							&.section-deal-promotions {
-								.image-control { line-height: 0px; margin-bottom: 60px; }
+								.image-control { line-height: 0px; margin-bottom: 60px;
+                                    img { height: 100%; object-fit: cover;  display: block; }
+								}
 							}
 
                         }
                     }
-
-					.product-image { margin-bottom: 60px; }
                 }
+
+                /** SECTION SISTER HOTELS **/
+                .section-sister-hotels { margin-bottom: 180px; display: inline-block;
+                    .title-info { display: block;
+                        &:before { display: none; }
+                        span { font-family: $body-font-family; }
+                    }
+
+                    h3 { font-family: $body-font-family-regular; font-size: $h2-font-size; font-weight: $h2-font-weight; color: $h2-font-color; text-transform: $font-transform-capitalize; display: inline; position: relative;
+                        &:before { content: ""; border-bottom: 1px solid $selected-dark-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 2px; }
+                    }
+                    
+                    a { text-decoration: $link-text-decoration; }
+
+                    article { margin-top: 35px;
+                        .heading-control { margin-bottom: 10px !important; }
+
+                        .image-control { margin-bottom: 35px;
+                            img { height: 100%; object-fit: cover;  display: block; }
+                        }
+                    }
+                }
+
+                /** SECTION PACKAGES **/
+                .section-packages { margin-bottom: 180px; display: inline-block;
+                    article {
+                        .items { display: -webkit-box; width: 100%; 
+                            .image-control { width: 640px; height: 400px; display: table-cell;
+                                img { height: 100%; object-fit: cover;  display: block; }
+                            }
+
+                            .side-control { vertical-align: top; display: table-cell; padding-left: 60px;
+                                .heading-control { margin-bottom: 40px !important; }
+                                .booking-button { float: right; margin-top: 60px; }
+                            }                           
+                        }
+                    }
+                }
+                
+                /** SECTION TODO **/
+                .section-todo { margin-bottom: 0; display: block;
+                    article {
+                        .items { display: -webkit-box; width: 100%; 
+                            .image-control { width: 640px; height: 430px; display: table-cell; /*line-height: 0;*/
+                                img { height: 100%; object-fit: cover; display: block; }
+                            }
+
+                            .side-control { vertical-align: top; display: table-cell; padding-left: 60px;
+                                .heading-control { margin-bottom: 40px !important; }
+                                /*.booking-button { float: right; margin-top: 60px; }*/
+                                .link-control { float: right; margin-top: 50px;
+                                    a { text-decoration: $link-text-decoration; }
+                                }
+                            }                           
+                        }
+                    }
+
+                }
+
             }
         }
         
@@ -342,6 +464,18 @@ label { font-family: $body-font-family-medium; }
         }
     }
 }
+
+/* ---------------------------------- PAGINATION --------------------------------- */
+.pagination-wrapper { margin-top: 80px; margin-bottom: 80px;
+    ul { text-align: center; line-height: 20px;
+        li { display: inline-block;
+             a { margin: 0 10px; font-size: $p2-font-size; text-decoration: $link-text-decoration;
+                 &.active { font-family: $body-font-family-medium; }
+             }
+        }
+    }
+}
+
 
 /* -------------------------------- SOCIAL MEDIA -------------------------------- */
 .social-link-list { position: fixed; right: 0; top: 300px;
