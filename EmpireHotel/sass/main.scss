@@ -253,8 +253,9 @@ label { font-family: $body-font-family-medium; }
 
                             /* SECTION DEAL PROMOTIONS */
                             /* SECTION INFO */
+                            &.section-deal-promotions { margin-bottom: 180px; }
                             &.section-deal-promotions,
-                            &.section-info { margin-bottom: 180px;
+                            &.section-info {
                                 .col-counter { display: table; width: 100%;
                                     /* 1 item */
                                     > div:nth-child(1):nth-last-child(1) {
@@ -324,7 +325,7 @@ label { font-family: $body-font-family-medium; }
                 }
 
                 /** SECTION SISTER HOTELS **/
-                .section-sister-hotels { margin-bottom: 180px; display: inline-block;
+                .section-sister-hotels { display: inline-block;
                     .title-info { display: block;
                         &:before { display: none; }
                         span { font-family: $body-font-family; }
@@ -346,7 +347,7 @@ label { font-family: $body-font-family-medium; }
                 }
 
                 /** SECTION PACKAGES **/
-                .section-packages { margin-bottom: 180px; display: inline-block;
+                .section-packages { display: inline-block;
                     article {
                         .items { display: -webkit-box; width: 100%; 
                             .image-control { width: 640px; height: 400px; display: table-cell;
@@ -385,7 +386,7 @@ label { font-family: $body-font-family-medium; }
         }
         
         /*------ FOOTER WRAPPER ------*/
-        .footer-wrapper {
+        .footer-wrapper { margin-top: 180px;
             footer { position: relative; border-top: $hr-border-width $hr-border-style $footer-border-color; border-bottom: $hr-border-width $hr-border-style $hr-border-color; background-color: $footer-background-color; padding-left: $sidebar-box-width;
                 .footer-container { padding: 60px 60px 60px 30px; font-size: 20px;
                     
@@ -466,8 +467,8 @@ label { font-family: $body-font-family-medium; }
 }
 
 /* ---------------------------------- PAGINATION --------------------------------- */
-.pagination-wrapper { margin-top: 80px; margin-bottom: 80px;
-    ul { text-align: center; line-height: 20px;
+.pagination-wrapper { position: relative; text-align: center; 
+    ul { position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; line-height: 180px;
         li { display: inline-block;
              a { margin: 0 10px; font-size: $p2-font-size; text-decoration: $link-text-decoration;
                  &.active { font-family: $body-font-family-medium; }
