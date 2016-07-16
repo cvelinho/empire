@@ -355,6 +355,35 @@ select { text-align: center; text-align-last: center; }
 								p { margin-top: 30px; }
 								a { text-decoration: $link-text-decoration; }
 							}
+
+							&.section-contact { display: table; width: 100%;
+								article {
+									.items { display: -webkit-box; width: 100%; 
+										.image-control { display: table-cell;
+											img { height: auto; object-fit: cover; display: block; }
+										}
+
+										.side-control { width: 640px; vertical-align: top; display: table-cell; padding-right: 60px;
+											.heading-control { margin-bottom: 40px !important; }
+											.booking-button { float: right; margin-top: 60px; }
+										}                           
+									}
+								}
+
+								.col-item { margin-bottom: 35px; }
+								.heading-control { margin-bottom: 50px;
+									&.last { margin-bottom: 40px; }
+								}
+
+								.image-control { line-height: 0px; margin-bottom: 5px;
+                                    img { height: 100%; object-fit: cover; display: block; }
+									figure { position: relative;
+										img { width: auto; margin: 0 auto; }
+									}
+								}
+								p { margin-top: 30px; }
+								a { text-decoration: $link-text-decoration; }
+							}
                         }
                     }
                 }
@@ -398,7 +427,7 @@ select { text-align: center; text-align-last: center; }
                 }
                 
                 /** SECTION TODO **/
-                .section-todo { margin-bottom: 0; display: block;
+                .section-todo { margin-bottom: 0; display: block; margin-top: 180px;
                     article {
                         .items { display: -webkit-box; width: 100%; 
                             .image-control { width: 640px; height: 430px; display: table-cell; /*line-height: 0;*/
