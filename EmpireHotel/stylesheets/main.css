@@ -316,7 +316,7 @@ select {
   display: block;
   margin-right: 3.57866%;
   width: 48.21067%;
-  margin-bottom: 3.57866%;
+  /*margin-bottom: 3.57866%;*/
 }
 .col-counter > div:nth-child(2):nth-last-child(1) {
   margin-right: 0;
@@ -328,7 +328,7 @@ select {
   display: block;
   margin-right: 3.57866%;
   width: 30.94756%;
-  margin-bottom: 3.57866%;
+  /*margin-bottom: 3.57866%;*/
 }
 .col-counter > div:nth-child(3):nth-last-child(1) {
   margin-right: 0;
@@ -341,7 +341,7 @@ select {
   display: block;
   margin-right: 3.57866%;
   width: 22.316%;
-  margin-bottom: 3.57866%;
+  /*margin-bottom: 3.57866%;*/
 }
 .col-counter > div:nth-child(4):nth-last-child(1) {
   margin-right: 0;
@@ -510,12 +510,15 @@ select {
   /* SECTION BOOK NOW */
   /* SECTION SPECIAL OFFERS  */
   /** SECTION GALLERY LIST **/
+  /* GALLERY SLIDER CONTROL */
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control {
-  line-height: 0px;
-  /* instead of img block display */
   /* IMAGE CONTROL */
   /* SCROLLTO CCONTROL */
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .image-control {
+  line-height: 0px;
+  /* instead of img block display */
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .image-control img {
   display: block;
@@ -555,6 +558,7 @@ select {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container {
   padding: 0 30px;
+  display: table;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container .heading-control {
   margin-bottom: 60px;
@@ -650,6 +654,73 @@ select {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events {
+  display: table;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .heading-control.last {
+  margin-bottom: 0px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .heading-control h3 {
+  font-size: 27px;
+  margin-top: 50px;
+  display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .image-control {
+  line-height: 0px;
+  margin-bottom: 5px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .image-control figure {
+  position: relative;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .image-control figure img {
+  width: auto;
+  margin: 0 auto;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events p {
+  margin-top: 180px;
+  display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events a {
+  text-decoration: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings {
+  display: table;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings .heading-control {
+  margin-bottom: 50px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings .heading-control.last {
+  margin-bottom: 40px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings .image-control {
+  line-height: 0px;
+  margin-bottom: 5px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings .image-control figure {
+  position: relative;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings .image-control figure img {
+  width: auto;
+  margin: 0 auto;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings p {
+  margin-top: 30px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings a {
+  text-decoration: none;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels {
   display: inline-block;
@@ -873,6 +944,24 @@ select {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-gallery-list img {
   max-height: 310px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .gallery-slider-control {
+  position: relative;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .gallery-slider-control .nav-dots .nav-dot {
+  width: 6px;
+  height: 6px;
+  margin: 0 3px 0 0;
+  position: relative;
+  border-radius: 0px;
+  display: inline-block;
+  background-color: #402107;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .gallery-slider-control .nav-dots .nav-dot:last-child {
+  margin-right: 6px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .gallery-slider-control .nav-dots .nav-dot.active {
+  background-color: #cd700b;
 }
 .main-framework .framework-wrapper .footer-wrapper {
   margin-top: 180px;
@@ -1099,7 +1188,6 @@ Media queries
     display: block;
     margin-right: 3.57866%;
     width: 48.21067%;
-    margin-bottom: 3.57866%;
   }
   .box-control .box-item:nth-child(2n+1) {
     clear: left;
@@ -1119,7 +1207,6 @@ Media queries
     display: block;
     margin-right: 3.57866%;
     width: 30.94756%;
-    margin-bottom: 3.57866%;
   }
   .box-control .box-item:nth-child(3n+1) {
     clear: left;
@@ -1139,7 +1226,6 @@ Media queries
     display: block;
     margin-right: 3.57866%;
     width: 22.316%;
-    margin-bottom: 3.57866%;
   }
   .box-control .box-item:nth-child(4n+1) {
     clear: left;
