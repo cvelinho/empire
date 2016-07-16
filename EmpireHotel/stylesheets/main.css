@@ -247,6 +247,10 @@ h3 {
   color: #7a7c7b;
   line-height: 27px;
 }
+.p2 span {
+  font-family: "Brandon_med";
+  color: #cd700b;
+}
 
 .p3 {
   font-size: 16px;
@@ -283,6 +287,11 @@ h3 {
 
 label {
   font-family: "Brandon_med";
+}
+
+select {
+  text-align: center;
+  text-align-last: center;
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -497,6 +506,10 @@ label {
   /** SECTION SISTER HOTELS **/
   /** SECTION PACKAGES **/
   /** SECTION TODO **/
+  /** SECTION SPECIALS **/
+  /* SECTION BOOK NOW */
+  /* SECTION SPECIAL OFFERS  */
+  /** SECTION GALLERY LIST **/
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control {
   line-height: 0px;
@@ -526,7 +539,7 @@ label {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control span:after {
   content: "";
-  background-image: url("../images/icons/icon-arrow-down.png");
+  background-image: url("../images/icons/icon-circle-arrow-down.png");
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -749,6 +762,118 @@ label {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control .link-control a {
   text-decoration: none;
 }
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-specials .step-content .step-number {
+  font-family: "Brandon_med";
+  font-size: 27px;
+  background-color: #cd700b;
+  color: #fff;
+  border-radius: 30px;
+  display: inline-block;
+  line-height: 46px;
+  height: 46px;
+  width: 46px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-specials .step-content .step-title {
+  font-family: "Brandon_med";
+  font-size: 27px;
+  color: #402107;
+  padding-left: 20px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now {
+  padding-left: 70px;
+  font-family: "Brandon_med";
+  font-size: 16px;
+  color: #7a7c7b;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now img {
+  width: auto;
+  vertical-align: bottom;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-book-date {
+  display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-book-date:nth-child(2) {
+  padding-left: 25px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now input[type='text'] {
+  font-family: "Brandon_med";
+  font-size: 16px;
+  color: #7a7c7b;
+  background-color: #f7f7f7;
+  border: 2px solid #7a7c7b;
+  height: 36px;
+  width: 180px;
+  margin-right: 12px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now input[type='text']::-webkit-input-placeholder {
+  color: #7a7c7b;
+  text-transform: uppercase;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-guests,
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-rooms {
+  position: relative;
+  display: inline-block;
+  padding-left: 26px;
+  color: #7a7c7b;
+  text-transform: uppercase;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-guests .select-wrapper,
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-rooms .select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 15px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-guests .select-wrapper:after,
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-rooms .select-wrapper:after {
+  content: "";
+  background-image: url("../images/icons/icon-arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 7px;
+  height: 3px;
+  display: inline-block;
+  margin-top: -7px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now select {
+  font-family: "Brandon_med";
+  font-size: 16px;
+  color: #7a7c7b;
+  background-color: #f7f7f7;
+  border: 2px solid #7a7c7b;
+  width: 36px;
+  height: 36px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-special-offers .special-offer-content {
+  background-color: #dedede;
+  padding: 30px 30px 30px 70px;
+  display: table;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-special-offers .special-offer-content:last-child {
+  margin-bottom: 0px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-special-offers .special-offer-content .col-item {
+  display: table-cell;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-special-offers .special-offer-content .col-item:last-child {
+  vertical-align: bottom;
+  text-align: right;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-gallery-list img {
+  max-height: 310px;
+}
 .main-framework .framework-wrapper .footer-wrapper {
   margin-top: 180px;
 }
@@ -883,11 +1008,11 @@ label {
 }
 
 /* ---------------------------------- PAGINATION --------------------------------- */
-.pagination-wrapper {
+.pagination-control {
   position: relative;
   text-align: center;
 }
-.pagination-wrapper ul {
+.pagination-control ul {
   position: absolute;
   top: 0;
   right: 0;
@@ -896,15 +1021,15 @@ label {
   margin: auto;
   line-height: 180px;
 }
-.pagination-wrapper ul li {
+.pagination-control ul li {
   display: inline-block;
 }
-.pagination-wrapper ul li a {
+.pagination-control ul li a {
   margin: 0 10px;
   font-size: 20px;
   text-decoration: none;
 }
-.pagination-wrapper ul li a.active {
+.pagination-control ul li a.active {
   font-family: "Brandon_med";
 }
 
@@ -955,5 +1080,71 @@ Media queries
 ============================================================================
 */
 /* Smartphone Design  ----------- */
+@media screen and (min-width: 320px) and (max-device: 630px) {
+  .box-control {
+    position: relative !important;
+  }
+  .box-control .box-item {
+    width: 100%;
+  }
+}
 /* Tablet Design  ----------- */
+@media screen and (min-width: 631px) and (max-width: 1040px) {
+  /* BOX CONTROL */
+  .box-control {
+    position: relative !important;
+  }
+  .box-control .box-item {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 48.21067%;
+    margin-bottom: 3.57866%;
+  }
+  .box-control .box-item:nth-child(2n+1) {
+    clear: left;
+  }
+  .box-control .box-item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
 /* Desktop S  ----------- */
+@media screen and (min-width: 1040px) and (max-width: 1710px) {
+  /* BOX CONTROL */
+  .box-control {
+    position: relative !important;
+  }
+  .box-control .box-item {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 30.94756%;
+    margin-bottom: 3.57866%;
+  }
+  .box-control .box-item:nth-child(3n+1) {
+    clear: left;
+  }
+  .box-control .box-item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+/* Desktop L  ----------- */
+@media screen and (min-width: 1710px) {
+  /* BOX CONTROL */
+  .box-control {
+    position: relative !important;
+  }
+  .box-control .box-item {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 22.316%;
+    margin-bottom: 3.57866%;
+  }
+  .box-control .box-item:nth-child(4n+1) {
+    clear: left;
+  }
+  .box-control .box-item:nth-child(4n) {
+    margin-right: 0;
+  }
+}

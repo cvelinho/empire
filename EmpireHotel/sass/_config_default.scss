@@ -62,12 +62,22 @@ $description-font-color:                $body-font-color;
 /* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
 $font-transform-capitalize:             capitalize;
 
+$step-font-size:						27px;
+$step-number-font-color:				#fff;
+$step-number-background-color:			#cd700b;
+$step-number-border-radius:				30px;
+
+$step-instruction-font-color:			#402107;
+
 
 /* -------------------------------- OTHER COLORS -------------------------------- */
 $accent-light-color:                    #f7f7f7;
 $accent-lighter-color:                  #e4e5e5;
-$accent-dark-color:                     #7a7c7b;
-$selected-dark-color:                   #cd700b;
+$accent-dark-color:                     #dedede;
+$accent-darker-color:					#7a7c7b;
+
+$selected-light-color:					#cd700b;
+$selected-dark-color:					#402107;
 
 $footer-background-color:               #fff;
 $footer-border-color:                   #e4e5e5;
