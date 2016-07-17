@@ -1,0 +1,56 @@
+/*
+============================================================================
+Media queries
+============================================================================
+*/
+/* Smartphone Design  ----------- */
+@media screen and (min-width : 320px) and (max-device : 630px) {
+	.box-control { position: relative !important;
+		.box-item { width: 100%; }
+	}
+}
+
+/* Tablet Design  ----------- */
+@media screen and (min-width : 631px) and (max-width : 1040px) {
+	/* BOX CONTROL */
+	.box-control { position: relative !important;
+		.box-item { float: left; display: block; margin-right: 3.57866%; width: 48.21067%; 
+			&:nth-child(2n+1) {
+				clear: left;
+			}
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+/* Desktop S  ----------- */
+@media screen and (min-width : 1040px) and (max-width : 1710px) {
+	/* BOX CONTROL */
+	.box-control { position: relative !important;
+		.box-item { float: left; display: block; margin-right: 3.57866%; width: 30.94756%; 
+			&:nth-child(3n+1) {
+				clear: left;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+/* Desktop L  ----------- */
+@media screen and (min-width : 1710px) {
+	/* BOX CONTROL */
+	.box-control { position: relative !important;
+		.box-item { float: left; display: block; margin-right: 3.57866%; width: 22.316%; 
+			&:nth-child(4n+1) {
+				clear: left;
+			}
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		}
+	}
+}

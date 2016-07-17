@@ -73,11 +73,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
 /* -------------------------------- OTHER COLORS -------------------------------- */
 /* ------------------------------- APP NAVIGATION ------------------------------- */
+/* ------------------------------------ FOOTER ---------------------------------- */
 /* ---------------------------- GLOBAL ROUNDED CORNERS --------------------------- */
 /* --------------------------------- BASE BUTTON -------------------------------- */
 /* --------------------------------- LIGHT BUTTON ------------------------------- */
 /* ------------------------ TEXT INPUT, SELECT, TEXTAREA ------------------------ */
 /* --------------------------------- SIDEBAR BOX -------------------------------- */
+/* ------------------------------------ OTHER ----------------------------------- */
+/* ---------------------------------- SCROLLTO ---------------------------------- */
 /* -------------------------------- DEVICE SIZES -------------------------------- */
 /*large*/
 /*small*/
@@ -145,6 +148,22 @@ br {
   margin-bottom: 35px;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid #dedede;
+  margin: 90px 0;
+}
+hr.top {
+  border-color: #cd700b;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+hr.hr-30 {
+  margin: 30px 0;
+}
+
 .button {
   display: block;
   background-color: #cd700b;
@@ -173,26 +192,15 @@ br {
   margin: 0 auto;
 }
 
+.clr {
+  clear: both;
+}
+
 img {
   width: 100%;
 }
 
-hr {
-  border: 0;
-  border-top: 1px solid #dedede;
-  margin: 90px 0;
-}
-hr.top {
-  border-color: #cd700b;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
-}
-hr.hr-30 {
-  margin: 30px 0;
-}
-
+/* HEADING */
 h1 {
   font-family: "Brandon_light", Arial;
   font-size: 48px;
@@ -219,9 +227,10 @@ h2 {
   text-transform: uppercase;
   display: inline;
   position: relative;
+  line-height: 46px;
 }
 h2 span {
-  font-family: "Brandon_med";
+  font-family: "Brandon_med", Arial;
   color: #cd700b;
 }
 
@@ -248,7 +257,7 @@ h3 {
   line-height: 27px;
 }
 .p2 span {
-  font-family: "Brandon_med";
+  font-family: "Brandon_med", Arial;
   color: #cd700b;
 }
 
@@ -258,10 +267,7 @@ h3 {
   line-height: 30px;
 }
 
-.clr {
-  clear: both;
-}
-
+/* ICONS */
 .icon-phone:before {
   content: "";
   background-image: url("../images/icons/icon-phone.png");
@@ -285,13 +291,18 @@ h3 {
   margin-right: 6px;
 }
 
+/* FORM */
 label {
-  font-family: "Brandon_med";
+  font-family: "Brandon_med", Arial;
 }
 
 select {
   text-align: center;
   text-align-last: center;
+}
+
+.strong {
+  font-family: "Brandon_med", Arial;
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -393,7 +404,7 @@ select {
   line-height: 30px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-contact span {
-  font-family: Brandon_reg;
+  font-family: "Brandon_reg", Arial;
   font-size: 16px;
   color: #7a7c7b;
 }
@@ -440,7 +451,7 @@ select {
   padding: 0 6px;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li span, .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li a {
-  font-family: Brandon_reg;
+  font-family: "Brandon_reg", Arial;
   color: #7a7c7b;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-language nav ul li a {
@@ -453,29 +464,30 @@ select {
   width: 100%;
   padding: 0px;
   margin: 0px;
+  position: relative;
   /* SIDEBAR WRAPPER */
   /* MAIN CONTENT WRAPPER */
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper {
   width: 405px;
   float: left;
-  padding: 60px 60px 0 60px;
+  padding: 60px 60px 0px 60px;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside {
   display: block;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li {
   display: block;
+  line-height: 20px;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a {
-  font-family: Brandon_reg;
+  font-family: "Brandon_reg", Arial;
   font-size: 20px;
   color: #7a7c7b;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   position: relative;
-  line-height: 0px;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a:after {
   content: "";
@@ -503,18 +515,10 @@ select {
   margin: 0px;
   /* PRODUCT CONTROL */
   /* INNER WRAPPER */
-  /** SECTION SISTER HOTELS **/
-  /** SECTION PACKAGES **/
-  /** SECTION TODO **/
-  /** SECTION SPECIALS **/
-  /* SECTION BOOK NOW */
-  /* SECTION SPECIAL OFFERS  */
-  /** SECTION GALLERY LIST **/
-  /* GALLERY SLIDER CONTROL */
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control {
   /* IMAGE CONTROL */
-  /* SCROLLTO CCONTROL */
+  /* SCROLLTO CONTROL */
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .image-control {
   line-height: 0px;
@@ -524,19 +528,19 @@ select {
   display: block;
   width: 100%;
   max-height: 990px;
+  object-fit: cover;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control {
-  text-align: center;
+  height: 180px;
   display: table;
   width: 100%;
-  height: 180px;
+  text-align: center;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control span {
-  /*display: block;*/
-  font-family: Brandon_reg;
+  font-family: "Brandon_reg", Arial;
+  font-size: 20px;
   text-transform: uppercase;
   color: #cd700b;
-  font-size: 20px;
   display: table-cell;
   vertical-align: middle;
 }
@@ -545,11 +549,13 @@ select {
   background-image: url("../images/icons/icon-circle-arrow-down.png");
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
+  width: 38px;
   height: 38px;
   display: block;
   text-align: center;
   margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper {
   width: 100%;
@@ -559,15 +565,41 @@ select {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container {
   padding: 0 30px;
   display: table;
+  width: 100%;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container .heading-control {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section {
-  /* SECTION HERO */
-  /* SECTION AMENTITIES */
-  /* SECTION DEAL PROMOTIONS */
-  /* SECTION INFO */
+  /*------ PAGE: HOME ------*/
+  /** SECTION HERO **/
+  /** SECTION AMENTITIES **/
+  /** SECTION DEAL PROMOTIONS **/
+  /** SECTION INFO **/
+  /*------ PAGE: ROOMS ------*/
+  /** SECTION ROOMS **/
+  /** SECTION SISTER HOTELS **/
+  /*------ PAGE: PACKAGES ------*/
+  /** SECTION PACKAGES **/
+  /*------ PAGE: SPECIALS ------*/
+  /** SECTION SPECIALS **/
+  /** SECTION BOOK NOW **/
+  /** SECTION SPECIAL OFFERS **/
+  /*------ PAGE: THINGS TO DO ------*/
+  /** SECTION TODO **/
+  /*------ PAGE: EAT & DRINK ------*/
+  /** SECTION EAT **/
+  /*------ PAGE: GALLERY ------*/
+  /** SECTION GALLERY LIST **/
+  /*------ PAGE: POOL DECK ------*/
+  /** SECTION POOL DECK **/
+  /*------ PAGE: MEETING & EVENTS ------*/
+  /** SECTION MEETINGS & EVENTS **/
+  /*------ PAGE: WEEDINGS & CELEBRATIONS ------*/
+  /** SECTION WEEDINGS **/
+  /** GALLERY SLIDER CONTROL **/
+  /*------ PAGE: CONTACT ------*/
+  /** SECTION CONTACT **/
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-default .col-counter {
   column-count: 2;
@@ -578,6 +610,9 @@ select {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-hero {
   margin-bottom: 180px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-hero .heading-control:nth-child(2) {
+  margin-bottom: 30px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-hero .col-counter {
   column-count: 2;
@@ -611,7 +646,6 @@ select {
   display: block;
   margin-right: 3.57866%;
   width: 48.21067%;
-  margin-bottom: 3.57866%;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(2):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(2):nth-last-child(1) {
   margin-right: 0;
@@ -625,7 +659,6 @@ select {
   display: block;
   margin-right: 3.57866%;
   width: 30.94756%;
-  margin-bottom: 3.57866%;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(3):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(3):nth-last-child(1) {
   margin-right: 0;
@@ -641,19 +674,294 @@ select {
   display: block;
   margin-right: 3.57866%;
   width: 22.316%;
-  margin-bottom: 3.57866%;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter > div:nth-child(4):nth-last-child(1), .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter > div:nth-child(4):nth-last-child(1) {
   margin-right: 0;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .image-control {
-  line-height: 0px;
   margin-bottom: 60px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .image-control img {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions a, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info a {
+  text-decoration: none;
+  position: relative;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions a:before, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info a:before {
+  content: "";
+  border-bottom: 1px solid #cd700b;
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-rooms {
+  margin-top: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels {
+  display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels .title-info {
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels .title-info:before {
+  display: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels .title-info span {
+  font-family: "Brandon_light", Arial;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels h3 {
+  font-family: "Brandon_reg", Arial;
+  font-size: 42px;
+  font-weight: normal;
+  color: #402107;
+  text-transform: capitalize;
+  display: inline;
+  position: relative;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels h3:before {
+  content: "";
+  border-bottom: 1px solid #cd700b;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels a {
+  text-decoration: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels article {
+  margin-top: 35px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels article .heading-control {
+  margin-bottom: 10px !important;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels article .image-control {
+  margin-bottom: 35px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels article .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages {
+  display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items {
+  display: -webkit-box;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .image-control {
+  width: 640px;
+  height: 400px;
+  display: table-cell;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .side-control {
+  vertical-align: top;
+  display: table-cell;
+  padding-left: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .side-control .heading-control {
+  margin-bottom: 40px !important;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .side-control .booking-button {
+  float: right;
+  margin-top: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-specials .step-content .step-number {
+  font-family: "Brandon_med", Arial;
+  font-size: 27px;
+  background-color: #cd700b;
+  color: #fff;
+  border-radius: 30px;
+  display: inline-block;
+  line-height: 46px;
+  height: 46px;
+  width: 46px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-specials .step-content .step-title {
+  font-family: "Brandon_med", Arial;
+  font-size: 27px;
+  color: #402107;
+  padding-left: 20px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now {
+  padding-left: 70px;
+  font-family: "Brandon_med", Arial;
+  font-size: 16px;
+  color: #7a7c7b;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now img {
+  width: auto;
+  vertical-align: bottom;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now .section-book-date {
+  display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now .section-book-date:nth-child(2) {
+  padding-left: 25px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now input[type='text'] {
+  font-family: "Brandon_med", Arial;
+  font-size: 16px;
+  color: #7a7c7b;
+  background-color: #f7f7f7;
+  border: 2px solid #7a7c7b;
+  height: 36px;
+  width: 180px;
+  margin-right: 12px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now input[type='text']::-webkit-input-placeholder {
+  color: #7a7c7b;
+  text-transform: uppercase;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now .section-guests,
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now .section-rooms {
+  position: relative;
+  display: inline-block;
+  padding-left: 26px;
+  color: #7a7c7b;
+  text-transform: uppercase;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now .section-guests .select-wrapper,
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now .section-rooms .select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 15px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now .section-guests .select-wrapper:after,
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now .section-rooms .select-wrapper:after {
+  content: "";
+  background-image: url("../images/icons/icon-arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 7px;
+  height: 3px;
+  display: inline-block;
+  margin-top: -7px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-book-now select {
+  font-family: "Brandon_med", Arial;
+  font-size: 16px;
+  color: #7a7c7b;
+  background-color: #f7f7f7;
+  border: 2px solid #7a7c7b;
+  width: 36px;
+  height: 36px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-special-offers .special-offer-content {
+  background-color: #dedede;
+  padding: 30px 30px 30px 70px;
+  display: table;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-special-offers .special-offer-content:last-child {
+  margin-bottom: 0px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-special-offers .special-offer-content .col-item {
+  display: table-cell;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .section-special-offers .special-offer-content .col-item:last-child {
+  vertical-align: bottom;
+  text-align: right;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo {
+  margin-bottom: 0;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items {
+  display: -webkit-box;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items .image-control {
+  width: 640px;
+  height: 430px;
+  display: table-cell;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items .side-control {
+  vertical-align: top;
+  display: table-cell;
+  padding-left: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items .side-control .heading-control {
+  margin-bottom: 40px !important;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items .side-control .link-control {
+  float: right;
+  margin-top: 50px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items .side-control .link-control a {
+  text-decoration: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-eat {
+  margin-top: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-gallery-list img {
+  max-height: 310px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-gallery-list h3 {
+  font-size: 16px;
+  color: #7a7c7b;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  display: block;
+  line-height: inherit;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-pool-deck {
+  margin-bottom: 0;
+  display: block;
+  margin-top: 180px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-pool-deck article .items {
+  display: -webkit-box;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-pool-deck article .items .image-control {
+  width: 640px;
+  height: 430px;
+  display: table-cell;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-pool-deck article .items .image-control img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-pool-deck article .items .side-control {
+  vertical-align: top;
+  display: table-cell;
+  padding-left: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-pool-deck article .items .side-control .heading-control {
+  margin-bottom: 40px !important;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-pool-deck article .items .side-control a {
+  text-decoration: none;
+  position: relative;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events {
   display: table;
@@ -662,10 +970,11 @@ select {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .heading-control.last {
   margin-bottom: 0px;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .heading-control h3 {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .heading-control a {
   font-size: 27px;
   margin-top: 50px;
   display: inline-block;
+  text-decoration: none;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .image-control {
   line-height: 0px;
@@ -683,11 +992,12 @@ select {
   width: auto;
   margin: 0 auto;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events p {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .event-info {
   margin-top: 180px;
   display: inline-block;
+  width: 100%;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events a {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .event-info a {
   text-decoration: none;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings {
@@ -721,6 +1031,24 @@ select {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-weedings a {
   text-decoration: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .gallery-slider-control {
+  position: relative;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .gallery-slider-control .nav-dots .nav-dot {
+  width: 6px;
+  height: 6px;
+  margin: 0 3px 0 0;
+  position: relative;
+  border-radius: 0px;
+  display: inline-block;
+  background-color: #402107;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .gallery-slider-control .nav-dots .nav-dot:last-child {
+  margin-right: 6px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .gallery-slider-control .nav-dots .nav-dot.active {
+  background-color: #cd700b;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-contact {
   display: table;
@@ -782,248 +1110,6 @@ select {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-contact a {
   text-decoration: none;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels {
-  display: inline-block;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels .title-info {
-  display: block;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels .title-info:before {
-  display: none;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels .title-info span {
-  font-family: "Brandon_light", Arial;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels h3 {
-  font-family: Brandon_reg;
-  font-size: 42px;
-  font-weight: normal;
-  color: #402107;
-  text-transform: capitalize;
-  display: inline;
-  position: relative;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels h3:before {
-  content: "";
-  border-bottom: 1px solid #cd700b;
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
-  width: 100%;
-  bottom: 2px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels a {
-  text-decoration: none;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels article {
-  margin-top: 35px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels article .heading-control {
-  margin-bottom: 10px !important;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels article .image-control {
-  margin-bottom: 35px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-sister-hotels article .image-control img {
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages {
-  display: inline-block;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items {
-  display: -webkit-box;
-  width: 100%;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .image-control {
-  width: 640px;
-  height: 400px;
-  display: table-cell;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .image-control img {
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .side-control {
-  vertical-align: top;
-  display: table-cell;
-  padding-left: 60px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .side-control .heading-control {
-  margin-bottom: 40px !important;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-packages article .items .side-control .booking-button {
-  float: right;
-  margin-top: 60px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo {
-  margin-bottom: 0;
-  display: block;
-  margin-top: 180px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items {
-  display: -webkit-box;
-  width: 100%;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .image-control {
-  width: 640px;
-  height: 430px;
-  display: table-cell;
-  /*line-height: 0;*/
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .image-control img {
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control {
-  vertical-align: top;
-  display: table-cell;
-  padding-left: 60px;
-  /*.booking-button { float: right; margin-top: 60px; }*/
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control .heading-control {
-  margin-bottom: 40px !important;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control .link-control {
-  float: right;
-  margin-top: 50px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-todo article .items .side-control .link-control a {
-  text-decoration: none;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-specials .step-content .step-number {
-  font-family: "Brandon_med";
-  font-size: 27px;
-  background-color: #cd700b;
-  color: #fff;
-  border-radius: 30px;
-  display: inline-block;
-  line-height: 46px;
-  height: 46px;
-  width: 46px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-specials .step-content .step-title {
-  font-family: "Brandon_med";
-  font-size: 27px;
-  color: #402107;
-  padding-left: 20px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now {
-  padding-left: 70px;
-  font-family: "Brandon_med";
-  font-size: 16px;
-  color: #7a7c7b;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now img {
-  width: auto;
-  vertical-align: bottom;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-book-date {
-  display: inline-block;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-book-date:nth-child(2) {
-  padding-left: 25px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now input[type='text'] {
-  font-family: "Brandon_med";
-  font-size: 16px;
-  color: #7a7c7b;
-  background-color: #f7f7f7;
-  border: 2px solid #7a7c7b;
-  height: 36px;
-  width: 180px;
-  margin-right: 12px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now input[type='text']::-webkit-input-placeholder {
-  color: #7a7c7b;
-  text-transform: uppercase;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-guests,
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-rooms {
-  position: relative;
-  display: inline-block;
-  padding-left: 26px;
-  color: #7a7c7b;
-  text-transform: uppercase;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-guests .select-wrapper,
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-rooms .select-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  margin-left: 15px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-guests .select-wrapper:after,
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now .section-rooms .select-wrapper:after {
-  content: "";
-  background-image: url("../images/icons/icon-arrow-down.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  width: 7px;
-  height: 3px;
-  display: inline-block;
-  margin-top: -7px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-book-now select {
-  font-family: "Brandon_med";
-  font-size: 16px;
-  color: #7a7c7b;
-  background-color: #f7f7f7;
-  border: 2px solid #7a7c7b;
-  width: 36px;
-  height: 36px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-special-offers .special-offer-content {
-  background-color: #dedede;
-  padding: 30px 30px 30px 70px;
-  display: table;
-  width: 100%;
-  margin-bottom: 30px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-special-offers .special-offer-content:last-child {
-  margin-bottom: 0px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-special-offers .special-offer-content .col-item {
-  display: table-cell;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-special-offers .special-offer-content .col-item:last-child {
-  vertical-align: bottom;
-  text-align: right;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .section-gallery-list img {
-  max-height: 310px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .gallery-slider-control {
-  position: relative;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .gallery-slider-control .nav-dots .nav-dot {
-  width: 6px;
-  height: 6px;
-  margin: 0 3px 0 0;
-  position: relative;
-  border-radius: 0px;
-  display: inline-block;
-  background-color: #402107;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .gallery-slider-control .nav-dots .nav-dot:last-child {
-  margin-right: 6px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .gallery-slider-control .nav-dots .nav-dot.active {
-  background-color: #cd700b;
-}
 .main-framework .framework-wrapper .footer-wrapper {
   margin-top: 180px;
 }
@@ -1040,7 +1126,6 @@ select {
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section {
   position: relative;
-  /* SECTION INFO */
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter {
   display: table;
@@ -1048,10 +1133,12 @@ select {
   /* 1 item */
   /* 2 items */
   /* 3 items */
+  /* 4 items */
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(1):nth-last-child(1) {
   width: 100%;
   vertical-align: top;
+  position: relative;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(1):nth-last-child(2),
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(2):nth-last-child(1) {
@@ -1059,7 +1146,6 @@ select {
   display: block;
   margin-right: 3.57866%;
   width: 48.21067%;
-  margin-bottom: 3.57866%;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(2):nth-last-child(1) {
   margin-right: 0;
@@ -1071,18 +1157,30 @@ select {
   display: block;
   margin-right: 3.57866%;
   width: 30.94756%;
-  margin-bottom: 3.57866%;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(3):nth-last-child(1) {
+  margin-right: 0;
+}
+.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(1):nth-last-child(4),
+.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(2):nth-last-child(3),
+.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(3):nth-last-child(2),
+.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(4):nth-last-child(1) {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 22.316%;
+}
+.main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter > div:nth-child(4):nth-last-child(1) {
   margin-right: 0;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .items {
   color: #7a7c7b;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .items h2 {
-  font-family: Brandon_reg;
+  font-family: "Brandon_reg", Arial;
   font-size: 20px;
   color: #cd700b;
+  line-height: inherit;
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container ul li {
   display: block;
@@ -1157,7 +1255,12 @@ select {
   text-align: center;
 }
 
-/* ---------------------------------- PAGINATION --------------------------------- */
+/* import pagination control partial sass*/
+/*
+============================================================================
+PAGINATION
+============================================================================
+*/
 .pagination-control {
   position: relative;
   text-align: center;
@@ -1180,10 +1283,15 @@ select {
   text-decoration: none;
 }
 .pagination-control ul li a.active {
-  font-family: "Brandon_med";
+  font-family: "Brandon_med", Arial;
 }
 
-/* -------------------------------- SOCIAL MEDIA -------------------------------- */
+/* import social links partial sass*/
+/*
+============================================================================
+SOCIAL MEDIA
+============================================================================
+*/
 .social-link-list {
   position: fixed;
   right: 0;
@@ -1224,6 +1332,7 @@ select {
   background-position: 0 -180px;
 }
 
+/* import media queries partial sass*/
 /*
 ============================================================================
 Media queries

@@ -33,24 +33,25 @@ body { font: $body-font-size $body-font-family; background-color: $body-backgrou
 
 a { font-family: $body-font-family; color: $selected-light-color; }
 br { content: ""; display: block; margin-bottom: 35px; }
-
-.button { display: block; background-color: $button-background-color; color: $button-text-color; text-transform: $button-font-transform; border: $button-border; font-size: $button-font-size; font-weight: $button-font-weight; text-align: $button-text-align; padding: 0 40px; height: 36px; cursor: pointer; }
-
-.left, .block-left, .col-left { float: left; }
-.right, .block-right, .col-left { float: right; }
-.center, .block-center, .col-center { float: none; text-align: center; margin: 0 auto; }
-
-img { width: 100%; }
-
 hr { border: 0; border-top: $hr-border-width $hr-border-style $hr-border-color; margin: 90px 0;
     &.top { border-color: $selected-light-color; width: 60%; margin-left: auto; margin-right: auto; margin-bottom: 60px; }
     &.hr-30 { margin: 30px 0;  }
 }
 
-h1 { font-family: $h1-font-family; font-size: $h1-font-size; font-weight: $h1-font-weight; color: $h1-font-color; text-transform: $h1-font-transform; display: inline; position: relative; line-height: 38px;
+.button { display: block; background-color: $button-background-color; color: $button-text-color; text-transform: $button-font-transform; border: $button-border; font-size: $button-font-size; font-weight: $button-font-weight; text-align: $button-text-align; padding: 0 40px; height: 36px; cursor: pointer; }
+
+.left, .block-left, .col-left			{ float: left; }
+.right, .block-right, .col-left			{ float: right; }
+.center, .block-center, .col-center		{ float: none; text-align: center; margin: 0 auto; }
+.clr									{ clear: both; }
+
+img { width: 100%; }
+
+/* HEADING */
+h1 { font-family: $h1-font-family; font-size: $h1-font-size; font-weight: $h1-font-weight; color: $h1-font-color; text-transform: $h1-font-transform; display: inline; position: relative; line-height: $h1-line-height;
     &:before { content: ""; border-bottom: 2px solid $selected-light-color; position: absolute; width: 100%; bottom: 2px; }
 }
-h2 { font-family: $h2-font-family; font-size: $h2-font-size; font-weight: $h2-font-weight; color: $h2-font-color; text-transform: $h2-font-transform; display: inline; position: relative;
+h2 { font-family: $h2-font-family; font-size: $h2-font-size; font-weight: $h2-font-weight; color: $h2-font-color; text-transform: $h2-font-transform; display: inline; position: relative; line-height: $h2-line-height;
     span { font-family: $body-font-family-medium; color: $selected-light-color; }
 }
 h3 { font-family: $h3-font-family; font-size: $h3-font-size; font-weight: $h3-font-weight; color: $h3-font-color; text-transform: $h3-font-transform; display: inline; position: relative; line-height: $h3-line-height; }
@@ -61,8 +62,8 @@ h3 { font-family: $h3-font-family; font-size: $h3-font-size; font-weight: $h3-fo
 }
 .p3 { font-size: $p3-font-size; color: $body-font-color; line-height: $p3-line-height; }
 
-.clr { clear: both; }
 
+/* ICONS */
 .icon-phone {
     &:before { content: ""; background-image: url("../images/icons/icon-phone.png"); }
 }
@@ -74,11 +75,12 @@ h3 { font-family: $h3-font-family; font-size: $h3-font-size; font-weight: $h3-fo
     &:before { background-repeat: no-repeat; background-position: center; width: 21px; height: 21px; display: inline-block; text-align: center; vertical-align: top; margin-top: 4px; margin-right: 6px; }
 }
 
+/* FORM */
 label { font-family: $body-font-family-medium; }
 
 select { text-align: center; text-align-last: center; }
 	
-
+.strong { font-family: $body-font-family-medium; }
 
 /* ------------------------------------------------------------------------------ */
 /* --------------------------------- FRAMEWORK ---------------------------------- */
@@ -182,7 +184,7 @@ select { text-align: center; text-align-last: center; }
                     nav { display: block; font-size: $body-font-size; 
                         ul {
                             li { display: inline-block; padding: 0 6px; 
-                                span, a { font-family: $body-font-family-regular; color: $accent-darker-color; }
+                                span, a { font-family: $body-font-family-regular; color: $body-font-color; }
                                 a { cursor: pointer;
                                     &.active, &:hover { color: $selected-light-color; }
                                 }
@@ -194,14 +196,14 @@ select { text-align: center; text-align-last: center; }
         }
 
         /* MAIN WRAPPER */
-        .main-wrapper { width: 100%; padding: 0px; margin: 0px; 
+        .main-wrapper { width: 100%; padding: 0px; margin: 0px; position: relative;
             /* SIDEBAR WRAPPER */
-            .sidebarbox-wrapper { width: $sidebar-box-width; float: left; padding: 60px 60px 0 60px;
+            .sidebarbox-wrapper { width: $sidebar-box-width; float: left; padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left;
                 aside { display: block;
                     ul {
-                        li { display: block; 
-                            a { font-family: $sidebar-box-font-family; font-size: $sidebar-box-font-size; color: $sidebar-box-font-color; text-transform: $sidebar-box-font-transform; cursor: pointer; text-decoration: none; position: relative; line-height: 0px;
-								&:after { content: ""; display: block; margin-bottom: 30px; }
+                        li { display: block; line-height: 20px;
+                            a { font-family: $sidebar-box-font-family; font-size: $sidebar-box-font-size; color: $sidebar-box-font-color; text-transform: $sidebar-box-font-transform; cursor: pointer; text-decoration: $link-text-decoration; position: relative;
+								&:after { content: ""; display: block; margin-bottom: $sidebar-link-margin-bottom; }
                                 &.active, &:hover { color: $sidebar-box-active-font-color; /*text-decoration: $sidebar-box-text-decoration;*/
                                     /* smooth decoration */
                                     &:before { content: ""; border-bottom: 1px solid $selected-light-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 2px; }
@@ -219,24 +221,23 @@ select { text-align: center; text-align-last: center; }
 				.product-control { 
 					/* IMAGE CONTROL */
 					.image-control { line-height: 0px; /* instead of img block display */
-						img { display: block; width: 100%; max-height: 990px; }
+						img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
 					}
 
-					/* SCROLLTO CCONTROL */
-					.scrollto-control { text-align: center; display: table; width: 100%; height: 180px; 
-						span { /*display: block;*/ font-family: $body-font-family-regular; text-transform: uppercase; color: $selected-light-color; font-size: 20px; display: table-cell; vertical-align: middle; 
-							&:after { content: ""; background-image: url("../images/icons/icon-circle-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: 100%; height: 38px; display: block; text-align: center; margin-top: 15px; }
+					/* SCROLLTO CONTROL */
+					.scrollto-control { height: $scrollto-height; display: table; width: 100%; text-align: center;
+						span { font-family: $body-font-family-regular; font-size: $scrollto-font-size; text-transform: $font-transform-uppercase; color: $selected-light-color; display: table-cell; vertical-align: middle; 
+							&:after { content: ""; background-image: url("../images/icons/icon-circle-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: $scrollto-icon-size; height: $scrollto-icon-size; display: block; text-align: center; margin-top: $scrollto-icon-margin-top; margin-left: auto; margin-right: auto; }
 						}
 					}
 				}
 
-
                 /* INNER WRAPPER */
                 .inner-wrapper { width: 100%; position: relative;
                     /* INNER CONTAINER */
-                    .inner-container { padding: 0 30px; display: table;
+                    .inner-container { padding: 0 30px; display: table; width: 100%;
 
-                        .heading-control { margin-bottom: 60px; }
+                        .heading-control { margin-bottom: 50px; }
 
                         section { 
 							
@@ -246,89 +247,199 @@ select { text-align: center; text-align-last: center; }
 								.booking-button { float: right; margin-top: 60px; }
 							}
 
-                            /* SECTION HERO */
+							/*------ PAGE: HOME ------*/
+                            /** SECTION HERO **/
                             &.section-hero { margin-bottom: 180px;
+								.heading-control {
+									&:nth-child(2) { margin-bottom: 30px; }
+								}
                                 .col-counter { column-count: 2; }
                             }
-
-                            /* SECTION AMENTITIES */
+                            /** SECTION AMENTITIES **/
                             &.section-amenities { margin-bottom: 180px;
                                 .col-counter { column-count: 3; }
                             }
-
-                            /* SECTION DEAL PROMOTIONS */
-                            /* SECTION INFO */
+                            /** SECTION DEAL PROMOTIONS **/
+                            /** SECTION INFO **/
                             &.section-deal-promotions { margin-bottom: 180px; }
                             &.section-deal-promotions,
                             &.section-info {
                                 .col-counter { display: table; width: 100%;
                                     /* 1 item */
-                                    > div:nth-child(1):nth-last-child(1) {
-	                                    width: 100%;
-                                        vertical-align: top;
-                                        position: relative;
-                                    }
+                                    > div:nth-child(1):nth-last-child(1) { width: 100%; vertical-align: top; position: relative; }
 
                                     /* 2 items */
                                     > div:nth-child(1):nth-last-child(2),
-                                    > div:nth-child(2):nth-last-child(1) {
-                                        float: left;
-                                        display: block;
-                                        margin-right: 3.57866%;
-                                        width: 48.21067%;
-                                        margin-bottom: 3.57866%;
-                                    }
+                                    > div:nth-child(2):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 48.21067%; }
                                     > div:nth-child(1):nth-last-child(2) {}
-                                    > div:nth-child(2):nth-last-child(1) {
-                                        margin-right: 0;
-                                    }
+                                    > div:nth-child(2):nth-last-child(1) { margin-right: 0; }
 
                                     /* 3 items */
                                     > div:nth-child(1):nth-last-child(3),
                                     > div:nth-child(2):nth-last-child(2),
-                                    > div:nth-child(3):nth-last-child(1) {
-                                        float: left;
-                                        display: block;
-                                        margin-right: 3.57866%;
-                                        width: 30.94756%;
-                                        margin-bottom: 3.57866%;
-                                    }
+                                    > div:nth-child(3):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 30.94756%; }
                                     > div:nth-child(1):nth-last-child(3) {}
                                     > div:nth-child(2):nth-last-child(2) {}
-                                    > div:nth-child(3):nth-last-child(1) {
-                                        margin-right: 0;
-                                    }
+                                    > div:nth-child(3):nth-last-child(1) { margin-right: 0; }
 
                                     /* 4 items */
                                     > div:nth-child(1):nth-last-child(4),
                                     > div:nth-child(2):nth-last-child(3),
                                     > div:nth-child(3):nth-last-child(2),
-                                    > div:nth-child(4):nth-last-child(1) {
-                                        float: left;
-                                        display: block;
-                                        margin-right: 3.57866%;
-                                        width: 22.316%;
-                                        margin-bottom: 3.57866%;
-                                    }
+                                    > div:nth-child(4):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 22.316%;  }
                                     > div:nth-child(1):nth-last-child(4) {}
                                     > div:nth-child(2):nth-last-child(3) {}
                                     > div:nth-child(3):nth-last-child(2) {}
-                                    > div:nth-child(4):nth-last-child(1) {
-                                        margin-right: 0;
-                                    }
+                                    > div:nth-child(4):nth-last-child(1) { margin-right: 0; }
                                 }
                             }
-
 							&.section-deal-promotions {
-								.image-control { line-height: 0px; margin-bottom: 60px;
+								.image-control { margin-bottom: 60px;
                                     img { height: 100%; object-fit: cover; display: block; }
 								}
 							}
+							&.section-deal-promotions,
+							&.section-info {
+								a { text-decoration: $link-text-decoration; position: relative;
+									&:before { content: ""; border-bottom: 1px solid $selected-light-color; position: absolute; width: 100%; bottom: 2px; }
+								}
+							}
 
+							/*------ PAGE: ROOMS ------*/
+							/** SECTION ROOMS **/
+							&.section-rooms { margin-top: 60px; }
+							/** SECTION SISTER HOTELS **/
+							&.section-sister-hotels { display: inline-block;
+								.title-info { display: block;
+									&:before { display: none; }
+									span { font-family: $body-font-family; }
+								}
+
+								h3 { font-family: $body-font-family-regular; font-size: $h2-font-size; font-weight: $h2-font-weight; color: $h2-font-color; text-transform: $font-transform-capitalize; display: inline; position: relative;
+									&:before { content: ""; border-bottom: 1px solid $selected-light-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 2px; }
+								}
+                    
+								a { text-decoration: $link-text-decoration; }
+
+								article { margin-top: 35px;
+									.heading-control { margin-bottom: 10px !important; }
+
+									.image-control { margin-bottom: 35px;
+										img { height: 100%; object-fit: cover;  display: block; }
+									}
+								}
+							}
+
+							/*------ PAGE: PACKAGES ------*/
+							/** SECTION PACKAGES **/
+							&.section-packages { display: inline-block;
+								article {
+									.items { display: -webkit-box; width: 100%; 
+										.image-control { width: 640px; height: 400px; display: table-cell;
+											img { height: 100%; object-fit: cover;  display: block; }
+										}
+
+										.side-control { vertical-align: top; display: table-cell; padding-left: 60px;
+											.heading-control { margin-bottom: 40px !important; }
+											.booking-button { float: right; margin-top: 60px; }
+										}                           
+									}
+								}
+							}
+
+							/*------ PAGE: SPECIALS ------*/
+							/** SECTION SPECIALS **/
+							&.section-specials {
+								.step-content { 
+									.step-number { font-family: $body-font-family-medium; font-size: $step-font-size; background-color: $step-number-background-color; color: $step-number-font-color; border-radius: $step-number-border-radius; display: inline-block; line-height: 46px; height: 46px; width: 46px; text-align: center; margin-bottom: 50px; }
+									.step-title { font-family: $body-font-family-medium; font-size: $step-font-size; color: $selected-dark-color; padding-left: 20px; }
+								}
+							}
+							/** SECTION BOOK NOW **/
+							.section-book-now { padding-left: 70px; font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; 
+								img { width: auto; vertical-align: bottom; }
+
+								.section-book-date { display: inline-block;
+									&:nth-child(2) { padding-left: 25px; }
+								}
+
+								input[type='text'] { font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; height: 36px; width: 180px; margin-right: 12px;
+									&::-webkit-input-placeholder { color: $form-font-color; text-transform: $form-text-transform; }
+								}
+
+								.section-guests,
+								.section-rooms { position: relative; display: inline-block; padding-left: 26px; color: $form-font-color; text-transform: $form-text-transform;
+									.select-wrapper { position: relative; display: inline-block; width: 36px; height: 36px; margin-left: 15px;
+										&:after { content: ""; background-image: url("../images/icons/icon-arrow-down.png"); background-repeat: no-repeat; background-position: right; width: 7px; height: 3px; display: inline-block; margin-top: -7px; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto;
+										}
+									}
+								}
+
+								select { font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; width: 36px; height: 36px; -webkit-appearance: none; -moz-appearance: none; }
+							}
+							/** SECTION SPECIAL OFFERS **/
+							.section-special-offers {
+								.special-offer-content { background-color: $accent-dark-color; padding: 30px 30px 30px 70px; display: table; width: 100%; margin-bottom: 30px;
+									&:last-child { margin-bottom: 0px; }
+									.col-item { display: table-cell;
+										&:last-child { vertical-align: bottom; text-align: right; }
+									}
+								}
+							}
+							
+							/*------ PAGE: THINGS TO DO ------*/
+							/** SECTION TODO **/
+							&.section-todo { margin-bottom: 0; display: block;
+								article {
+									.items { display: -webkit-box; width: 100%; 
+										.image-control { width: 640px; height: 430px; display: table-cell;
+											img { height: 100%; object-fit: cover; display: block; }
+										}
+
+										.side-control { vertical-align: top; display: table-cell; padding-left: 60px;
+											.heading-control { margin-bottom: 40px !important; }
+											.link-control { float: right; margin-top: 50px;
+												a { text-decoration: $link-text-decoration; }
+											}
+										}                           
+									}
+								}
+							}
+
+							/*------ PAGE: EAT & DRINK ------*/
+							/** SECTION EAT **/
+							&.section-eat { margin-top: 60px; }
+
+							/*------ PAGE: GALLERY ------*/
+							/** SECTION GALLERY LIST **/
+							&.section-gallery-list {
+								img { max-height: 310px; }
+								h3 { font-size: $body-font-size; color: $body-font-color; margin-bottom: 30px; margin-top: 15px; display: block; line-height: inherit; }
+							}
+					
+							/*------ PAGE: POOL DECK ------*/
+							/** SECTION POOL DECK **/
+							&.section-pool-deck { margin-bottom: 0; display: block; margin-top: 180px;
+								article {
+									.items { display: -webkit-box; width: 100%; 
+										.image-control { width: 640px; height: 430px; display: table-cell;
+											img { height: 100%; object-fit: cover; display: block; }
+										}
+
+										.side-control { vertical-align: top; display: table-cell; padding-left: 60px;
+											.heading-control { margin-bottom: 40px !important; }
+											a { text-decoration: $link-text-decoration; position: relative; }
+										}                           
+									}
+								}
+							}
+
+							/*------ PAGE: MEETING & EVENTS ------*/
+							/** SECTION MEETINGS & EVENTS **/
 							&.section-events { display: table; width: 100%;
 								.heading-control {
 									&.last { margin-bottom: 0px; }
-									h3 { font-size: 27px; margin-top: 50px; display: inline-block; }
+									a { font-size: 27px; margin-top: 50px; display: inline-block; text-decoration: $link-text-decoration; }
 								}
 
 								.image-control { line-height: 0px; margin-bottom: 5px;
@@ -337,10 +448,13 @@ select { text-align: center; text-align-last: center; }
 										img { width: auto; margin: 0 auto; }
 									}
 								}
-								p { margin-top: 180px; display: inline-block; }
-								a { text-decoration: $link-text-decoration; }
+								.event-info { margin-top: 180px; display: inline-block; width: 100%;
+									a { text-decoration: $link-text-decoration; }
+								}
 							}
 
+							/*------ PAGE: WEEDINGS & CELEBRATIONS ------*/
+							/** SECTION WEEDINGS **/
 							&.section-weedings { display: table; width: 100%;
 								.heading-control { margin-bottom: 50px;
 									&.last { margin-bottom: 40px; }
@@ -356,6 +470,18 @@ select { text-align: center; text-align-last: center; }
 								a { text-decoration: $link-text-decoration; }
 							}
 
+							/** GALLERY SLIDER CONTROL **/
+							.gallery-slider-control { position: relative;
+								.nav-dots {
+									.nav-dot { width: 6px; height: 6px; margin: 0 3px 0 0; position: relative; border-radius: $global-rounded-corners; display: inline-block; background-color: $selected-dark-color;
+										&:last-child { margin-right: 6px; }
+										&.active { background-color: $selected-light-color; }
+									}
+								}
+							}
+
+							/*------ PAGE: CONTACT ------*/
+							/** SECTION CONTACT **/
 							&.section-contact { display: table; width: 100%;
 								article {
 									.items { display: -webkit-box; width: 100%; 
@@ -387,173 +513,47 @@ select { text-align: center; text-align-last: center; }
                         }
                     }
                 }
-
-                /** SECTION SISTER HOTELS **/
-                .section-sister-hotels { display: inline-block;
-                    .title-info { display: block;
-                        &:before { display: none; }
-                        span { font-family: $body-font-family; }
-                    }
-
-                    h3 { font-family: $body-font-family-regular; font-size: $h2-font-size; font-weight: $h2-font-weight; color: $h2-font-color; text-transform: $font-transform-capitalize; display: inline; position: relative;
-                        &:before { content: ""; border-bottom: 1px solid $selected-light-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 2px; }
-                    }
-                    
-                    a { text-decoration: $link-text-decoration; }
-
-                    article { margin-top: 35px;
-                        .heading-control { margin-bottom: 10px !important; }
-
-                        .image-control { margin-bottom: 35px;
-                            img { height: 100%; object-fit: cover;  display: block; }
-                        }
-                    }
-                }
-
-                /** SECTION PACKAGES **/
-                .section-packages { display: inline-block;
-                    article {
-                        .items { display: -webkit-box; width: 100%; 
-                            .image-control { width: 640px; height: 400px; display: table-cell;
-                                img { height: 100%; object-fit: cover;  display: block; }
-                            }
-
-                            .side-control { vertical-align: top; display: table-cell; padding-left: 60px;
-                                .heading-control { margin-bottom: 40px !important; }
-                                .booking-button { float: right; margin-top: 60px; }
-                            }                           
-                        }
-                    }
-                }
-                
-                /** SECTION TODO **/
-                .section-todo { margin-bottom: 0; display: block; margin-top: 180px;
-                    article {
-                        .items { display: -webkit-box; width: 100%; 
-                            .image-control { width: 640px; height: 430px; display: table-cell; /*line-height: 0;*/
-                                img { height: 100%; object-fit: cover; display: block; }
-                            }
-
-                            .side-control { vertical-align: top; display: table-cell; padding-left: 60px;
-                                .heading-control { margin-bottom: 40px !important; }
-                                /*.booking-button { float: right; margin-top: 60px; }*/
-                                .link-control { float: right; margin-top: 50px;
-                                    a { text-decoration: $link-text-decoration; }
-                                }
-                            }                           
-                        }
-                    }
-                }
-
-				/** SECTION SPECIALS **/
-				.section-specials {
-					.step-content { 
-						.step-number { font-family: $body-font-family-medium; font-size: $step-font-size; background-color: $step-number-background-color; color: $step-number-font-color; border-radius: $step-number-border-radius; display: inline-block; line-height: 46px; height: 46px; width: 46px; text-align: center; margin-bottom: 50px; }
-						.step-title { font-family: $body-font-family-medium; font-size: $step-font-size; color: $selected-dark-color; padding-left: 20px; }
-						article { }
-					}
-				}
-				
-				/* SECTION BOOK NOW */
-				.section-book-now { padding-left: 70px; font-family: $body-font-family-medium; font-size: 16px; color: $form-font-color; 
-					img { width: auto; vertical-align: bottom; }
-
-					.section-book-date { display: inline-block;
-						&:nth-child(2) { padding-left: 25px; }
-					}
-
-					input[type='text'] { font-family: $body-font-family-medium; font-size: 16px; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; height: 36px; width: 180px; margin-right: 12px;
-						&::-webkit-input-placeholder { color: $form-font-color; text-transform: $form-text-transform; }
-					}
-
-					.section-guests,
-					.section-rooms { position: relative; display: inline-block; padding-left: 26px; color: $form-font-color; text-transform: $form-text-transform;
-						.select-wrapper { position: relative; display: inline-block; width: 36px; height: 36px; margin-left: 15px;
-							&:after { content: ""; background-image: url("../images/icons/icon-arrow-down.png"); background-repeat: no-repeat; background-position: right; width: 7px; height: 3px; display: inline-block; margin-top: -7px; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto;
-							}
-							
-						}
-					}
-
-					select { font-family: $body-font-family-medium; font-size: 16px; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; width: 36px; height: 36px; -webkit-appearance: none; -moz-appearance: none; }
-				}
-
-				/* SECTION SPECIAL OFFERS  */
-				.section-special-offers {
-					.special-offer-content { background-color: $accent-dark-color; padding: 30px 30px 30px 70px; display: table; width: 100%; margin-bottom: 30px;
-						&:last-child { margin-bottom: 0px; }
-						.col-item { display: table-cell;
-							&:last-child { vertical-align: bottom; text-align: right; }
-						}
-					}
-				}
-
-				/** SECTION GALLERY LIST **/
-				.section-gallery-list {
-					img { max-height: 310px; }
-				}
-					
-				/* GALLERY SLIDER CONTROL */
-				.gallery-slider-control { position: relative;
-					.nav-dots {
-						.nav-dot { width: 6px; height: 6px; margin: 0 3px 0 0; position: relative; border-radius: $global-rounded-corners; display: inline-block; background-color: $selected-dark-color;
-							&:last-child { margin-right: 6px; }
-							&.active { background-color: $selected-light-color; }
-						}
-					}
-				}
-
             }
         }
         
         /*------ FOOTER WRAPPER ------*/
-        .footer-wrapper { margin-top: 180px;
+        .footer-wrapper { margin-top: $footer-margin-top;
             footer { position: relative; border-top: $hr-border-width $hr-border-style $footer-border-color; border-bottom: $hr-border-width $hr-border-style $hr-border-color; background-color: $footer-background-color; padding-left: $sidebar-box-width;
-                .footer-container { padding: 60px 60px 60px 30px; font-size: 20px;
+                .footer-container { padding: 60px 60px 60px 30px; font-size: $footer-font-size;
                     
                     section { position: relative;
-                        /* SECTION INFO */
                         &.section-footer-nav { 
                             .col-counter { display: table; width: 100%;
                                 /* 1 item */
-                                > div:nth-child(1):nth-last-child(1) {
-	                                width: 100%;
-                                    vertical-align: top;
-                                }
+                                > div:nth-child(1):nth-last-child(1) { width: 100%; vertical-align: top; position: relative; }
 
                                 /* 2 items */
                                 > div:nth-child(1):nth-last-child(2),
-                                > div:nth-child(2):nth-last-child(1) {
-									float: left;
-                                    display: block;
-                                    margin-right: 3.57866%;
-                                    width: 48.21067%;
-                                    margin-bottom: 3.57866%;
-                                }
+                                > div:nth-child(2):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 48.21067%; }
                                 > div:nth-child(1):nth-last-child(2) {}
-                                > div:nth-child(2):nth-last-child(1) {
-                                    margin-right: 0;
-                                }
+                                > div:nth-child(2):nth-last-child(1) { margin-right: 0; }
 
                                 /* 3 items */
                                 > div:nth-child(1):nth-last-child(3),
                                 > div:nth-child(2):nth-last-child(2),
-                                > div:nth-child(3):nth-last-child(1) {
-	                                float: left;
-                                    display: block;
-                                    margin-right: 3.57866%;
-                                    width: 30.94756%;
-                                    margin-bottom: 3.57866%;
-                                }
+                                > div:nth-child(3):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 30.94756%; }
                                 > div:nth-child(1):nth-last-child(3) {}
                                 > div:nth-child(2):nth-last-child(2) {}
-                                > div:nth-child(3):nth-last-child(1) {
-                                    margin-right: 0;
-                                }
+                                > div:nth-child(3):nth-last-child(1) { margin-right: 0; }
+
+                                /* 4 items */
+                                > div:nth-child(1):nth-last-child(4),
+                                > div:nth-child(2):nth-last-child(3),
+                                > div:nth-child(3):nth-last-child(2),
+                                > div:nth-child(4):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 22.316%;  }
+                                > div:nth-child(1):nth-last-child(4) {}
+                                > div:nth-child(2):nth-last-child(3) {}
+                                > div:nth-child(3):nth-last-child(2) {}
+                                > div:nth-child(4):nth-last-child(1) { margin-right: 0; }
                             }
 
-                            .items { color: $accent-darker-color;
-                                h2 { font-family: $body-font-family-regular; font-size: 20px; color: $selected-light-color; }
+                            .items { color: $body-font-color;
+                                h2 { font-family: $body-font-family-regular; font-size: $footer-font-size; color: $selected-light-color; line-height: inherit; }
                             }
                         }
                     }
@@ -569,7 +569,7 @@ select { text-align: center; text-align-last: center; }
                     }
 
                     form {
-                        input[type="text"] { font-family: $body-font-family; font-size: 20px; border: $hr-border-width $hr-border-style $accent-lighter-color; color: $accent-darker-color; padding: 10px 25px; margin-top: 20px; width: 100%;
+                        input[type="text"] { font-family: $body-font-family; font-size: 20px; border: $hr-border-width $hr-border-style $accent-lighter-color; color: $body-font-color; padding: 10px 25px; margin-top: 20px; width: 100%;
                             &::-webkit-input-placeholder { color: $form-placeholder-color; text-transform: $form-text-transform; }
                         }
                         button { font-family: $body-font-family; font-size: 20px; background-color: $button-light-background-color; border: $button-light-outer-border; color: $button-light-text-color; text-transform: $button-light-font-transform; margin-top: 20px; cursor: pointer;
@@ -581,117 +581,18 @@ select { text-align: center; text-align-last: center; }
         }
 
         /*------ COPYRIGHT WRAPPER ------*/
-        .copyright-wrapper { position: relative; width: 100%; height: 180px; background-color: $accent-light-color; font-size: 20px; color: $accent-darker-color; display: table;
+        .copyright-wrapper { position: relative; width: 100%; height: 180px; background-color: $accent-light-color; font-size: 20px; color: $body-font-color; display: table;
             p { display: table-cell; vertical-align: middle; text-align: center; }
         }
 
     }
 }
 
+/* import pagination control partial sass*/
+@import "pagination";
 
-/* ---------------------------------- PAGINATION --------------------------------- */
-.pagination-control { position: relative; text-align: center; 
-    ul { position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; line-height: 180px;
-        li { display: inline-block;
-             a { margin: 0 10px; font-size: $p2-font-size; text-decoration: $link-text-decoration;
-                 &.active { font-family: $body-font-family-medium; }
-             }
-        }
-    }
-}
+/* import social links partial sass*/
+@import "social";
 
-
-/* -------------------------------- SOCIAL MEDIA -------------------------------- */
-.social-link-list { position: fixed; right: 0; top: 300px;
-	li { height: 45px; position: relative;
-		a { display: inline-block; width: 45px; height: 45px;
-			span {
-				&:before { content: ''; display: block; top: 0; left: 0; height: 45px; width: 45px; background: url(../images/icons/sprite-icon-social.png) no-repeat; cursor: pointer; }
-
-				&.icon-facebook {
-					&:before {
-						background-position: 0 0;
-					}
-				}
-				&.icon-twitter {
-					&:before {
-						background-position: 0 -45px;
-					}
-				}
-				&.icon-google-plus {
-					&:before {
-						background-position: 0 -90px;
-					}
-				}
-				&.icon-instagram {
-					&:before {
-						background-position: 0 -135px;
-					}
-				}
-				&.icon-pinterest {
-					&:before {
-						background-position: 0 -180px;
-					}
-				}
-			}
-		}	
-	}	
-}
-
-
-/*
-============================================================================
-Media queries
-============================================================================
-*/
-/* Smartphone Design  ----------- */
-@media screen and (min-width : 320px) and (max-device : 630px) {
-	.box-control { position: relative !important;
-		.box-item { width: 100%; }
-	}
-}
-
-/* Tablet Design  ----------- */
-@media screen and (min-width : 631px) and (max-width : 1040px) {
-	/* BOX CONTROL */
-	.box-control { position: relative !important;
-		.box-item { float: left; display: block; margin-right: 3.57866%; width: 48.21067%; 
-			&:nth-child(2n+1) {
-				clear: left;
-			}
-			&:nth-child(2n) {
-				margin-right: 0;
-			}
-		}
-	}
-}
-
-/* Desktop S  ----------- */
-@media screen and (min-width : 1040px) and (max-width : 1710px) {
-	/* BOX CONTROL */
-	.box-control { position: relative !important;
-		.box-item { float: left; display: block; margin-right: 3.57866%; width: 30.94756%; 
-			&:nth-child(3n+1) {
-				clear: left;
-			}
-			&:nth-child(3n) {
-				margin-right: 0;
-			}
-		}
-	}
-}
-
-/* Desktop L  ----------- */
-@media screen and (min-width : 1710px) {
-	/* BOX CONTROL */
-	.box-control { position: relative !important;
-		.box-item { float: left; display: block; margin-right: 3.57866%; width: 22.316%; 
-			&:nth-child(4n+1) {
-				clear: left;
-			}
-			&:nth-child(4n) {
-				margin-right: 0;
-			}
-		}
-	}
-}
+/* import media queries partial sass*/
+@import "media";
