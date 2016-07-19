@@ -28,7 +28,7 @@ $imgPath: "../images/";
 /* ------------------------------------ CUSTOM ---------------------------------- */
 * { outline: none !important; box-sizing: border-box; }
 
-html, body { height:100%; }
+html, body { height:100%; overflow: inherit; }
 body { font: $body-font-size $body-font-family; background-color: $body-background-color; }
 
 a { font-family: $body-font-family; color: $selected-light-color; }
@@ -187,12 +187,17 @@ select { text-align: center; text-align-last: center; }
                         ul {
                             li { display: inline-block; padding: 0 6px; 
                                 span, a { font-family: $body-font-family-regular; color: $body-font-color; }
-                                a { cursor: pointer;
-                                    &.active, &:hover { color: $selected-light-color; }
+                                a { cursor: pointer; }
+                                &.active, &:hover { color: $selected-light-color;
+                                    a { color: $selected-light-color; }
+                                    
                                 }
+
                             }
                         }
                     }
+                    
+                    .language-wrapper { display: none; }
                 }
             }
         }
