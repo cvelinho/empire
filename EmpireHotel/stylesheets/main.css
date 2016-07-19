@@ -487,8 +487,9 @@ select {
   display: block;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li {
-  display: block;
+  display: inline;
   line-height: 20px;
+  position: relative;
 }
 .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a {
   font-family: "Brandon_reg", Arial;
@@ -499,24 +500,25 @@ select {
   text-decoration: none;
   position: relative;
 }
-.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a:after {
+.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:after {
   content: "";
   display: block;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
-.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a.active, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a:hover {
+.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.active, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover {
   color: #cd700b;
-  /*text-decoration: $sidebar-box-text-decoration;*/
-  /* smooth decoration */
 }
-.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a.active:before, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li a:hover:before {
+.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.active a, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover a {
+  color: #cd700b;
+}
+.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.active:before, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover:before {
   content: "";
   border-bottom: 1px solid #cd700b;
   display: inline-block;
   vertical-align: middle;
   position: absolute;
   width: 100%;
-  bottom: 2px;
+  bottom: 0px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper {
   float: right;
@@ -1207,18 +1209,6 @@ select {
   margin-bottom: 35px;
   display: block;
   font-family: "Brandon_med", Arial;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq .col-item {
-  margin-bottom: 35px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq .heading-control {
-  margin-bottom: 50px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq .heading-control.last {
-  margin-bottom: 40px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq p {
-  margin-top: 30px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq a {
   text-decoration: none;
