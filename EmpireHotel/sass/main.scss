@@ -155,7 +155,7 @@ select { text-align: center; text-align-last: center; }
         /*------ HEADER WRAPPER ------*/
         .header-wrapper { position: relative; height: 208px; border-bottom: $hr-border-width $hr-border-style $hr-border-color; -webkit-transition: all 0.4s ease-in;
             transition: all 0.4s ease;
-            &.sticky { position: fixed; height: 208px; width: 100%;  background-color: $framework-full-background; z-index: 1; }
+            &.sticky { position: fixed; height: 208px; width: 100%; background-color: $framework-full-background; z-index: 1; }
             header { padding: 0 60px;
                 /* Logo */
                 .header-logo { width: 100px; height: 148px;

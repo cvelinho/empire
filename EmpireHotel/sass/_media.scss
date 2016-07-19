@@ -75,8 +75,8 @@ Media queries
                 header {
                     .header-language {
 
+                        /* NAVIGATION */
                         nav { display: none; }
-
                         .language-wrapper { position: relative; display: flex; width: 50px;
                             &:after { content: ""; background-repeat: no-repeat; background-position: right; width: 11px; height: 7px; display: inline-block; margin-top: 0px; position: absolute; right: 0; top: 8px; margin-left: auto; margin-right: auto;
 
@@ -91,7 +91,6 @@ Media queries
                                 mask-size: 11px 7px;
                             }
                         }
-						
                         .language-dropdown { font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; width: 50px; z-index: 1; }
                     }
                 }
@@ -124,13 +123,23 @@ Media queries
 
 
     .main-framework { 
-
         .framework-wrapper {
 
-            .header-wrapper {
+            .header-wrapper { height: 150px;
                 header {
-                    .header-language {
+                    .header-logo { width: 79px; height: 84px; display: inline-block;
+                        img { width: 100%; height: auto; margin-top: 30px; }
+                    }  
+                    .header-contact { display: inline-block; padding-left: 30px; }
 
+                    .block-right { position: absolute; right: 60px; top: 0; }
+
+
+                    .header-search-form { height: 90px; text-align: right;
+                        button { margin-top: 53px; }
+                    }
+
+                    .header-language {
                         nav { display: none; }
                         .language-wrapper { position: relative; display: flex; width: 50px;
                             &:after { content: ""; background-repeat: no-repeat; background-position: right; width: 11px; height: 7px; display: inline-block; margin-top: 0px; position: absolute; right: 0; top: 8px; margin-left: auto; margin-right: auto;
@@ -146,17 +155,13 @@ Media queries
                                 mask-size: 11px 7px;
                             }
                         }
-						
                         .language-dropdown { font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; width: 50px; z-index: 1; }
-
                     }
                 }
             }
 
-            
         }
     }
-
 
 }
 
