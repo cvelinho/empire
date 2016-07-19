@@ -92,32 +92,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* import fonts partial sass*/
 @font-face {
   font-family: "Brandon_light";
-  src: url('../fonts/Brandon_light.eot?1467537446');
-  src: url('../fonts/Brandon_light.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467537446') format('woff'), url('../fonts/Brandon_light.ttf?1467537446') format('truetype');
+  src: url('../fonts/Brandon_light.eot?1467747082');
+  src: url('../fonts/Brandon_light.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467747082') format('woff'), url('../fonts/Brandon_light.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_light", font-files("Brandon_light.woff", woff, "Brandon_light.ttf", truetype), "Brandon_light.eot", "Brandon_light.svg#Brandon_light", svg);*/
 @font-face {
   font-family: "Brandon_reg";
-  src: url('../fonts/Brandon_reg.eot?1467186378');
-  src: url('../fonts/Brandon_reg.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467186378') format('woff'), url('../fonts/Brandon_reg.ttf?1467186378') format('truetype');
+  src: url('../fonts/Brandon_reg.eot?1467747083');
+  src: url('../fonts/Brandon_reg.eot?&1467747083#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467747083') format('woff'), url('../fonts/Brandon_reg.ttf?1467747083') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_reg", font-files("Brandon_reg.woff", woff, "Brandon_reg.ttf", truetype), "Brandon_reg.eot", "Brandon_reg.svg#Brandon_reg", svg);*/
 @font-face {
   font-family: "Brandon_med";
-  src: url('../fonts/Brandon_med.eot?1467537446');
-  src: url('../fonts/Brandon_med.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467537446') format('woff'), url('../fonts/Brandon_med.ttf?1467537446') format('truetype');
+  src: url('../fonts/Brandon_med.eot?1467747082');
+  src: url('../fonts/Brandon_med.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467747082') format('woff'), url('../fonts/Brandon_med.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_med", font-files("Brandon_med.woff", woff, "Brandon_med.ttf", truetype), "Brandon_med.eot", "Brandon_med.svg#Brandon_med", svg);*/
 @font-face {
   font-family: "Brandon_bld";
-  src: url('../fonts/Brandon_bld.eot?1467186378');
-  src: url('../fonts/Brandon_bld.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467186378') format('woff'), url('../fonts/Brandon_bld.ttf?1467186378') format('truetype');
+  src: url('../fonts/Brandon_bld.eot?1467747082');
+  src: url('../fonts/Brandon_bld.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467747082') format('woff'), url('../fonts/Brandon_bld.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -374,12 +374,10 @@ select {
   margin-left: 0px;
   margin-right: 0px;
   height: 100%;
-  display: table;
   width: 100%;
   /*------ HEADER WRAPPER ------*/
   /* MAIN WRAPPER */
   /*------ FOOTER WRAPPER ------*/
-  /*------ COPYRIGHT WRAPPER ------*/
 }
 .main-framework .framework-wrapper .header-wrapper {
   position: relative;
@@ -482,6 +480,12 @@ select {
   padding: 0px;
   margin: 0px;
   position: relative;
+  width: 100%;
+  background-color: #f7f7f7;
+  display: inline-block;
+  margin-bottom: 615px;
+  padding-bottom: 180px;
+  border-bottom: 1px solid #e4e5e5;
   /* SIDEBAR WRAPPER */
   /* MAIN CONTENT WRAPPER */
 }
@@ -512,13 +516,13 @@ select {
   display: block;
   padding-bottom: 30px;
 }
-.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.active, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover {
+.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.current-menu-item, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover {
   color: #cd700b;
 }
-.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.active a, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover a {
+.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.current-menu-item a, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover a {
   color: #cd700b;
 }
-.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.active:before, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover:before {
+.main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li.current-menu-item:before, .main-framework .framework-wrapper .main-wrapper .sidebarbox-wrapper aside ul li:hover:before {
   content: "";
   border-bottom: 1px solid #cd700b;
   display: inline-block;
@@ -1221,11 +1225,15 @@ select {
   text-decoration: none;
 }
 .main-framework .framework-wrapper .footer-wrapper {
-  margin-top: 180px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -9999;
+  /*------ COPYRIGHT CONTAINER ------*/
 }
 .main-framework .framework-wrapper .footer-wrapper footer {
   position: relative;
-  border-top: 1px solid #e4e5e5;
   border-bottom: 1px solid #dedede;
   background-color: #fff;
   padding-left: 405px;
@@ -1350,7 +1358,7 @@ select {
   margin-top: 7px;
   padding-left: 10px;
 }
-.main-framework .framework-wrapper .copyright-wrapper {
+.main-framework .framework-wrapper .footer-wrapper .copyright-container {
   position: relative;
   width: 100%;
   height: 180px;
@@ -1359,7 +1367,7 @@ select {
   color: #7a7c7b;
   display: table;
 }
-.main-framework .framework-wrapper .copyright-wrapper p {
+.main-framework .framework-wrapper .footer-wrapper .copyright-container p {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
