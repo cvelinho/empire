@@ -81,6 +81,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* --------------------------------- SIDEBAR BOX -------------------------------- */
 /* ------------------------------------ OTHER ----------------------------------- */
 /* ---------------------------------- SCROLLTO ---------------------------------- */
+/* ------------------------------------- FAQ ------------------------------------ */
 /* -------------------------------- DEVICE SIZES -------------------------------- */
 /*large*/
 /*small*/
@@ -91,32 +92,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* import fonts partial sass*/
 @font-face {
   font-family: "Brandon_light";
-  src: url('../fonts/Brandon_light.eot?1467747082');
-  src: url('../fonts/Brandon_light.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467747082') format('woff'), url('../fonts/Brandon_light.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_light.eot?1467537446');
+  src: url('../fonts/Brandon_light.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467537446') format('woff'), url('../fonts/Brandon_light.ttf?1467537446') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_light", font-files("Brandon_light.woff", woff, "Brandon_light.ttf", truetype), "Brandon_light.eot", "Brandon_light.svg#Brandon_light", svg);*/
 @font-face {
   font-family: "Brandon_reg";
-  src: url('../fonts/Brandon_reg.eot?1467747083');
-  src: url('../fonts/Brandon_reg.eot?&1467747083#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467747083') format('woff'), url('../fonts/Brandon_reg.ttf?1467747083') format('truetype');
+  src: url('../fonts/Brandon_reg.eot?1467186378');
+  src: url('../fonts/Brandon_reg.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467186378') format('woff'), url('../fonts/Brandon_reg.ttf?1467186378') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_reg", font-files("Brandon_reg.woff", woff, "Brandon_reg.ttf", truetype), "Brandon_reg.eot", "Brandon_reg.svg#Brandon_reg", svg);*/
 @font-face {
   font-family: "Brandon_med";
-  src: url('../fonts/Brandon_med.eot?1467747082');
-  src: url('../fonts/Brandon_med.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467747082') format('woff'), url('../fonts/Brandon_med.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_med.eot?1467537446');
+  src: url('../fonts/Brandon_med.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467537446') format('woff'), url('../fonts/Brandon_med.ttf?1467537446') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_med", font-files("Brandon_med.woff", woff, "Brandon_med.ttf", truetype), "Brandon_med.eot", "Brandon_med.svg#Brandon_med", svg);*/
 @font-face {
   font-family: "Brandon_bld";
-  src: url('../fonts/Brandon_bld.eot?1467747082');
-  src: url('../fonts/Brandon_bld.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467747082') format('woff'), url('../fonts/Brandon_bld.ttf?1467747082') format('truetype');
+  src: url('../fonts/Brandon_bld.eot?1467186378');
+  src: url('../fonts/Brandon_bld.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467186378') format('woff'), url('../fonts/Brandon_bld.ttf?1467186378') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -383,6 +384,15 @@ select {
   position: relative;
   height: 208px;
   border-bottom: 1px solid #dedede;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease;
+}
+.main-framework .framework-wrapper .header-wrapper.sticky {
+  position: fixed;
+  height: 208px;
+  width: 100%;
+  background-color: #f7f7f7;
+  z-index: 1;
 }
 .main-framework .framework-wrapper .header-wrapper header {
   padding: 0 60px;
@@ -514,6 +524,8 @@ select {
   padding: 60px 60px 0 0;
   margin: 0px;
   /* PRODUCT CONTROL */
+  /* ROOM CONTROL */
+  /* EAT-DRINK CONTROL */
   /* INNER WRAPPER */
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control {
@@ -536,26 +548,46 @@ select {
   width: 100%;
   text-align: center;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control span {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control .scrollto-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control .scrollto-content .scrollto-text {
   font-family: "Brandon_reg", Arial;
   font-size: 20px;
   text-transform: uppercase;
   color: #cd700b;
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control span:after {
-  content: "";
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .product-control .scrollto-control .scrollto-content .scrollto-icon {
   background-image: url("../images/icons/icon-circle-arrow-down.png");
   background-repeat: no-repeat;
   background-position: center;
   width: 38px;
   height: 38px;
-  display: block;
-  text-align: center;
   margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .room-control {
+  border: 0;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 90px;
+  padding-bottom: 90px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .room-control:nth-last-child(2) {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .eat-drink-control {
+  border: 0;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 90px;
+  padding-bottom: 90px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .eat-drink-control:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper {
   width: 100%;
@@ -600,6 +632,8 @@ select {
   /** GALLERY SLIDER CONTROL **/
   /*------ PAGE: CONTACT ------*/
   /** SECTION CONTACT **/
+  /*------ PAGE: FAQ ------*/
+  /** SECTION FAQ **/
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-default .col-counter {
   column-count: 2;
@@ -703,6 +737,16 @@ select {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels {
   display: inline-block;
 }
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels:before {
+  content: "";
+  display: block;
+  border-top: 1px solid #cd700b;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  margin-top: 90px;
+}
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels .title-info {
   display: block;
 }
@@ -749,6 +793,17 @@ select {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages {
   display: inline-block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article {
+  border: 0;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 90px;
+  padding-bottom: 90px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items {
   display: -webkit-box;
@@ -888,6 +943,17 @@ select {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo {
   margin-bottom: 0;
   display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article {
+  border: 0;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 90px;
+  padding-bottom: 90px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items {
   display: -webkit-box;
@@ -1034,21 +1100,12 @@ select {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .gallery-slider-control {
   position: relative;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .gallery-slider-control .nav-dots .nav-dot {
-  width: 6px;
-  height: 6px;
-  margin: 0 3px 0 0;
-  position: relative;
-  border-radius: 0px;
-  display: inline-block;
-  background-color: #402107;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .gallery-slider-control .nav-dots .nav-dot:last-child {
-  margin-right: 6px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section .gallery-slider-control .nav-dots .nav-dot.active {
-  background-color: #cd700b;
+  /*.nav-dots {
+  	.nav-dot { width: 6px; height: 6px; margin: 0 3px 0 0; position: relative; border-radius: $global-rounded-corners; display: inline-block; background-color: $selected-dark-color;
+  		&:last-child { margin-right: 6px; }
+  		&.active { background-color: $selected-light-color; }
+  	}
+  }*/
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-contact {
   display: table;
@@ -1108,6 +1165,62 @@ select {
   margin-top: 30px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-contact a {
+  text-decoration: none;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq {
+  display: table;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq article .items {
+  display: -webkit-box;
+  width: 100%;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq article .items .side-control {
+  max-width: 840px;
+  vertical-align: top;
+  display: table-cell;
+  padding-right: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq article .items .side-control .heading-control {
+  margin-bottom: 40px !important;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq article .items .side-control .booking-button {
+  float: right;
+  margin-top: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq article .items .side-control .faq-item {
+  margin-bottom: 35px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq article .items .side-control .faq-item .question {
+  font-size: 27px;
+  margin-bottom: 35px;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq article .items .side-control .faq-item .answer {
+  font-size: 20px;
+  color: #7a7c7b;
+  margin-bottom: 35px;
+  display: block;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq article .items .side-control .faq-item .answer .additional-info {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  display: block;
+  font-family: "Brandon_med", Arial;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq .col-item {
+  margin-bottom: 35px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq .heading-control {
+  margin-bottom: 50px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq .heading-control.last {
+  margin-bottom: 40px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq p {
+  margin-top: 30px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-faq a {
   text-decoration: none;
 }
 .main-framework .framework-wrapper .footer-wrapper {
@@ -1253,6 +1366,60 @@ select {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+/* import slick slider control partial sass*/
+/* --------------------------------- SLICK SLIDER ------------------------------- */
+.slick-slider .slick-dots {
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+.slick-slider .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 3px 0 0;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0px;
+}
+.slick-slider .slick-dots li:last-child {
+  margin-right: 6px;
+}
+.slick-slider .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  padding: 0px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  width: 6px;
+  height: 6px;
+  position: relative;
+  border-radius: 0px;
+  display: inline-block;
+  background-color: #402107;
+}
+.slick-slider .slick-dots li button:hover, .slick-slider .slick-dots li button:focus {
+  outline: none;
+}
+.slick-slider .slick-dots li button:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin: 0 3px 0 0;
+  position: relative;
+  border-radius: 0px;
+  display: inline-block;
+  background-color: #402107;
+}
+.slick-slider .slick-dots li.slick-active button:before {
+  background-color: #cd700b;
 }
 
 /* import pagination control partial sass*/

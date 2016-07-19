@@ -153,7 +153,9 @@ select { text-align: center; text-align-last: center; }
     .framework-wrapper { background-color: $framework-full-background; margin-left: $framework-margin-left; margin-right: $framework-margin-right; height: 100%; display: table; width: 100%;
 
         /*------ HEADER WRAPPER ------*/
-        .header-wrapper { position: relative; height: 208px; border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+        .header-wrapper { position: relative; height: 208px; border-bottom: $hr-border-width $hr-border-style $hr-border-color; -webkit-transition: all 0.4s ease-in;
+            transition: all 0.4s ease;
+            &.sticky { position: fixed; height: 208px; width: 100%;  background-color: $framework-full-background; z-index: 1; }
             header { padding: 0 60px;
                 /* Logo */
                 .header-logo { width: 100px; height: 148px;
@@ -226,14 +228,26 @@ select { text-align: center; text-align-last: center; }
 
 					/* SCROLLTO CONTROL */
 					.scrollto-control { height: $scrollto-height; display: table; width: 100%; text-align: center;
-						span { font-family: $body-font-family-regular; font-size: $scrollto-font-size; text-transform: $font-transform-uppercase; color: $selected-light-color; display: table-cell; vertical-align: middle; 
-							&:after { content: ""; background-image: url("../images/icons/icon-circle-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: $scrollto-icon-size; height: $scrollto-icon-size; display: block; text-align: center; margin-top: $scrollto-icon-margin-top; margin-left: auto; margin-right: auto; }
-						}
+                        .scrollto-content { display: table-cell; vertical-align: middle;
+                            .scrollto-text { font-family: $body-font-family-regular; font-size: $scrollto-font-size; text-transform: $font-transform-uppercase; color: $selected-light-color; display: block; }
+                            .scrollto-icon { background-image: url("../images/icons/icon-circle-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: $scrollto-icon-size; height: $scrollto-icon-size; margin-top: $scrollto-icon-margin-top; }
+                        }
 					}
 				}
 
+                /* ROOM CONTROL */
+                .room-control { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+                    &:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+                }
+               
+                /* EAT-DRINK CONTROL */
+                .eat-drink-control { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+                    &:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+                }
+
                 /* INNER WRAPPER */
                 .inner-wrapper { width: 100%; position: relative;
+
                     /* INNER CONTAINER */
                     .inner-container { padding: 0 30px; display: table; width: 100%;
 
@@ -310,6 +324,7 @@ select { text-align: center; text-align-last: center; }
 							&.section-rooms { margin-top: 60px; }
 							/** SECTION SISTER HOTELS **/
 							&.section-sister-hotels { display: inline-block;
+                                &:before { content: ""; display: block; border-top: $hr-border-width $hr-border-style $selected-light-color; width: 60%; margin-left: auto; margin-right: auto; margin-bottom: 60px; margin-top: 90px; }
 								.title-info { display: block;
 									&:before { display: none; }
 									span { font-family: $body-font-family; }
@@ -333,7 +348,8 @@ select { text-align: center; text-align-last: center; }
 							/*------ PAGE: PACKAGES ------*/
 							/** SECTION PACKAGES **/
 							&.section-packages { display: inline-block;
-								article {
+								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+                                    &:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 									.items { display: -webkit-box; width: 100%; 
 										.image-control { width: 640px; height: 400px; display: table-cell;
 											img { height: 100%; object-fit: cover;  display: block; }
@@ -390,7 +406,8 @@ select { text-align: center; text-align-last: center; }
 							/*------ PAGE: THINGS TO DO ------*/
 							/** SECTION TODO **/
 							&.section-todo { margin-bottom: 0; display: block;
-								article {
+								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+                                    &:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 									.items { display: -webkit-box; width: 100%; 
 										.image-control { width: 640px; height: 430px; display: table-cell;
 											img { height: 100%; object-fit: cover; display: block; }
@@ -471,13 +488,13 @@ select { text-align: center; text-align-last: center; }
 							}
 
 							/** GALLERY SLIDER CONTROL **/
-							.gallery-slider-control { position: relative;
-								.nav-dots {
+							.gallery-slider-control { position: relative; 
+								/*.nav-dots {
 									.nav-dot { width: 6px; height: 6px; margin: 0 3px 0 0; position: relative; border-radius: $global-rounded-corners; display: inline-block; background-color: $selected-dark-color;
 										&:last-child { margin-right: 6px; }
 										&.active { background-color: $selected-light-color; }
 									}
-								}
+								}*/
 							}
 
 							/*------ PAGE: CONTACT ------*/
@@ -507,6 +524,35 @@ select { text-align: center; text-align-last: center; }
 										img { width: auto; margin: 0 auto; }
 									}
 								}
+								p { margin-top: 30px; }
+								a { text-decoration: $link-text-decoration; }
+							}
+
+                            /*------ PAGE: FAQ ------*/
+							/** SECTION FAQ **/
+							&.section-faq { display: table; width: 100%;
+								article {
+									.items { display: -webkit-box; width: 100%; 
+									
+										.side-control { max-width: 840px; vertical-align: top; display: table-cell; padding-right: 60px;
+											.heading-control { margin-bottom: 40px !important; }
+											.booking-button { float: right; margin-top: 60px; }
+
+                                            .faq-item {  margin-bottom: $faq-margin-bottom;
+                                                .question { font-size: $faq-question-font-size; margin-bottom: $faq-margin-bottom; display: block; }
+                                                .answer { font-size: $faq-answer-font-size; color: $body-font-color; margin-bottom: $faq-margin-bottom; display: block;
+                                                    .additional-info { margin-top:$faq-margin-bottom; margin-bottom: $faq-margin-bottom; display: block; font-family: $body-font-family-medium; }
+                                                }
+                                            }
+										}                           
+									}
+								}
+
+								.col-item { margin-bottom: 35px; }
+								.heading-control { margin-bottom: 50px;
+									&.last { margin-bottom: 40px; }
+								}
+
 								p { margin-top: 30px; }
 								a { text-decoration: $link-text-decoration; }
 							}
@@ -587,6 +633,9 @@ select { text-align: center; text-align-last: center; }
 
     }
 }
+
+/* import slick slider control partial sass*/
+@import "slick-slider";
 
 /* import pagination control partial sass*/
 @import "pagination";
