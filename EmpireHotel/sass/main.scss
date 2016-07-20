@@ -29,7 +29,7 @@ $imgPath: "../images/";
 /* ------------------------------------ CUSTOM ---------------------------------- */
 * { outline: none !important; box-sizing: border-box; }
 
-html, body { height:100%; overflow: inherit; }
+html, body { height:100%; /*overflow: inherit;*/ }
 body { font: $body-font-size $body-font-family; background-color: $body-background-color; }
 
 a { font-family: $body-font-family; color: $selected-light-color; }
@@ -204,7 +204,7 @@ select { text-align: center; text-align-last: center; }
         }
 
         /* MAIN WRAPPER */
-        .main-wrapper { width: 100%; padding: 0px; margin: 0px; position: relative; width: 100%; background-color: $framework-full-background; display: inline-block; margin-bottom: 615px; padding-bottom: 180px; border-bottom: $hr-border-width $hr-border-style $accent-lighter-color; 
+        .main-wrapper { width: 100%; padding: 0px; margin: 0px; position: relative; width: 100%; background-color: $framework-full-background; display: inline-block; margin-bottom: 615px; padding-bottom: 180px; border-bottom: $hr-border-width $hr-border-style $accent-lighter-color; display: -webkit-box;
             /* SIDEBAR WRAPPER */
             .sidebarbox-wrapper { width: $sidebar-box-width; float: left; padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left;
                 aside { display: block;
