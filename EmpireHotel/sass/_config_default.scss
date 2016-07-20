@@ -4,6 +4,10 @@ $framework-full-background:			    #f7f7f7;
 $framework-margin-right:                0px;
 $framework-margin-left:                 0px;
 
+$main-wrapper-margin-botttom:			615px;
+$main-wrapper-padding-bottom:			180px;
+$main-content-wrapper-padding:			60px;
+
 $hr-border-width:                       1px;
 $hr-border-style:                       solid;
 $hr-border-color:                       #dedede;
@@ -59,10 +63,6 @@ $p2-line-height:                        27px;
 $p3-font-size:                          16px;
 $p3-line-height:                        30px;
 
-$description-font-size:					$body-font-size;
-$description-font-family:				$body-font-family-regular;
-$description-font-color:                $body-font-color;
-
 /* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
 $font-transform-capitalize:             capitalize;
 $font-transform-uppercase:				uppercase;
@@ -82,6 +82,25 @@ $accent-darker-color:					#7a7c7b;
 $selected-light-color:					#cd700b;
 $selected-dark-color:					#402107;
 
+/* ------------------------------------ HEADER ---------------------------------- */
+$header-large-height:					208px;
+$header-large-padding:					60px;
+
+$header-logo-height:					148px;
+$header-text-line-height:				30px;
+$header-search-form-height:				148px;
+$header-search-form-button-margin-top:	84px;
+
+$description-font-size:					$body-font-size;
+$description-font-family:				$body-font-family-regular;
+$description-font-color:                $body-font-color;
+
+/* ------------------------------------ FOOTER ---------------------------------- */
+$footer-font-size:						20px;
+$footer-background-color:               #fff;
+$footer-border-color:                   #e4e5e5;
+$footer-margin-top:						180px;
+
 /* ------------------------------- APP NAVIGATION ------------------------------- */
 $nav-background:                        transparent;
 
@@ -91,12 +110,6 @@ $nav-font-transform:                    uppercase;
 $nav-font-color:                        #7a7c7b;
 $nav-text-decoration:                   underline;
 $nav-active-font-color:                 #cd700b;
-
-/* ------------------------------------ FOOTER ---------------------------------- */
-$footer-font-size:						20px;
-$footer-background-color:               #fff;
-$footer-border-color:                   #e4e5e5;
-$footer-margin-top:						180px;
 
 /* ---------------------------- GLOBAL ROUNDED CORNERS --------------------------- */
 $global-rounded-corners:			    0px;

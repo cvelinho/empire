@@ -72,8 +72,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* ------------------------------ FONTS / HEADLINE ------------------------------ */
 /* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
 /* -------------------------------- OTHER COLORS -------------------------------- */
-/* ------------------------------- APP NAVIGATION ------------------------------- */
+/* ------------------------------------ HEADER ---------------------------------- */
 /* ------------------------------------ FOOTER ---------------------------------- */
+/* ------------------------------- APP NAVIGATION ------------------------------- */
 /* ---------------------------- GLOBAL ROUNDED CORNERS --------------------------- */
 /* --------------------------------- BASE BUTTON -------------------------------- */
 /* --------------------------------- LIGHT BUTTON ------------------------------- */
@@ -92,32 +93,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* import fonts partial sass*/
 @font-face {
   font-family: "Brandon_light";
-  src: url('../fonts/Brandon_light.eot?1467537446');
-  src: url('../fonts/Brandon_light.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467537446') format('woff'), url('../fonts/Brandon_light.ttf?1467537446') format('truetype');
+  src: url('../fonts/Brandon_light.eot?1467747082');
+  src: url('../fonts/Brandon_light.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467747082') format('woff'), url('../fonts/Brandon_light.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_light", font-files("Brandon_light.woff", woff, "Brandon_light.ttf", truetype), "Brandon_light.eot", "Brandon_light.svg#Brandon_light", svg);*/
 @font-face {
   font-family: "Brandon_reg";
-  src: url('../fonts/Brandon_reg.eot?1467186378');
-  src: url('../fonts/Brandon_reg.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467186378') format('woff'), url('../fonts/Brandon_reg.ttf?1467186378') format('truetype');
+  src: url('../fonts/Brandon_reg.eot?1467747083');
+  src: url('../fonts/Brandon_reg.eot?&1467747083#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467747083') format('woff'), url('../fonts/Brandon_reg.ttf?1467747083') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_reg", font-files("Brandon_reg.woff", woff, "Brandon_reg.ttf", truetype), "Brandon_reg.eot", "Brandon_reg.svg#Brandon_reg", svg);*/
 @font-face {
   font-family: "Brandon_med";
-  src: url('../fonts/Brandon_med.eot?1467537446');
-  src: url('../fonts/Brandon_med.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467537446') format('woff'), url('../fonts/Brandon_med.ttf?1467537446') format('truetype');
+  src: url('../fonts/Brandon_med.eot?1467747082');
+  src: url('../fonts/Brandon_med.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467747082') format('woff'), url('../fonts/Brandon_med.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_med", font-files("Brandon_med.woff", woff, "Brandon_med.ttf", truetype), "Brandon_med.eot", "Brandon_med.svg#Brandon_med", svg);*/
 @font-face {
   font-family: "Brandon_bld";
-  src: url('../fonts/Brandon_bld.eot?1467186378');
-  src: url('../fonts/Brandon_bld.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467186378') format('woff'), url('../fonts/Brandon_bld.ttf?1467186378') format('truetype');
+  src: url('../fonts/Brandon_bld.eot?1467747082');
+  src: url('../fonts/Brandon_bld.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467747082') format('woff'), url('../fonts/Brandon_bld.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -131,7 +132,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 html, body {
   height: 100%;
-  /*overflow: inherit;*/
 }
 
 body {
@@ -381,20 +381,11 @@ select {
 }
 .main-framework .framework-wrapper .header-wrapper {
   position: relative;
-  height: 208px;
   border-bottom: 1px solid #dedede;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease;
-}
-.main-framework .framework-wrapper .header-wrapper.sticky {
-  position: fixed;
-  height: 208px;
-  width: 100%;
-  background-color: #f7f7f7;
-  z-index: 1;
 }
 .main-framework .framework-wrapper .header-wrapper header {
   padding: 0 60px;
+  height: 208px;
   /* Logo */
   /* Description-Contact */
   /* Search form */
@@ -403,11 +394,12 @@ select {
 .main-framework .framework-wrapper .header-wrapper header .header-logo {
   width: 100px;
   height: 148px;
+  display: table-cell;
+  vertical-align: bottom;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-logo img {
   width: 100%;
-  height: 105px;
-  margin-top: 33px;
+  height: auto;
 }
 .main-framework .framework-wrapper .header-wrapper header .header-contact {
   line-height: 30px;
@@ -480,13 +472,12 @@ select {
   padding: 0px;
   margin: 0px;
   position: relative;
+  display: table;
   width: 100%;
   background-color: #f7f7f7;
-  display: inline-block;
   margin-bottom: 615px;
   padding-bottom: 180px;
   border-bottom: 1px solid #e4e5e5;
-  display: -webkit-box;
   /* SIDEBAR WRAPPER */
   /* MAIN CONTENT WRAPPER */
 }
@@ -535,7 +526,10 @@ select {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper {
   float: right;
   width: calc(100% - 405px);
-  padding: 60px 60px 0 0;
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-left: 0px;
+  padding-bottom: 0px;
   margin: 0px;
   /* PRODUCT CONTROL */
   /* ROOM CONTROL */
@@ -1231,6 +1225,7 @@ select {
   left: 0;
   width: 100%;
   z-index: -9999;
+  height: 615px;
   /*------ COPYRIGHT CONTAINER ------*/
 }
 .main-framework .framework-wrapper .footer-wrapper footer {

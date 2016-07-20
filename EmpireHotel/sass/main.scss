@@ -29,7 +29,7 @@ $imgPath: "../images/";
 /* ------------------------------------ CUSTOM ---------------------------------- */
 * { outline: none !important; box-sizing: border-box; }
 
-html, body { height:100%; /*overflow: inherit;*/ }
+html, body { height:100%; }
 body { font: $body-font-size $body-font-family; background-color: $body-background-color; }
 
 a { font-family: $body-font-family; color: $selected-light-color; }
@@ -154,16 +154,14 @@ select { text-align: center; text-align-last: center; }
     .framework-wrapper { background-color: $framework-full-background; margin-left: $framework-margin-left; margin-right: $framework-margin-right; height: 100%; width: 100%;
 
         /*------ HEADER WRAPPER ------*/
-        .header-wrapper { position: relative; height: 208px; border-bottom: $hr-border-width $hr-border-style $hr-border-color; -webkit-transition: all 0.4s ease-in;
-            transition: all 0.4s ease;
-            &.sticky { position: fixed; height: 208px; width: 100%; background-color: $framework-full-background; z-index: 1; }
-            header { padding: 0 60px;
+        .header-wrapper { position: relative; border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+            header { padding: 0 $header-large-padding; height: $header-large-height;
                 /* Logo */
-                .header-logo { width: 100px; height: 148px;
-                    img { width: 100%; height: 105px; margin-top: 33px; }
+                .header-logo { width: 100px; height: $header-logo-height; display: table-cell; vertical-align: bottom;
+                    img { width: 100%; height: auto; }
                 }    
                 /* Description-Contact */
-                .header-contact { line-height: $p3-line-height;
+                .header-contact { line-height: $header-text-line-height;
                     span { font-family: $description-font-family; font-size: $description-font-size; color: $description-font-color;
                         &:first-child { padding-left: 0px;
                             &:before { padding-right: 0px; }
@@ -178,12 +176,12 @@ select { text-align: center; text-align-last: center; }
                 }
 
                 /* Search form */
-                .header-search-form { height: 148px; text-align: right;
-                    button { margin-top: 84px; }
+                .header-search-form { height: $header-search-form-height; text-align: right;
+                    button { margin-top: $header-search-form-button-margin-top; }
                 }
             
                 /* Language menu */
-                .header-language { line-height: $p3-line-height;
+                .header-language { line-height: $header-text-line-height;
                     nav { display: block; font-size: $body-font-size; 
                         ul {
                             li { display: inline-block; padding: 0 6px; 
@@ -191,9 +189,7 @@ select { text-align: center; text-align-last: center; }
                                 a { cursor: pointer; }
                                 &.active, &:hover { color: $selected-light-color;
                                     a { color: $selected-light-color; }
-                                    
                                 }
-
                             }
                         }
                     }
@@ -204,7 +200,7 @@ select { text-align: center; text-align-last: center; }
         }
 
         /* MAIN WRAPPER */
-        .main-wrapper { width: 100%; padding: 0px; margin: 0px; position: relative; width: 100%; background-color: $framework-full-background; display: inline-block; margin-bottom: 615px; padding-bottom: 180px; border-bottom: $hr-border-width $hr-border-style $accent-lighter-color; display: -webkit-box;
+        .main-wrapper { width: 100%; padding: 0px; margin: 0px; position: relative; display: table; width: 100%; background-color: $framework-full-background; margin-bottom: $main-wrapper-margin-botttom; padding-bottom: $main-wrapper-padding-bottom; border-bottom: $hr-border-width $hr-border-style $accent-lighter-color;
             /* SIDEBAR WRAPPER */
             .sidebarbox-wrapper { width: $sidebar-box-width; float: left; padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left;
                 aside { display: block;
@@ -222,7 +218,7 @@ select { text-align: center; text-align-last: center; }
             }
 
             /* MAIN CONTENT WRAPPER */
-            .main-content-wrapper { float: right; width: calc(100% - #{$sidebar-box-width}); padding: 60px 60px 0 0; margin: 0px;
+            .main-content-wrapper { float: right; width: calc(100% - #{$sidebar-box-width}); padding-top: $main-content-wrapper-padding; padding-right: $main-content-wrapper-padding; padding-left: 0px; padding-bottom: 0px;  margin: 0px;
 
 				/* PRODUCT CONTROL */
 				.product-control { 
@@ -562,7 +558,7 @@ select { text-align: center; text-align-last: center; }
         }
         
         /*------ FOOTER WRAPPER ------*/
-        .footer-wrapper { position: fixed; bottom: 0; left: 0; width: 100%; z-index: -9999;
+        .footer-wrapper { position: fixed; bottom: 0; left: 0; width: 100%; z-index: -9999; height: 615px;
             footer { position: relative; border-bottom: $hr-border-width $hr-border-style $hr-border-color; background-color: $footer-background-color; padding-left: $sidebar-box-width;
                 .footer-container { padding: 60px 60px 60px 30px; font-size: $footer-font-size;
                     
