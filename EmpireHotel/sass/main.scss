@@ -27,7 +27,7 @@ Version: 1.0
 $imgPath: "../images/";
 
 /* ------------------------------------ CUSTOM ---------------------------------- */
-* { outline: none !important; box-sizing: border-box; }
+* { outline: none !important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 html, body { height:100%; }
 body { font: $body-font-size $body-font-family; background-color: $body-background-color; }
@@ -269,7 +269,7 @@ select { text-align: center; text-align-last: center; }
                             }
                             .welcome-heading-control { margin-bottom: 50px; padding: 0px 30px; }
                             .welcome-article { padding: 30px 30px 0 30px;
-                                &.col-counter { column-count: 2; column-gap: 60px; }
+                                &.col-counter {  -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px; }
                             }
                         }
                     }
@@ -282,7 +282,7 @@ select { text-align: center; text-align-last: center; }
                         section { 
 							
 							&.section-default {
-								.col-counter { column-count: 2; column-gap: 60px; }
+								.col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px; }
 
 								.booking-button { float: right; margin-top: 60px; }
 							}
@@ -290,14 +290,14 @@ select { text-align: center; text-align-last: center; }
 							/*------ PAGE: HOME ------*/
                             /** SECTION AMENTITIES **/
                             &.section-amenities { margin-bottom: 180px;
-                                .col-counter { column-count: 3; column-gap: 60px; }
+                                .col-counter { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px; }
                             }
                             /** SECTION DEAL PROMOTIONS **/
                             /** SECTION INFO **/
                             &.section-deal-promotions { margin-bottom: 180px; }
                             &.section-deal-promotions,
                             &.section-info {
-                                .col-counter { /*display: table;*/ width: 100%; column-count: 3; column-gap: 60px;
+                                .col-counter { /*display: table;*/ width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px;
                                     .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
                                 }
                             }
@@ -324,7 +324,7 @@ select { text-align: center; text-align-last: center; }
 									span { font-family: $body-font-family; }
 								}
 
-                                .col-counter { width: 100%; column-count: 3; column-gap: 60px;
+                                .col-counter { width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px;
                                     .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
                                 }
 
@@ -404,8 +404,15 @@ select { text-align: center; text-align-last: center; }
 							/*------ PAGE: THINGS TO DO ------*/
 							/** SECTION TODO **/
 							&.section-todo { margin-bottom: 0; display: block;
+								.alm-reveal {
+									&:last-child {
+										article {
+											&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+										}
+									}
+								}
 								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
-                                    &:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+                                    &:last-child {  }
 									.items { display: -webkit-box; width: 100%; 
 										.image-control { width: 640px; height: 430px; display: table-cell;
 											img { height: 100%; object-fit: cover; display: block; }
@@ -452,7 +459,7 @@ select { text-align: center; text-align-last: center; }
 							/*------ PAGE: MEETING & EVENTS ------*/
 							/** SECTION MEETINGS & EVENTS **/
 							&.section-events { /*display: table;*/ width: 100%;
-                                .col-counter { width: 100%; column-count: 3; column-gap: 60px;
+                                .col-counter { width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px;
                                     .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; }
                                 }
 
@@ -565,7 +572,7 @@ select { text-align: center; text-align-last: center; }
                     
                     section { position: relative;
                         &.section-footer-nav { 
-                            .col-counter { width: 100%; column-count: 3; column-gap: 60px;
+                            .col-counter { width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px;
                                 .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
                             }
                             

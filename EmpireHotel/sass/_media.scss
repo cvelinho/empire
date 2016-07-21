@@ -87,7 +87,7 @@ Media queries
                                 }
                                 .welcome-heading-control { margin-bottom: 50px; padding: 0px 15px; }
                                 .welcome-article { padding: 0px 15px;
-                                    &.col-counter { column-count: 2; }
+                                    &.col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
                                 }
                             }
                         }
@@ -103,7 +103,7 @@ Media queries
 
                                 &.section-deal-promotions,
                                 &.section-info {
-                                     .col-counter { width: 100%; column-count: 2; column-gap: 60px;
+                                     .col-counter { width: 100%; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
                                         .col-item { }
                                     }
                                 }
@@ -150,38 +150,38 @@ Media queries
 
                 .sidebarbox-wrapper { display: none; }
 
-                .main-content-wrapper { float: none; width: 100%; padding: 60px 0px 0 0px; margin: 0px;
+                .main-content-wrapper { float: none; width: 100%; padding: 90px 0px 0 0px; margin: 0px;
                     .inner-wrapper { width: 100%; position: relative;
 
-                        .welcome-container { margin-bottom: 60px; position: relative; 
+                        .welcome-container { margin-bottom: 90px; position: relative; 
                             &:after { content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
                             
-                            .welcome-wrapper { padding: 30px; position: relative; display: -webkit-box; -webkit-box-orient: vertical;
+                            .welcome-wrapper { padding: 0px 30px 90px 30px; position: relative; display: -webkit-box; -webkit-box-orient: vertical; -moz-box-orient: vertical; box-orient: vertical;   
                                 .welcome-image-control { -webkit-box-ordinal-group: 3; -moz-box-ordinal-group: 3; box-ordinal-group: 3;
                                     img { }
                                 }
                                 .welcome-heading-control { -webkit-box-ordinal-group: 1; -moz-box-ordinal-group: 1; box-ordinal-group: 1; padding: 0px; }
-                                .welcome-article { -webkit-box-ordinal-group: 4; -moz-box-ordinal-group: 4; box-ordinal-group: 4; padding: 0px;
-                                    &.col-counter { column-count: 2; }
+                                .welcome-article { -webkit-box-ordinal-group: 5; -moz-box-ordinal-group: 5; box-ordinal-group: 5; padding: 0px;
+                                    &.col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
                                 }
 
-                                .scrollto-control { display: none; }
+                                .scrollto-control { -webkit-box-ordinal-group: 4; -moz-box-ordinal-group: 4; box-ordinal-group: 4;}
                             }
                         }
 
-                        .inner-container { padding: 0px 0px; display: table; width: 100%;
+                        .inner-container { padding: 0px; display: table; width: 100%;
                             .heading-control { margin-bottom: 50px; }
 
                             section {
                                 &.section-amenities { position: relative; margin-bottom: 90px; padding-bottom: 90px;
                                     &:after { content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
                                     .heading-control { padding: 0px 30px; }
-                                    .col-counter { column-count: 2; padding: 0px 30px; }
+                                    .col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; padding: 0px 30px; }
                                 }
 
                                 &.section-deal-promotions,
                                 &.section-info { 
-                                     .col-counter { width: 100%; column-count: 2; 
+                                     .col-counter { width: 100%; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; 
                                         .col-item { }
                                     }
                                 }
@@ -190,11 +190,15 @@ Media queries
                                     .col-counter { padding: 0px 30px; }
                                     .col-counter { -webkit-column-rule: $hr-border-width outset $hr-border-color; -moz-column-rule: $hr-border-width outset $hr-border-color; column-rule: $hr-border-width outset $hr-border-color;
                                         div.col-item {
-                                            .items { display: -webkit-box; -webkit-box-orient: vertical;
-                                                .image-control      { -webkit-box-ordinal-group: 2; -moz-box-ordinal-group: 2; box-ordinal-group: 2; }
-                                                .title-control      { -webkit-box-ordinal-group: 1; -moz-box-ordinal-group: 1; box-ordinal-group: 1; }
-                                                .heading-control    { -webkit-box-ordinal-group: 3; -moz-box-ordinal-group: 3; box-ordinal-group: 3; }
-                                                .info-control       { -webkit-box-ordinal-group: 4; -moz-box-ordinal-group: 4; box-ordinal-group: 4; }
+                                            .items { display: -webkit-box; -webkit-box-orient: vertical; -moz-box-orient: vertical; box-orient: vertical;
+                                                .image-control { -webkit-box-ordinal-group: 2; -moz-box-ordinal-group: 2; box-ordinal-group: 2; }
+                                                .title-control { -webkit-box-ordinal-group: 1; -moz-box-ordinal-group: 1; box-ordinal-group: 1; padding-bottom: 60px;
+													h2 { font-size: 36px;
+														&:before { content: ""; border-bottom: 2px solid $selected-light-color; position: absolute; width: 100%; bottom: 2px; }
+													}
+												}
+                                                .heading-control { -webkit-box-ordinal-group: 3; -moz-box-ordinal-group: 3; box-ordinal-group: 3; }
+                                                .info-control { -webkit-box-ordinal-group: 4; -moz-box-ordinal-group: 4; box-ordinal-group: 4; }
                                             }
                                         }
                                     }
@@ -218,7 +222,7 @@ Media queries
 			
 			            section { position: relative;
 				            &.section-footer-nav { 
-					            .col-counter { column-count: 2;
+					            .col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2;
 						            .col-item {
                                         &:nth-child(2n) { display: none; }
 						            }

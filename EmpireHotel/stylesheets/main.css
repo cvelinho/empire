@@ -93,32 +93,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* import fonts partial sass*/
 @font-face {
   font-family: "Brandon_light";
-  src: url('../fonts/Brandon_light.eot?1467537446');
-  src: url('../fonts/Brandon_light.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467537446') format('woff'), url('../fonts/Brandon_light.ttf?1467537446') format('truetype');
+  src: url('../fonts/Brandon_light.eot?1467747082');
+  src: url('../fonts/Brandon_light.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_light.woff?1467747082') format('woff'), url('../fonts/Brandon_light.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_light", font-files("Brandon_light.woff", woff, "Brandon_light.ttf", truetype), "Brandon_light.eot", "Brandon_light.svg#Brandon_light", svg);*/
 @font-face {
   font-family: "Brandon_reg";
-  src: url('../fonts/Brandon_reg.eot?1467186378');
-  src: url('../fonts/Brandon_reg.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467186378') format('woff'), url('../fonts/Brandon_reg.ttf?1467186378') format('truetype');
+  src: url('../fonts/Brandon_reg.eot?1467747083');
+  src: url('../fonts/Brandon_reg.eot?&1467747083#iefix') format('embedded-opentype'), url('../fonts/Brandon_reg.woff?1467747083') format('woff'), url('../fonts/Brandon_reg.ttf?1467747083') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_reg", font-files("Brandon_reg.woff", woff, "Brandon_reg.ttf", truetype), "Brandon_reg.eot", "Brandon_reg.svg#Brandon_reg", svg);*/
 @font-face {
   font-family: "Brandon_med";
-  src: url('../fonts/Brandon_med.eot?1467537446');
-  src: url('../fonts/Brandon_med.eot?&1467537446#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467537446') format('woff'), url('../fonts/Brandon_med.ttf?1467537446') format('truetype');
+  src: url('../fonts/Brandon_med.eot?1467747082');
+  src: url('../fonts/Brandon_med.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_med.woff?1467747082') format('woff'), url('../fonts/Brandon_med.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 /*@include font-face("Brandon_med", font-files("Brandon_med.woff", woff, "Brandon_med.ttf", truetype), "Brandon_med.eot", "Brandon_med.svg#Brandon_med", svg);*/
 @font-face {
   font-family: "Brandon_bld";
-  src: url('../fonts/Brandon_bld.eot?1467186378');
-  src: url('../fonts/Brandon_bld.eot?&1467186378#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467186378') format('woff'), url('../fonts/Brandon_bld.ttf?1467186378') format('truetype');
+  src: url('../fonts/Brandon_bld.eot?1467747082');
+  src: url('../fonts/Brandon_bld.eot?&1467747082#iefix') format('embedded-opentype'), url('../fonts/Brandon_bld.woff?1467747082') format('woff'), url('../fonts/Brandon_bld.ttf?1467747082') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -127,6 +127,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* ------------------------------------ CUSTOM ---------------------------------- */
 * {
   outline: none !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -634,6 +636,8 @@ select {
   padding: 30px 30px 0 30px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container .welcome-wrapper .welcome-article.col-counter {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
   column-count: 2;
   column-gap: 60px;
 }
@@ -678,6 +682,8 @@ select {
   /** SECTION FAQ **/
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-default .col-counter {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
   column-count: 2;
   column-gap: 60px;
 }
@@ -689,6 +695,8 @@ select {
   margin-bottom: 180px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-amenities .col-counter {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
   column-count: 3;
   column-gap: 60px;
 }
@@ -698,6 +706,8 @@ select {
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter {
   /*display: table;*/
   width: 100%;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
   column-count: 3;
   column-gap: 60px;
 }
@@ -759,6 +769,8 @@ select {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels .col-counter {
   width: 100%;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
   column-count: 3;
   column-gap: 60px;
 }
@@ -962,16 +974,16 @@ select {
   margin-bottom: 0;
   display: block;
 }
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo .alm-reveal:last-child article:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article {
   border: 0;
   border-bottom: 1px solid #dedede;
   margin-bottom: 90px;
   padding-bottom: 90px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article:last-child {
-  border-bottom: none;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-todo article .items {
   display: -webkit-box;
@@ -1053,6 +1065,8 @@ select {
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-events .col-counter {
   width: 100%;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
   column-count: 3;
   column-gap: 60px;
 }
@@ -1269,6 +1283,8 @@ select {
 }
 .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter {
   width: 100%;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
   column-count: 3;
   column-gap: 60px;
 }
@@ -1630,6 +1646,8 @@ Media queries
     padding: 0px 15px;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container .welcome-wrapper .welcome-article.col-counter {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
     column-count: 2;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container {
@@ -1640,6 +1658,8 @@ Media queries
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter {
     width: 100%;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
     column-count: 2;
     column-gap: 60px;
   }
@@ -1675,7 +1695,7 @@ Media queries
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper {
     float: none;
     width: 100%;
-    padding: 60px 0px 0 0px;
+    padding: 90px 0px 0 0px;
     margin: 0px;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper {
@@ -1683,7 +1703,7 @@ Media queries
     position: relative;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
     position: relative;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container:after {
@@ -1694,10 +1714,12 @@ Media queries
     bottom: 2px;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container .welcome-wrapper {
-    padding: 30px;
+    padding: 0px 30px 90px 30px;
     position: relative;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container .welcome-wrapper .welcome-image-control {
     -webkit-box-ordinal-group: 3;
@@ -1711,19 +1733,23 @@ Media queries
     padding: 0px;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container .welcome-wrapper .welcome-article {
-    -webkit-box-ordinal-group: 4;
-    -moz-box-ordinal-group: 4;
-    box-ordinal-group: 4;
+    -webkit-box-ordinal-group: 5;
+    -moz-box-ordinal-group: 5;
+    box-ordinal-group: 5;
     padding: 0px;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container .welcome-wrapper .welcome-article.col-counter {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
     column-count: 2;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .welcome-container .welcome-wrapper .scrollto-control {
-    display: none;
+    -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    box-ordinal-group: 4;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container {
-    padding: 0px 0px;
+    padding: 0px;
     display: table;
     width: 100%;
   }
@@ -1746,11 +1772,15 @@ Media queries
     padding: 0px 30px;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-amenities .col-counter {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
     column-count: 2;
     padding: 0px 30px;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter, .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-info .col-counter {
     width: 100%;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
     column-count: 2;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions {
@@ -1776,6 +1806,8 @@ Media queries
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter div.col-item .items {
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter div.col-item .items .image-control {
     -webkit-box-ordinal-group: 2;
@@ -1786,6 +1818,17 @@ Media queries
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
     box-ordinal-group: 1;
+    padding-bottom: 60px;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter div.col-item .items .title-control h2 {
+    font-size: 36px;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter div.col-item .items .title-control h2:before {
+    content: "";
+    border-bottom: 2px solid #cd700b;
+    position: absolute;
+    width: 100%;
+    bottom: 2px;
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .col-counter div.col-item .items .heading-control {
     -webkit-box-ordinal-group: 3;
@@ -1827,6 +1870,8 @@ Media queries
     position: relative;
   }
   .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
     column-count: 2;
   }
   .main-framework .framework-wrapper .footer-wrapper footer .footer-container section.section-footer-nav .col-counter .col-item:nth-child(2n) {
