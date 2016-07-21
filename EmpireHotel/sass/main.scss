@@ -208,7 +208,7 @@ select { text-align: center; text-align-last: center; }
                         li { display: inline; line-height: 20px; position: relative;
                             a { font-family: $sidebar-box-font-family; font-size: $sidebar-box-font-size; color: $sidebar-box-font-color; text-transform: $sidebar-box-font-transform; cursor: pointer; text-decoration: $link-text-decoration; position: relative; }
                             &:after { content: ""; display: block; padding-bottom: $sidebar-link-margin-bottom; }
-                            &.current-menu-item, &:hover { color: $sidebar-box-active-font-color;
+                            &.active, &.current-menu-item, &:hover { color: $sidebar-box-active-font-color;
                                 a { color: $sidebar-box-active-font-color; }
                                 &:before { content: ""; border-bottom: 1px solid $selected-light-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 0px; }
                             }
@@ -223,17 +223,29 @@ select { text-align: center; text-align-last: center; }
 				/* PRODUCT CONTROL */
 				.product-control { 
 					/* IMAGE CONTROL */
-					.image-control { line-height: 0px; /* instead of img block display */
+					/*.image-control { line-height: 0px;
 						img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
-					}
+					}*/
 
 					/* SCROLLTO CONTROL */
-					.scrollto-control { height: $scrollto-height; display: table; width: 100%; text-align: center;
+					/*.scrollto-control { height: $scrollto-height; display: table; width: 100%; text-align: center;
                         .scrollto-content { display: table-cell; vertical-align: middle;
                             .scrollto-text { font-family: $body-font-family-regular; font-size: $scrollto-font-size; text-transform: $font-transform-uppercase; color: $selected-light-color; display: block; }
                             .scrollto-icon { background-image: url("../images/icons/icon-circle-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: $scrollto-icon-size; height: $scrollto-icon-size; margin-top: $scrollto-icon-margin-top; }
                         }
-					}
+					}*/
+				}
+
+                /* IMAGE CONTROL */
+				.image-control { line-height: 0px; /* instead of img block display */
+					img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
+				}
+                /* SCROLLTO CONTROL */
+				.scrollto-control { height: $scrollto-height; display: table; width: 100%; text-align: center;
+                    .scrollto-content { display: table-cell; vertical-align: middle;
+                        .scrollto-text { font-family: $body-font-family-regular; font-size: $scrollto-font-size; text-transform: $font-transform-uppercase; color: $selected-light-color; display: block; }
+                        .scrollto-icon { background-image: url("../images/icons/icon-circle-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: $scrollto-icon-size; height: $scrollto-icon-size; margin-top: $scrollto-icon-margin-top; }
+                    }
 				}
 
                 /* ROOM CONTROL */
@@ -249,63 +261,44 @@ select { text-align: center; text-align-last: center; }
                 /* INNER WRAPPER */
                 .inner-wrapper { width: 100%; position: relative;
 
+                    /* WELCOME CONTAINER */
+                    .welcome-container { margin-bottom: 180px;
+                        .welcome-wrapper {
+                            .welcome-image-control { line-height: 0px;
+                                img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
+                            }
+                            .welcome-heading-control { margin-bottom: 50px; padding: 0px 30px; }
+                            .welcome-article { padding: 30px 30px 0 30px;
+                                &.col-counter { column-count: 2; column-gap: 60px; }
+                            }
+                        }
+                    }
+
                     /* INNER CONTAINER */
-                    .inner-container { padding: 0 30px; display: table; width: 100%;
+                    .inner-container { padding: 0px 30px; display: table; width: 100%;
 
                         .heading-control { margin-bottom: 50px; }
 
                         section { 
 							
 							&.section-default {
-								.col-counter { column-count: 2; }
+								.col-counter { column-count: 2; column-gap: 60px; }
 
 								.booking-button { float: right; margin-top: 60px; }
 							}
 
 							/*------ PAGE: HOME ------*/
-                            /** SECTION HERO **/
-                            &.section-hero { margin-bottom: 180px;
-								.heading-control {
-									&:nth-child(2) { margin-bottom: 30px; }
-								}
-                                .col-counter { column-count: 2; }
-                            }
                             /** SECTION AMENTITIES **/
                             &.section-amenities { margin-bottom: 180px;
-                                .col-counter { column-count: 3; }
+                                .col-counter { column-count: 3; column-gap: 60px; }
                             }
                             /** SECTION DEAL PROMOTIONS **/
                             /** SECTION INFO **/
                             &.section-deal-promotions { margin-bottom: 180px; }
                             &.section-deal-promotions,
                             &.section-info {
-                                .col-counter { display: table; width: 100%;
-                                    /* 1 item */
-                                    > div:nth-child(1):nth-last-child(1) { width: 100%; vertical-align: top; position: relative; }
-
-                                    /* 2 items */
-                                    > div:nth-child(1):nth-last-child(2),
-                                    > div:nth-child(2):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 48.21067%; }
-                                    > div:nth-child(1):nth-last-child(2) {}
-                                    > div:nth-child(2):nth-last-child(1) { margin-right: 0; }
-
-                                    /* 3 items */
-                                    > div:nth-child(1):nth-last-child(3),
-                                    > div:nth-child(2):nth-last-child(2),
-                                    > div:nth-child(3):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 30.94756%; }
-                                    > div:nth-child(1):nth-last-child(3) {}
-                                    > div:nth-child(2):nth-last-child(2) {}
-                                    > div:nth-child(3):nth-last-child(1) { margin-right: 0; }
-
-                                    /* 4 items */
-                                    > div:nth-child(1):nth-last-child(4),
-                                    > div:nth-child(2):nth-last-child(3),
-                                    > div:nth-child(3):nth-last-child(2),
-                                    > div:nth-child(4):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 22.316%;  }
-                                    > div:nth-child(1):nth-last-child(4) {}
-                                    > div:nth-child(2):nth-last-child(3) {}
-                                    > div:nth-child(3):nth-last-child(2) {}
-                                    > div:nth-child(4):nth-last-child(1) { margin-right: 0; }
+                                .col-counter { /*display: table;*/ width: 100%; column-count: 3; column-gap: 60px;
+                                    .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
                                 }
                             }
 							&.section-deal-promotions {
@@ -330,6 +323,10 @@ select { text-align: center; text-align-last: center; }
 									&:before { display: none; }
 									span { font-family: $body-font-family; }
 								}
+
+                                .col-counter { width: 100%; column-count: 3; column-gap: 60px;
+                                    .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
+                                }
 
 								h3 { font-family: $body-font-family-regular; font-size: $h2-font-size; font-weight: $h2-font-weight; color: $h2-font-color; text-transform: $font-transform-capitalize; display: inline; position: relative;
 									&:before { content: ""; border-bottom: 1px solid $selected-light-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 2px; }
@@ -454,7 +451,11 @@ select { text-align: center; text-align-last: center; }
 
 							/*------ PAGE: MEETING & EVENTS ------*/
 							/** SECTION MEETINGS & EVENTS **/
-							&.section-events { display: table; width: 100%;
+							&.section-events { /*display: table;*/ width: 100%;
+                                .col-counter { width: 100%; column-count: 3; column-gap: 60px;
+                                    .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; }
+                                }
+
 								.heading-control {
 									&.last { margin-bottom: 0px; }
 									a { font-size: 27px; margin-top: 50px; display: inline-block; text-decoration: $link-text-decoration; }
@@ -560,39 +561,14 @@ select { text-align: center; text-align-last: center; }
         /*------ FOOTER WRAPPER ------*/
         .footer-wrapper { position: fixed; bottom: 0; left: 0; width: 100%; z-index: -9999; height: 615px;
             footer { position: relative; border-bottom: $hr-border-width $hr-border-style $hr-border-color; background-color: $footer-background-color; padding-left: $sidebar-box-width;
-                .footer-container { padding: 60px 60px 60px 30px; font-size: $footer-font-size;
+                .footer-container { padding: 60px 90px 60px 30px; font-size: $footer-font-size;
                     
                     section { position: relative;
                         &.section-footer-nav { 
-                            .col-counter { display: table; width: 100%;
-                                /* 1 item */
-                                > div:nth-child(1):nth-last-child(1) { width: 100%; vertical-align: top; position: relative; }
-
-                                /* 2 items */
-                                > div:nth-child(1):nth-last-child(2),
-                                > div:nth-child(2):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 48.21067%; }
-                                > div:nth-child(1):nth-last-child(2) {}
-                                > div:nth-child(2):nth-last-child(1) { margin-right: 0; }
-
-                                /* 3 items */
-                                > div:nth-child(1):nth-last-child(3),
-                                > div:nth-child(2):nth-last-child(2),
-                                > div:nth-child(3):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 30.94756%; }
-                                > div:nth-child(1):nth-last-child(3) {}
-                                > div:nth-child(2):nth-last-child(2) {}
-                                > div:nth-child(3):nth-last-child(1) { margin-right: 0; }
-
-                                /* 4 items */
-                                > div:nth-child(1):nth-last-child(4),
-                                > div:nth-child(2):nth-last-child(3),
-                                > div:nth-child(3):nth-last-child(2),
-                                > div:nth-child(4):nth-last-child(1) { float: left; display: block; margin-right: 3.57866%; width: 22.316%;  }
-                                > div:nth-child(1):nth-last-child(4) {}
-                                > div:nth-child(2):nth-last-child(3) {}
-                                > div:nth-child(3):nth-last-child(2) {}
-                                > div:nth-child(4):nth-last-child(1) { margin-right: 0; }
+                            .col-counter { width: 100%; column-count: 3; column-gap: 60px;
+                                .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
                             }
-
+                            
                             .items { color: $body-font-color;
                                 h2 { font-family: $body-font-family-regular; font-size: $footer-font-size; color: $selected-light-color; line-height: inherit; }
                             }
