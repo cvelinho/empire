@@ -40,6 +40,7 @@ hr { border: 0; border-top: $hr-border-width $hr-border-style $hr-border-color; 
 .right, .block-right, .col-left			{ float: right; text-align: right; }
 .center, .block-center, .col-center		{ float: none; text-align: center; margin: 0 auto; }
 .clr									{ clear: both; }
+.col-hidden								{ display: none; }
 
 img { width: 100%; }
 
@@ -302,12 +303,16 @@ select { text-align: center; text-align-last: center; }
 							&.section-packages { display: inline-block;
 								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
                                     &:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
-									.items { display: -webkit-box; width: 100%; 
-										.image-control { width: 640px; height: 400px; display: table-cell;
-											img { height: 100%; object-fit: cover;  display: block; }
+
+									&.col-counter { width: 100%; columns: 2; column-count: 2; column-gap: 60px;
+										.image-control,
+										.side-control { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
+
+										.image-control { height: initial; 
+											img { object-fit: cover; display: block; height: 450px; max-height: 450px;}
 										}
 
-										.side-control { vertical-align: top; display: table-cell; padding-left: 60px;
+										.side-control { 
 											.heading-control { margin-bottom: 40px !important; }
 											.booking-button { float: right; margin-top: 60px; }
 										}                           

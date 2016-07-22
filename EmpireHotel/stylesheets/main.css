@@ -199,6 +199,10 @@ hr.hr-30 {
   clear: both;
 }
 
+.col-hidden {
+  display: none;
+}
+
 img {
   width: 100%;
 }
@@ -902,29 +906,38 @@ SECTION SEARCH FORM
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items {
-  display: -webkit-box;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter {
+  width: 100%;
+  columns: 2;
+  column-count: 2;
+  column-gap: 60px;
+}
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .image-control,
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .side-control {
+  margin: 0;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+  display: inline-block;
   width: 100%;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .image-control {
-  width: 640px;
-  height: 400px;
-  display: table-cell;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .image-control {
+  height: initial;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .image-control img {
-  height: 100%;
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .image-control img {
   object-fit: cover;
   display: block;
+  height: 450px;
+  max-height: 450px;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .side-control {
-  vertical-align: top;
-  display: table-cell;
-  padding-left: 60px;
-}
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .side-control .heading-control {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .side-control .heading-control {
   margin-bottom: 40px !important;
 }
-.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article .items .side-control .booking-button {
+.main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .side-control .booking-button {
   float: right;
   margin-top: 60px;
 }
@@ -2138,6 +2151,61 @@ Media queries
   }
   .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-sister-hotels article .p1:last-child {
     display: none;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages {
+    display: inline-block;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article {
+    border: 0;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 90px;
+    padding-bottom: 90px;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article:last-child {
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter {
+    display: none;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-hidden {
+    display: block;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter {
+    width: 100%;
+    columns: 2;
+    column-count: 2;
+    column-gap: 60px;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .image-control,
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .side-control {
+    margin: 0;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -o-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    display: inline-block;
+    width: 100%;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .image-control {
+    height: initial;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .image-control img {
+    object-fit: cover;
+    display: block;
+    height: 450px;
+    max-height: 450px;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .side-control .heading-control {
+    margin-bottom: 40px !important;
+  }
+  .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-packages article.col-counter .side-control .booking-button {
+    float: right;
+    margin-top: 60px;
   }
   .main-framework .framework-wrapper .footer-wrapper {
     position: relative;

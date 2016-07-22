@@ -42,7 +42,7 @@
                         <!-- NAVIGATION MENU -->
                         <nav id="menu" role="navigation" style="display: none;">
                             <ul>
-                                <li><a href="home.html">Home</a></li>
+                                <li class="active"><a href="home.html">Home</a></li>
                                 <li><a href="rooms.html">Rooms</a></li>
                                 <li><a href="packages.html">Packages</a></li>
                                 <li><a href="specials.html">Specials</a></li>
@@ -58,8 +58,41 @@
 
                         <!-- SEARCH FORM -->
                         <div class="header-search-form">
-                            <div class="block-btn">
-                                <button class="button right">Book room</button>
+                            <div class="section-book-now">
+                                <form>
+                                    <div class="section-book-date">
+                                        <input type="text" value="" placeholder="Check In" class="center"  />
+                                        <!--<svg>
+                                            <use href="images/icons/calendar.svg"></use>
+                                        </svg>-->
+                                        <img src="images/icons/icon-calendar.png" />
+                                    </div>
+                                    <div class="section-book-date">
+                                        <input type="text" value="" placeholder="Check Out" class="center"  />
+                                        <img src="images/icons/icon-calendar.png" />
+                                    </div>
+                                    <div class="section-guests">
+                                        <span>NO. OF GUESTS</span>
+                                        <div class="select-wrapper center">
+                                            <select>
+                                                <option>2</option>
+                                                <option>22</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="section-rooms">
+                                        <span>NO. OF ROOMS</span>
+                                        <div class="select-wrapper center">
+                                            <select>
+                                                <option>2</option>
+                                                <option>22</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="section-button">
+                                        <button class="button">Book room</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
@@ -68,7 +101,7 @@
                             <nav>
                                 <ul>
                                     <li><span>Language:</span></li>
-                                    <li><a class="active">English</a></li>
+                                    <li class="active"><a>English</a></li>
                                     <li><a>Française</a></li>
                                     <li><a>Español</a></li>
                                     <li><a>Deutsch</a></li>
@@ -77,6 +110,19 @@
                                     <li><a>中文</a></li>
                                 </ul>
                             </nav>
+
+                            <div class="language-wrapper right">
+                                <label>
+                                    Language:
+                                </label>
+                                <select class="language-dropdown">
+                                    <option>EN</option>
+                                    <option>FR</option>
+                                    <option>IT</option>
+                                    <option>DE</option>
+                                    <option>IT</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -92,7 +138,7 @@
                         <ul>
                             <li><a href="home.html">Home</a></li>
                             <li><a href="rooms.html" >Rooms</a></li>
-                            <li><a href="packages.html" class="active">Packages</a></li>
+                            <li class="active"><a href="packages.html">Packages</a></li>
                             <li><a href="specials.html">Specials</a></li>
                             <li><a href="todo.html">Things to do</a></li>
                             <li><a href="eat-drink.html">Eat & drink</a></li>
@@ -124,19 +170,41 @@
 
                             <!-- SECTION PACKAGES -->
                             <section class="section-packages">
-                                <article>
+                                <article class="col-counter">
+                                    <div class="image-control">
+                                        <img src="images/packages-img-1.jpg"/>
+                                    </div>
+                                    <div class="side-control">
+                                        <div>
+                                            <h2>ALL WHEEL DRIVE PACKAGE</h2>
+                                        </div>
+                                        <div class="heading-control">
+                                            <h3>Friday, Saturday, and Sunday nights</h3>
+                                        </div>
+                                        <div class="p1">
+                                            Don't waste time looking for parking garages next time you enjoy a weekend stay in Manhattan. Just leave your car with our doorman and we'll take care of the rest. Price includes guest room, overnight parking, and Wi-Fi.
+                                        </div>
+                                        <div class="booking-button">
+                                            <div class="block-btn">
+                                                <button class="button right">Book room</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                    
+                                <article class="col-hidden">
+                                    <div class="heading-control">
+                                        <h2>ALL WHEEL DRIVE PACKAGE</h2>
+                                    </div>
+                                    <div class="heading-control">
+                                        <h3>Friday, Saturday, and Sunday nights</h3>
+                                    </div>
                                     <div class="col-item">
                                         <div class="items">
                                             <div class="image-control">
                                                 <img src="images/packages-img-1.jpg"/>
                                             </div>
                                             <div class="side-control">
-                                                <div>
-                                                    <h2>ALL WHEEL DRIVE PACKAGE</h2>
-                                                </div>
-                                                <div class="heading-control">
-                                                    <h3>Friday, Saturday, and Sunday nights</h3>
-                                                </div>
                                                 <div class="p1">
                                                     Don't waste time looking for parking garages next time you enjoy a weekend stay in Manhattan. Just leave your car with our doorman and we'll take care of the rest. Price includes guest room, overnight parking, and Wi-Fi.
                                                 </div>
@@ -149,6 +217,9 @@
                                         </div>
                                     </div>
                                 </article>
+                                
+
+
                                 <article>
                                     <div class="col-item">
                                         <div class="items">
