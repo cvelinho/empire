@@ -136,21 +136,74 @@ Media queries
 		}
 	}
 
-    .main-framework {
+    /* SOCIAL MEDIA */
+    .social-link-list { position: relative; right: 0px; top: 0px; bottom: 0px; top: -249px; z-index: 1; width: 100%; text-align: center; margin: 0px auto;
+        div { display: block; }
+        ul { display: -webkit-box; margin: 0px auto; display: block; /* width: 100%; */ text-align: center; height: 45px; display: table;
+            li { height: 45px; position: relative; display: table-cell;
+		        a { display: inline-block; width: 45px; height: 45px; }	
+	        }
+        }
+	    	
+    }
+
+    .main-framework { height: initial;
 
         .framework-wrapper {
 
-            .header-wrapper {
+            .header-wrapper { height: 200px;
                 header { padding: 0 30px;
-                    .header-language {}
+                    .header-logo { display: block; height: 120px;
+                        img {  height: auto; }
+                    }    
+                    .header-contact { padding-left: 0px;
+                        span { 
+                            &:first-child { display: none; }
+                            &.contact-address {
+                                &:before { display: none; }
+                            }
+                        } 
+                    }
+
+                    /* Search form */
+                    .header-search-form {
+                        button { }
+                    }
+            
+                    /* Language menu */
+                    .header-language { 
+                        nav { 
+                            ul {
+                                li { 
+                                    span, a {  }
+                                    a {  }
+                                    &.active, &:hover { 
+                                        a {}
+									}
+                                }
+                            }
+                        }
+                    }
+                    .language-wrapper { display: none; }
                 }
             }
 
-            .main-wrapper { margin-bottom: 545px;
-
+            .main-wrapper { margin-bottom: 0px; padding-bottom: 0px;
+                
                 .sidebarbox-wrapper { display: none; }
 
                 .main-content-wrapper { float: none; width: 100%; padding: 90px 0px 0 0px; margin: 0px;
+
+                    .image-control { line-height: 0px; /* instead of img block display */
+					    img { display: block; width: 100%; max-height: 400px; object-fit: cover; }
+				    }
+
+                    .room-control { margin-bottom: 90px; padding-bottom: 90px;
+                        &:after { content: ""; border-bottom: none; position: absolute; width: 100%; bottom: 2px; }
+                        
+                        .room-wrapper { padding: 0px 30px ; position: relative; }
+                    }
+
                     .inner-wrapper { width: 100%; position: relative;
 
                         .welcome-container { margin-bottom: 90px; position: relative; 
@@ -170,12 +223,12 @@ Media queries
                         }
 
                         .inner-container { padding: 0px; display: table; width: 100%;
-                            .heading-control { margin-bottom: 50px; }
+                            .heading-control {  }
 
                             section {
                                 &.section-amenities { position: relative; margin-bottom: 90px; padding-bottom: 90px;
                                     &:after { content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
-                                    .heading-control { padding: 0px 30px; }
+                                    .heading-control { padding: 0px 30px; margin-bottom: 90px; }
                                     .col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; padding: 0px 30px; }
                                 }
 
@@ -203,12 +256,50 @@ Media queries
                                         }
                                     }
                                 }
-                                &.section-info { position: relative;
+                                &.section-info { position: relative; padding-bottom: 90px;
                                     .heading-control { padding: 0px 30px; }
                                      .col-counter { padding: 0px 30px; 
                                         .col-item { }
                                     }
                                 }
+
+                                &.section-rooms { margin-top: 30px;
+                                    .heading-control { display: none; }
+                                    .col-counter { 
+                                        &.booking-button { padding-top: 90px;
+                                            .block-btn { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
+                                                button { width: 100%; }
+                                            }
+                                        }
+                                    }
+							    }
+                                &.section-sister-hotels { padding: 0px 30px;
+                                    &:before { }
+								    .title-info { 
+									    &:before { display: none; }
+									    span { }
+								    }
+
+                                    .col-counter { width: 100%; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
+                                        .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; max-height: 400px; }
+                                    }
+
+								    article { margin-top: 35px;
+									    .heading-control { margin-bottom: 10px !important;
+                                            h3 { font-size: 20px;
+                                                 &:before { display: none; }
+                                            }
+									    }
+
+									    .image-control { margin-bottom: 0px;
+										    img { height: 100%; object-fit: cover;  display: block; }
+									    }
+
+                                        .p1 {
+                                            &:last-child { display: none; }
+                                        }
+								    }
+							    }
                             }
                         }
                     }
@@ -216,9 +307,9 @@ Media queries
 
             }
 
-            .footer-wrapper { position: fixed; bottom: 0; left: 0; width: 100%; z-index: -9999; height: 545px;
+            .footer-wrapper { position: relative; width: 100%; z-index: 1; height: auto;
 	            footer { position: relative; padding-left: 0px;
-		            .footer-container { padding: 60px 90px 60px 30px; font-size: $footer-font-size;
+		            .footer-container { padding: 90px 30px; font-size: $footer-font-size;
 			
 			            section { position: relative;
 				            &.section-footer-nav { 
@@ -232,16 +323,12 @@ Media queries
 		
 		            }	
 	            }
-	            /*------ COPYRIGHT CONTAINER ------*/
-	            .copyright-container { position: relative; width: 100%; height: 180px; background-color: $accent-light-color; font-size: 20px; color: $body-font-color; display: table;
-		            p { display: table-cell; vertical-align: middle; text-align: center; }
-	            }
+
             }
 
         }
 
     }
-
 }
 
 
@@ -270,9 +357,132 @@ Media queries
                 }
             }
 
-            .main-wrapper { 
+            .main-wrapper { margin-bottom: 0px; padding-bottom: 0px;
+
+                .sidebarbox-wrapper { display: none; }
+
+                .main-content-wrapper { float: none; width: 100%; padding: 60px 0px 0 0px; margin: 0px;
+                    .inner-wrapper { width: 100%; position: relative;
+
+                        .welcome-container { margin-bottom: 60px; position: relative; 
+                            &:after { content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
+                            
+                            .welcome-wrapper { padding: 0px 30px 60px 30px; position: relative; display: -webkit-box; -webkit-box-orient: vertical; -moz-box-orient: vertical; box-orient: vertical;   
+                                .welcome-image-control { -webkit-box-ordinal-group: 2; -moz-box-ordinal-group: 2; box-ordinal-group: 2;
+                                    img { }
+                                }
+                                .welcome-heading-control { -webkit-box-ordinal-group: 1; -moz-box-ordinal-group: 1; box-ordinal-group: 1; padding: 0px; }
+                                .welcome-article { -webkit-box-ordinal-group: 3; -moz-box-ordinal-group: 3; box-ordinal-group: 3; padding: 0px; margin-top: 60px;
+                                    &.col-counter { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
+                                }
+
+                                .scrollto-control { display: none; }
+                            }
+                        }
+
+                        .inner-container { padding: 0px; display: table; width: 100%;
+
+                            section {
+                                &.section-amenities { position: relative; margin-bottom: 60px; padding-bottom: 60px;
+                                    .heading-control { padding: 0px 30px; margin-bottom: 60px; }
+                                    .col-counter { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; padding: 0px 30px; }
+                                }
+
+                                &.section-deal-promotions,
+                                &.section-info { 
+                                     .col-counter { width: 100%; -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
+                                }
+                                &.section-deal-promotions { position: relative; margin-bottom: 0px; padding-bottom: 0px;
+                                    &:after { display: none; content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
+
+
+                                    .col-counter { padding: 0px 0px; }
+                                    .col-counter { 
+                                        div.col-item { position: relative; padding-bottom: 60px; margin-bottom: 60px;
+                                            &:after { content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
+
+                                            .items { padding: 0px 30px;
+                                                .title-control {  padding-bottom: 60px;
+													h2 { font-size: 36px;
+														&:before { content: ""; border-bottom: 2px solid $selected-light-color; position: absolute; width: 100%; bottom: 2px; }
+													}
+												}
+                                            }
+                                        }
+                                    }
+                                }
+                                &.section-info { position: relative; padding-bottom: 60px;
+                                    .heading-control { padding: 0px 30px; }
+                                     .col-counter { padding: 0px 30px; 
+                                        .col-item {
+                                            &:last-child { margin-top: 60px; }
+                                        }
+                                    }
+                                }
+
+                                &.section-rooms { margin-top: 30px;
+                                    .heading-control { display: none; }
+                                    .col-counter {  -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; column-gap: 60px;
+                                        &.booking-button { padding-top: 30px;
+                                            .block-btn { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
+                                                button { width: 100%; }
+                                            }
+                                        }
+                                    }
+							    }
+                                &.section-sister-hotels { padding: 0px 30px;
+                                    &:before { content: ""; display: block; border-top: $hr-border-width $hr-border-style $hr-border-color; width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 60px; margin-top: 60px; }
+								    .title-info { 
+									    &:before { display: none; }
+									    span { }
+								    }
+
+                                    .col-counter { width: 100%; -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; column-gap: 60px;
+                                        .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; max-height: auto; }
+                                    }
+
+								    article { margin-top: 35px;
+									    .heading-control { margin-bottom: 10px !important;
+                                            h3 { font-size: 20px;
+                                                 &:before { display: none; }
+                                            }
+									    }
+
+									    .image-control { margin-bottom: 0px;
+										    img { height: 100%; object-fit: cover;  display: block; }
+									    }
+
+                                        .p1 {
+                                            &:last-child { display: none; }
+                                        }
+								    }
+							    }
+                                
+                            }
+                        }
+                    }
+                }
 
             }
+
+            .footer-wrapper { position: relative; width: 100%; z-index: 1; height: auto;
+	            footer { position: relative; padding-left: 0px;
+		            .footer-container { padding: 60px 30px; font-size: $footer-font-size;
+			
+			            section { position: relative;
+				            &.section-footer-nav { 
+					            .col-counter { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1;
+						            .col-item {
+                                        &:nth-child(2n) { display: none; }
+						            }
+					            }
+				            }
+			            }
+		
+		            }	
+	            }
+            }
+
         }
     }
 }

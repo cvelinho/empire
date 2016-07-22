@@ -17,7 +17,6 @@ Version: 1.0
 /* ------------------------------- DEFAULT CONFIG ------------------------------- */
 @import "config_default";
 
-@import "compass";
 
 /* import fonts partial sass*/
 @import "fonts";
@@ -87,62 +86,6 @@ select { text-align: center; text-align-last: center; }
 /* --------------------------------- FRAMEWORK ---------------------------------- */
 /* ------------------------------------------------------------------------------ */
 /* DEFAULT COLUMN COUNTER */
-.col-counter { /*display: table; width: 100%;*/
-    /* 1 item */
-    > div:nth-child(1):nth-last-child(1) {
-	    width: 100%;
-        vertical-align: top;
-        position: relative;
-    }
-
-    /* 2 items */
-    > div:nth-child(1):nth-last-child(2),
-    > div:nth-child(2):nth-last-child(1) {
-        float: left;
-        display: block;
-        margin-right: 3.57866%;
-        width: 48.21067%;
-        /*margin-bottom: 3.57866%;*/
-    }
-    > div:nth-child(1):nth-last-child(2) {}
-    > div:nth-child(2):nth-last-child(1) {
-        margin-right: 0;
-    }
-
-    /* 3 items */
-    > div:nth-child(1):nth-last-child(3),
-    > div:nth-child(2):nth-last-child(2),
-    > div:nth-child(3):nth-last-child(1) {
-        float: left;
-        display: block;
-        margin-right: 3.57866%;
-        width: 30.94756%;
-        /*margin-bottom: 3.57866%;*/
-    }
-    > div:nth-child(1):nth-last-child(3) {}
-    > div:nth-child(2):nth-last-child(2) {}
-    > div:nth-child(3):nth-last-child(1) {
-        margin-right: 0;
-    }
-
-    /* 4 items */
-    > div:nth-child(1):nth-last-child(4),
-    > div:nth-child(2):nth-last-child(3),
-    > div:nth-child(3):nth-last-child(2),
-    > div:nth-child(4):nth-last-child(1) {
-        float: left;
-        display: block;
-        margin-right: 3.57866%;
-        width: 22.316%;
-       /*margin-bottom: 3.57866%;*/
-    }
-    > div:nth-child(1):nth-last-child(4) {}
-    > div:nth-child(2):nth-last-child(3) {}
-    > div:nth-child(3):nth-last-child(2) {}
-    > div:nth-child(4):nth-last-child(1) {
-        margin-right: 0;
-    }
-}
 
 
 /* ---------------------------------- FRAMEWORK --------------------------------- */
@@ -221,20 +164,7 @@ select { text-align: center; text-align-last: center; }
             .main-content-wrapper { float: right; width: calc(100% - #{$sidebar-box-width}); padding-top: $main-content-wrapper-padding; padding-right: $main-content-wrapper-padding; padding-left: 0px; padding-bottom: 0px;  margin: 0px;
 
 				/* PRODUCT CONTROL */
-				.product-control { 
-					/* IMAGE CONTROL */
-					/*.image-control { line-height: 0px;
-						img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
-					}*/
-
-					/* SCROLLTO CONTROL */
-					/*.scrollto-control { height: $scrollto-height; display: table; width: 100%; text-align: center;
-                        .scrollto-content { display: table-cell; vertical-align: middle;
-                            .scrollto-text { font-family: $body-font-family-regular; font-size: $scrollto-font-size; text-transform: $font-transform-uppercase; color: $selected-light-color; display: block; }
-                            .scrollto-icon { background-image: url("../images/icons/icon-circle-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: $scrollto-icon-size; height: $scrollto-icon-size; margin-top: $scrollto-icon-margin-top; }
-                        }
-					}*/
-				}
+				.product-control { }
 
                 /* IMAGE CONTROL */
 				.image-control { line-height: 0px; /* instead of img block display */
@@ -251,11 +181,25 @@ select { text-align: center; text-align-last: center; }
                 /* ROOM CONTROL */
                 .room-control { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
                     &:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+                    .room-wrapper {
+                        .room-container{}
+                    }
+                    .image-control {
+					    img { max-height: 700px; }
+				    }
                 }
+
                
                 /* EAT-DRINK CONTROL */
-                .eat-drink-control { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+                .eat-drink-control { border: 0; margin-bottom: 90px; padding-bottom: 90px;
                     &:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+
+                    .eat-drink-wrapper {
+                        .eat-drink-container { position: relative;
+                            &:before { content: ""; border-bottom: 1px solid $selected-light-color; position: absolute; width: 100%; bottom: 2px; }
+                        }
+                    }
+
                 }
 
                 /* INNER WRAPPER */
@@ -273,6 +217,15 @@ select { text-align: center; text-align-last: center; }
                             }
                         }
                     }
+
+                    /* ROOM CONTAINER */
+                    .room-container {
+                        .room-wrapper {
+                            .heading-control { padding: 0px 30px; margin-bottom: 50px; }
+                            .room-image-control { max-height: 70px; }
+                        }
+                    }
+
 
                     /* INNER CONTAINER */
                     .inner-container { padding: 0px 30px; display: table; width: 100%;
@@ -315,9 +268,17 @@ select { text-align: center; text-align-last: center; }
 
 							/*------ PAGE: ROOMS ------*/
 							/** SECTION ROOMS **/
-							&.section-rooms { margin-top: 60px; }
+							&.section-rooms { margin-top: 60px;
+                                .col-counter {  -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
+                                &.booking-button { padding-top: 90px;
+                                        .block-btn { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
+                                            button { }
+                                        }
+                                    }
+                                 }
+							}
 							/** SECTION SISTER HOTELS **/
-							&.section-sister-hotels { display: inline-block;
+							&.section-sister-hotels { 
                                 &:before { content: ""; display: block; border-top: $hr-border-width $hr-border-style $selected-light-color; width: 60%; margin-left: auto; margin-right: auto; margin-bottom: 60px; margin-top: 90px; }
 								.title-info { display: block;
 									&:before { display: none; }
@@ -497,14 +458,7 @@ select { text-align: center; text-align-last: center; }
 							}
 
 							/** GALLERY SLIDER CONTROL **/
-							.gallery-slider-control { position: relative; 
-								/*.nav-dots {
-									.nav-dot { width: 6px; height: 6px; margin: 0 3px 0 0; position: relative; border-radius: $global-rounded-corners; display: inline-block; background-color: $selected-dark-color;
-										&:last-child { margin-right: 6px; }
-										&.active { background-color: $selected-light-color; }
-									}
-								}*/
-							}
+							.gallery-slider-control { position: relative; }
 
 							/*------ PAGE: CONTACT ------*/
 							/** SECTION CONTACT **/

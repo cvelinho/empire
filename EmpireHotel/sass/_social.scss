@@ -4,37 +4,41 @@ SOCIAL MEDIA
 ============================================================================
 */
 .social-link-list { position: fixed; right: 0; top: 300px;
-	li { height: 45px; position: relative;
-		a { display: inline-block; width: 45px; height: 45px;
-			span {
-				&:before { content: ''; display: block; top: 0; left: 0; height: 45px; width: 45px; background: url(../images/icons/sprite-icon-social.png) no-repeat; cursor: pointer; }
+    div { display: none; }
+    ul {
+        li { height: 45px; position: relative;
+		    a { display: inline-block; width: 45px; height: 45px;
+			    span {
+				    &:before { content: ''; display: block; top: 0; left: 0; height: 45px; width: 45px; background: url(../images/icons/sprite-icon-social.png) no-repeat; cursor: pointer; }
 
-				&.icon-facebook {
-					&:before {
-						background-position: 0 0;
-					}
-				}
-				&.icon-twitter {
-					&:before {
-						background-position: 0 -45px;
-					}
-				}
-				&.icon-google-plus {
-					&:before {
-						background-position: 0 -90px;
-					}
-				}
-				&.icon-instagram {
-					&:before {
-						background-position: 0 -135px;
-					}
-				}
-				&.icon-pinterest {
-					&:before {
-						background-position: 0 -180px;
-					}
-				}
-			}
-		}	
-	}	
+				    &.icon-facebook {
+					    &:before {
+						    background-position: 0 0;
+					    }
+				    }
+				    &.icon-twitter {
+					    &:before {
+						    background-position: 0 -45px;
+					    }
+				    }
+				    &.icon-google-plus {
+					    &:before {
+						    background-position: 0 -90px;
+					    }
+				    }
+				    &.icon-instagram {
+					    &:before {
+						    background-position: 0 -135px;
+					    }
+				    }
+				    &.icon-pinterest {
+					    &:before {
+						    background-position: 0 -180px;
+					    }
+				    }
+			    }
+		    }	
+	    }
+    }
+		
 }
