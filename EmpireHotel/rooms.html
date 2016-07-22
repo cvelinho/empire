@@ -42,7 +42,7 @@
                         <!-- NAVIGATION MENU -->
                         <nav id="menu" role="navigation" style="display: none;">
                             <ul>
-                                <li><a href="home.html">Home</a></li>
+                                <li class="active"><a href="home.html">Home</a></li>
                                 <li><a href="rooms.html">Rooms</a></li>
                                 <li><a href="packages.html">Packages</a></li>
                                 <li><a href="specials.html">Specials</a></li>
@@ -58,8 +58,41 @@
 
                         <!-- SEARCH FORM -->
                         <div class="header-search-form">
-                            <div class="block-btn">
-                                <button class="button right">Book room</button>
+                            <div class="section-book-now">
+                                <form>
+                                    <div class="section-book-date">
+                                        <input type="text" value="" placeholder="Check In" class="center"  />
+                                        <!--<svg>
+                                            <use href="images/icons/calendar.svg"></use>
+                                        </svg>-->
+                                        <img src="images/icons/icon-calendar.png" />
+                                    </div>
+                                    <div class="section-book-date">
+                                        <input type="text" value="" placeholder="Check Out" class="center"  />
+                                        <img src="images/icons/icon-calendar.png" />
+                                    </div>
+                                    <div class="section-guests">
+                                        <span>NO. OF GUESTS</span>
+                                        <div class="select-wrapper center">
+                                            <select>
+                                                <option>2</option>
+                                                <option>22</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="section-rooms">
+                                        <span>NO. OF ROOMS</span>
+                                        <div class="select-wrapper center">
+                                            <select>
+                                                <option>2</option>
+                                                <option>22</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="section-button">
+                                        <button class="button">Book room</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
@@ -68,7 +101,7 @@
                             <nav>
                                 <ul>
                                     <li><span>Language:</span></li>
-                                    <li><a class="active">English</a></li>
+                                    <li class="active"><a>English</a></li>
                                     <li><a>Française</a></li>
                                     <li><a>Español</a></li>
                                     <li><a>Deutsch</a></li>
@@ -77,6 +110,19 @@
                                     <li><a>中文</a></li>
                                 </ul>
                             </nav>
+
+                            <div class="language-wrapper right">
+                                <label>
+                                    Language:
+                                </label>
+                                <select class="language-dropdown">
+                                    <option>EN</option>
+                                    <option>FR</option>
+                                    <option>IT</option>
+                                    <option>DE</option>
+                                    <option>IT</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -112,153 +158,77 @@
                     <!-- INNER WRAPPER -->
                     <div class="inner-wrapper">
                         
-                        <!-- ROOM CONTROL -->
+                        <!-- ROOM CONTAINER -->
                         <div class="room-container">
                             <div class="room-wrapper">
                                 <div class="heading-control">
                                     <h1>Deluxe King</h1>
                                 </div>
-
-                                <div class="image-control">
+                                <div class="room-image-control">
                                     <img src="images/rooms-img-1.jpg" />
                                 </div>
-
                                 <div class="inner-container">
                                     <section class="section-rooms">
                                         <div class="heading-control">
                                             <h3>Spread out in this oversized king-bedded guest room with beautiful Lincoln Center views</h3>
                                         </div>
-
                                         <article class="p1 col-counter">
                                             Room is approximately 330 square feet. Design is a mix of earth-tone colors and functionality featuring a flat screen TV, iHome docking station with speakers, European linens and bathrobes, spa-inspired bathroom design with a tropical rain showerhead and luxury bath amenities. Enjoy our complimentary fitness center during your stay. WiFi available.
                                         </article>
-
                                         <div class="booking-button col-counter">
                                             <div class="block-btn mask"></div>
                                             <div class="block-btn">
                                                 <button class="button right">Book room</button>
                                             </div>
                                         </div>
-
-                                        <div class="clr"></div>
                                     </section>
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="room-control">
+
+                        <div class="room-container">
                             <div class="room-wrapper">
-
-                                <div class="room-container">
-                                    <div class="inner-container">
-                                        <section class="section-default">
-                                            <div class="heading-control">
-                                                <h1>Deluxe King</h1>
-                                            </div>
-                                        </section>
-                                    </div>
-
-                                    <div class="image-control">
-                                        <img src="images/rooms-img-1.jpg" />
-                                    </div>
-
-                                    <div class="inner-container">
-                                        <section class="section-rooms">
-                                            <div class="heading-control">
-                                                <h3>Spread out in this oversized king-bedded guest room with beautiful Lincoln Center views</h3>
-                                            </div>
-
-                                            <article class="p1 col-counter">
-                                                Room is approximately 330 square feet. Design is a mix of earth-tone colors and functionality featuring a flat screen TV, iHome docking station with speakers, European linens and bathrobes, spa-inspired bathroom design with a tropical rain showerhead and luxury bath amenities. Enjoy our complimentary fitness center during your stay. WiFi available.
-                                            </article>
-
-                                            <div class="booking-button col-counter">
-                                                <div class="block-btn mask"></div>
-                                                <div class="block-btn">
-                                                    <button class="button right">Book room</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="clr"></div>
-                                        </section>
-                                    </div>
+                                <div class="heading-control">
+                                    <h1>Standard Queen</h1>
                                 </div>
-
-                            </div>
-                        </div>-->
-
-                        <!-- PRODUCT CONTROL -->
-                        <div class="product-control room-control">
-                            <div class="room-wrapper">
-                                <!-- INNER CONTAINER -->
-                                <div class="inner-container">
-                                    <!-- SECTION DEFAULT-->
-                                    <section class="section-default">
-                                        <div class="heading-control">
-                                            <h1>Standard Queen</h1>
-                                        </div>
-                                    </section>
-                                </div>
-                                <!-- EOF INNER CONTAINER -->
-
-                                <div class="image-control">
+                                <div class="room-image-control">
                                     <img src="images/rooms-img-2.jpg" />
                                 </div>
-
-                                <!-- INNER CONTAINER -->
                                 <div class="inner-container">
-                                    <!-- SECTION DEFAULT-->
                                     <section class="section-rooms">
                                         <div class="heading-control">
                                             <h3>Rest and relax in this warm, quiet courtyard room</h3>
                                         </div>
-
                                         <article class="p1 col-counter">
                                             Room features one queen bed (approx. 191 square feet). Design is a mix of earth-tone colors and functionality featuring a flat screen TV, alarm clock radio, European linens and bathrobes, spa-inspired bathroom design with a tropical rain showerhead and luxury bath amenities. Enjoy our complimentary fitness center during your stay. WiFi available.
                                         </article>
-
                                         <div class="booking-button col-counter">
                                             <div class="block-btn mask"></div>
                                             <div class="block-btn">
                                                 <button class="button right">Book room</button>
                                             </div>
                                         </div>
-                                        <div class="clr"></div>
                                     </section>
                                 </div>
-                                <!-- EOF INNER CONTAINER -->
                             </div>
                         </div>
 
-                        <!-- PRODUCT CONTROL -->
-                        <div class="product-control room-control">
+                        <div class="room-container last">
                             <div class="room-wrapper">
-                                <!-- INNER CONTAINER -->
-                                <div class="inner-container">
-                                    <!-- SECTION DEFAULT-->
-                                    <section class="section-default">
-                                        <div class="heading-control">
-                                            <h1>Junior suite king</h1>
-                                        </div>
-                                    </section>
+                                <div class="heading-control">
+                                    <h1>Junior suite king</h1>
                                 </div>
-                                <!-- EOF INNER CONTAINER -->
-
-                                <div class="image-control">
+                                <div class="room-image-control">
                                     <img src="images/rooms-img-3.jpg" />
                                 </div>
-
-                                <!-- INNER CONTAINER -->
                                 <div class="inner-container">
-                                    <!-- SECTION DEFAULT-->
-                                    <section class="section-rooms">
+                                    <section class="section-rooms last">
                                         <div class="heading-control">
                                             <h3>Ideal for longer stays, this junior suite features city views</h3>
                                         </div>
-
                                         <article class="p1 col-counter">
                                             Room is equipped with a king bed, queen size pull-out sofa bed and 2 club chairs, approximately 350 square feet. Room design is a mix of earth-tone colors and functionality featuring a flat screen TV, iHome docking stations with speakers, European linens and bathroom design with a tropical rain showerhead and luxury bath amenities. Enjoy our complimentary fitness center during your stay. WiFi available.
                                         </article>
-
                                         <div class="booking-button col-counter">
                                             <div class="block-btn mask"></div>
                                             <div class="block-btn">
@@ -268,7 +238,6 @@
                                         <div class="clr"></div>
                                     </section>
                                 </div>
-                                <!-- EOF INNER CONTAINER -->
                             </div>
                         </div>
 

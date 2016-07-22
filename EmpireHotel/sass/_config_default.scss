@@ -90,9 +90,9 @@ $header-large-height:					208px;
 $header-large-padding:					60px;
 
 $header-logo-height:					148px;
-$header-text-line-height:				30px;
+$header-text-line-height:				initial;
 $header-search-form-height:				148px;
-$header-search-form-button-margin-top:	84px;
+$header-search-form-margin-top:			84px;
 
 $description-font-size:					$body-font-size;
 $description-font-family:				$body-font-family-regular;

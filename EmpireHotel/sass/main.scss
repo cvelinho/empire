@@ -10,10 +10,6 @@ Version: 1.0
 @import "compass/reset";
 
 /* import config sass*/
-/* ------------------------------------------------------------------------------ */
-/* ------------------------------- DEFAULT CONFIG ------------------------------- */
-/* ------------------------------------------------------------------------------ */
-
 /* ------------------------------- DEFAULT CONFIG ------------------------------- */
 @import "config_default";
 
@@ -40,8 +36,8 @@ hr { border: 0; border-top: $hr-border-width $hr-border-style $hr-border-color; 
 
 .button { display: block; background-color: $button-background-color; color: $button-text-color; text-transform: $button-font-transform; border: $button-border; font-size: $button-font-size; font-weight: $button-font-weight; text-align: $button-text-align; padding: 0 40px; height: 36px; cursor: pointer; }
 
-.left, .block-left, .col-left			{ float: left; }
-.right, .block-right, .col-left			{ float: right; }
+.left, .block-left, .col-left			{ float: left; tect-align: left; }
+.right, .block-right, .col-left			{ float: right; text-align: right; }
 .center, .block-center, .col-center		{ float: none; text-align: center; margin: 0 auto; }
 .clr									{ clear: both; }
 
@@ -82,10 +78,10 @@ select { text-align: center; text-align-last: center; }
 	
 .strong { font-family: $body-font-family-medium; }
 
-/* ------------------------------------------------------------------------------ */
-/* --------------------------------- FRAMEWORK ---------------------------------- */
-/* ------------------------------------------------------------------------------ */
-/* DEFAULT COLUMN COUNTER */
+
+
+/* import search form partial sass*/
+@import "form";
 
 
 /* ---------------------------------- FRAMEWORK --------------------------------- */
@@ -98,47 +94,53 @@ select { text-align: center; text-align-last: center; }
 
         /*------ HEADER WRAPPER ------*/
         .header-wrapper { position: relative; border-bottom: $hr-border-width $hr-border-style $hr-border-color;
-            header { padding: 0 $header-large-padding; height: $header-large-height;
-                /* Logo */
-                .header-logo { width: 100px; height: $header-logo-height; display: table-cell; vertical-align: bottom;
-                    img { width: 100%; height: auto; }
-                }    
-                /* Description-Contact */
-                .header-contact { line-height: $header-text-line-height;
-                    span { font-family: $description-font-family; font-size: $description-font-size; color: $description-font-color;
-                        &:first-child { padding-left: 0px;
-                            &:before { padding-right: 0px; }
-                        }
-                        &:last-child {
-                            &:after { border-right: none; }
-                            &:before { border-right: none; }
-                        }
-                        &:after { content: ""; border-right: 1px solid $accent-darker-color; padding-left: 10px; height: 17px; display: inline-block; vertical-align: middle; }
-                        &:before { content: ""; padding-right: 5px; }
-                    } 
-                }
+            header { padding: 0px $header-large-padding; height: $header-large-height;
+				
+				.block-left,
+				.block-right { height: $header-large-height; }
 
-                /* Search form */
-                .header-search-form { height: $header-search-form-height; text-align: right;
-                    button { margin-top: $header-search-form-button-margin-top; }
-                }
+				.block-left {
+					/* Logo */
+					.header-logo { width: 100px; padding-top: 35px; padding-bottom: 10px; display: table-cell; vertical-align: bottom;
+						img { width: 100%; height: auto; }
+					}    
+					/* Description-Contact */
+					.header-contact { line-height: $header-text-line-height; 
+						span { font-family: $description-font-family; font-size: $description-font-size; color: $description-font-color;
+							&:first-child { padding-left: 0px;
+								&:before { padding-right: 0px; }
+							}
+							&:last-child {
+								&:after { border-right: none; }
+								&:before { border-right: none; }
+							}
+							&:after { content: ""; border-right: 1px solid $accent-darker-color; padding-left: 10px; height: 17px; display: inline-block; vertical-align: middle; }
+							&:before { content: ""; padding-right: 5px; }
+						} 
+					}
+				}
+
+				.block-right { position: absolute; right: $header-large-padding;
+					/* Search form */
+					.header-search-form { height: $header-search-form-height; padding-top: $header-search-form-margin-top; }
             
-                /* Language menu */
-                .header-language { line-height: $header-text-line-height;
-                    nav { display: block; font-size: $body-font-size; 
-                        ul {
-                            li { display: inline-block; padding: 0 6px; 
-                                span, a { font-family: $body-font-family-regular; color: $body-font-color; }
-                                a { cursor: pointer; }
-                                &.active, &:hover { color: $selected-light-color;
-                                    a { color: $selected-light-color; }
-                                }
-                            }
-                        }
-                    }
+					/* Language menu */
+					.header-language { line-height: $header-text-line-height; padding-top: 10px;
+						nav { display: block; font-size: $body-font-size; 
+							ul {
+								li { display: inline-block; padding: 0 6px; 
+									span, a { font-family: $body-font-family-regular; color: $body-font-color; }
+									a { cursor: pointer; }
+									&.active, &:hover { color: $selected-light-color;
+										a { color: $selected-light-color; }
+									}
+								}
+							}
+						}
                     
-                    .language-wrapper { display: none; }
-                }
+						.language-wrapper { display: none; }
+					}
+				}
             }
         }
 
@@ -177,18 +179,6 @@ select { text-align: center; text-align-last: center; }
                         .scrollto-icon { background-image: url("../images/icons/icon-circle-arrow-down.png"); background-repeat: no-repeat; background-position: center; width: $scrollto-icon-size; height: $scrollto-icon-size; margin-top: $scrollto-icon-margin-top; }
                     }
 				}
-
-                /* ROOM CONTROL */
-                .room-control { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
-                    &:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
-                    .room-wrapper {
-                        .room-container{}
-                    }
-                    .image-control {
-					    img { max-height: 700px; }
-				    }
-                }
-
                
                 /* EAT-DRINK CONTROL */
                 .eat-drink-control { border: 0; margin-bottom: 90px; padding-bottom: 90px;
@@ -222,10 +212,11 @@ select { text-align: center; text-align-last: center; }
                     .room-container {
                         .room-wrapper {
                             .heading-control { padding: 0px 30px; margin-bottom: 50px; }
-                            .room-image-control { max-height: 70px; }
+                            .room-image-control {
+								img { display: block; width: 100%; max-height: 680px; object-fit: cover; }
+							}
                         }
                     }
-
 
                     /* INNER CONTAINER */
                     .inner-container { padding: 0px 30px; display: table; width: 100%;
@@ -268,14 +259,16 @@ select { text-align: center; text-align-last: center; }
 
 							/*------ PAGE: ROOMS ------*/
 							/** SECTION ROOMS **/
-							&.section-rooms { margin-top: 60px;
-                                .col-counter {  -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
-                                &.booking-button { padding-top: 90px;
-                                        .block-btn { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
-                                            button { }
-                                        }
-                                    }
-                                 }
+							&.section-rooms { border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-top: 60px; margin-bottom: 60px; padding-bottom: 60px;
+								&.last { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+								.heading-control { padding: 0px; }
+                                .col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
+									&.booking-button { padding-top: 90px;
+										.block-btn { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
+											button { }
+										}
+									}
+								}
 							}
 							/** SECTION SISTER HOTELS **/
 							&.section-sister-hotels { 

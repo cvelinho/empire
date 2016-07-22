@@ -4,7 +4,7 @@
     <title>The Empire Hotel</title>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="stylesheets/main.css" rel="stylesheet" media="all"/>
 
 </head>
@@ -59,8 +59,41 @@
 
                         <!-- SEARCH FORM -->
                         <div class="header-search-form">
-                            <div class="block-btn">
-                                <button class="button right">Book room</button>
+                            <div class="section-book-now">
+                                <form>
+                                    <div class="section-book-date">
+                                        <input type="text" value="" placeholder="Check In" class="center"  />
+                                        <!--<svg>
+                                            <use href="images/icons/calendar.svg"></use>
+                                        </svg>-->
+                                        <img src="images/icons/icon-calendar.png" />
+                                    </div>
+                                    <div class="section-book-date">
+                                        <input type="text" value="" placeholder="Check Out" class="center"  />
+                                        <img src="images/icons/icon-calendar.png" />
+                                    </div>
+                                    <div class="section-guests">
+                                        <span>NO. OF GUESTS</span>
+                                        <div class="select-wrapper center">
+                                            <select>
+                                                <option>2</option>
+                                                <option>22</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="section-rooms">
+                                        <span>NO. OF ROOMS</span>
+                                        <div class="select-wrapper center">
+                                            <select>
+                                                <option>2</option>
+                                                <option>22</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="section-button">
+                                        <button class="button">Book room</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
@@ -80,6 +113,9 @@
                             </nav>
 
                             <div class="language-wrapper right">
+                                <label>
+                                    Language:
+                                </label>
                                 <select class="language-dropdown">
                                     <option>EN</option>
                                     <option>FR</option>
