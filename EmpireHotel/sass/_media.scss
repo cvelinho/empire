@@ -536,20 +536,19 @@ Media queries
 
 					.block-left { 
 						/* Description-Contact */
-						.header-contact { margin-right: 108px;
+						.header-contact { line-height: $header-text-line-height; 
 							span { font-family: $description-font-family; font-size: $description-font-size; color: $description-font-color;
-								&:first-child { padding-left: 0px;
-									&:before { padding-right: 0px; }
-								}
-								&:last-child {
+								&.contact-address { display: block;
 									&:after { border-right: none; }
 									&:before { border-right: none; }
 								}
-								&:after { content: ""; border-right: 1px solid $accent-darker-color; padding-left: 10px; height: 17px; display: inline-block; vertical-align: middle; }
-								&:before { content: ""; padding-right: 5px; }
+
+								&.contact-phone { 
+									&:after {  }
+									&:before { padding-right: 0px; }
+								}
 							}
 						}
-
 					}
 
 					.block-right { 
