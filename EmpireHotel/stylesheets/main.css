@@ -548,29 +548,17 @@ nav[role=navigation] ul li:first-child {
   font-size: 16px;
   color: #7a7c7b;
 }
-.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:first-child {
-  padding-left: 0px;
+.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span.contact-address {
+  display: block;
 }
-.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:first-child:before {
+.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span.contact-address:after {
+  border-right: none;
+}
+.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span.contact-address:before {
+  border-right: none;
+}
+.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span.contact-phone:before {
   padding-right: 0px;
-}
-.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:last-child:after {
-  border-right: none;
-}
-.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:last-child:before {
-  border-right: none;
-}
-.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:after {
-  content: "";
-  border-right: 1px solid #7a7c7b;
-  padding-left: 10px;
-  height: 17px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:before {
-  content: "";
-  padding-right: 5px;
 }
 .main-framework .framework-wrapper .header-wrapper header .block-right {
   position: absolute;
@@ -2114,6 +2102,7 @@ Media queries
   }
   .main-framework .framework-wrapper .header-wrapper header .block-right {
     right: 0px;
+    border-bottom: 1px solid #dedede;
     /* Search form */
     /* Language menu */
   }
@@ -2590,6 +2579,17 @@ Media queries
     clear: left;
   }
 
+  /* NAVIGATION */
+  nav[role=navigation] {
+    clear: both;
+  }
+  nav[role=navigation].active {
+    width: 100%;
+    margin-top: 198px;
+    text-align: left;
+  }
+
+  /* EOF NAVIGATION */
   .main-framework .framework-wrapper {
     /*------ HEADER WRAPPER ------*/
     /* EOF HEADER WRAPPER */
@@ -2600,11 +2600,39 @@ Media queries
     display: block;
   }
   .main-framework .framework-wrapper .header-wrapper header .block-left {
-    /* Logo */
     /* Description-Contact */
   }
   .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact {
     margin-right: 108px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span {
+    font-family: "Brandon_reg", Arial;
+    font-size: 16px;
+    color: #7a7c7b;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:first-child {
+    padding-left: 0px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:first-child:before {
+    padding-right: 0px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:last-child:after {
+    border-right: none;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:last-child:before {
+    border-right: none;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:after {
+    content: "";
+    border-right: 1px solid #7a7c7b;
+    padding-left: 10px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span:before {
+    content: "";
+    padding-right: 5px;
   }
   .main-framework .framework-wrapper .header-wrapper header .block-right {
     /* Search form */
