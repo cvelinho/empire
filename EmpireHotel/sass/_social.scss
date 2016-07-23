@@ -4,7 +4,7 @@ SOCIAL MEDIA
 ============================================================================
 */
 .social-link-list { position: fixed; right: 0; top: 300px;
-    div { display: none; }
+    .social-text-title { display: none; }
     ul {
         li { height: 45px; position: relative;
 		    a { display: inline-block; width: 45px; height: 45px;

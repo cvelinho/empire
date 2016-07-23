@@ -62,7 +62,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* import config sass*/
 /* ------------------------------- DEFAULT CONFIG ------------------------------- */
 /* ---------------------------------- FRAMEWORK --------------------------------- */
 /*1710px*/
@@ -312,6 +311,42 @@ select {
   font-family: "Brandon_med", Arial;
 }
 
+/* --------------------------------- SCROLLBAR  --------------------------------- */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+  margin-left: 2px;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #dedede;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: #7a7c7b;
+  width: 7px;
+  border-top: 2px solid #dedede;
+  border-bottom: 2px solid #dedede;
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  height: 50px;
+  background-color: #7a7c7b;
+  width: 7px;
+  border-top: 2px solid #dedede;
+  border-bottom: 2px solid #dedede;
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+
+.modal-no-scroll {
+  overflow: hidden !important;
+}
+
 /* import search form partial sass*/
 /*
 ============================================================================
@@ -324,18 +359,17 @@ SECTION SEARCH FORM
   font-size: 16px;
   color: #7a7c7b;
 }
+.section-book-now .col-counter {
+  display: inline-block;
+}
 .section-book-now img {
   width: auto;
   vertical-align: bottom;
 }
-.section-book-now svg {
-  width: 36px;
-  height: 36px;
-}
 .section-book-now .section-book-date {
   display: inline-block;
 }
-.section-book-now .section-book-date:nth-child(2) {
+.section-book-now .section-book-date:last-child {
   padding-left: 25px;
 }
 .section-book-now input[type='text'] {
@@ -351,6 +385,22 @@ SECTION SEARCH FORM
 .section-book-now input[type='text']::-webkit-input-placeholder {
   color: #7a7c7b;
   text-transform: uppercase;
+}
+.section-book-now .icon-calendar {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  background-color: #7a7c7b;
+  width: 36px;
+  height: 38px;
+  -webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/calendar.svg");
+  mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/calendar.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 36px 38px;
+  mask-size: 36px 38px;
 }
 .section-book-now .section-guests,
 .section-book-now .section-rooms {
@@ -371,18 +421,24 @@ SECTION SEARCH FORM
 .section-book-now .section-guests .select-wrapper:after,
 .section-book-now .section-rooms .select-wrapper:after {
   content: "";
-  background-image: url("../images/icons/icon-arrow-down.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  width: 7px;
-  height: 3px;
   display: inline-block;
-  margin-top: -7px;
+  margin-top: -8px;
   position: absolute;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  background-color: #7a7c7b;
+  width: 7px;
+  height: 4px;
+  -webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg");
+  mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 7px 4px;
+  mask-size: 7px 4px;
 }
 .section-book-now .section-button {
   display: inline-block;
@@ -398,6 +454,44 @@ SECTION SEARCH FORM
   height: 36px;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+/* import navigation partial sass*/
+/*
+============================================================================
+MOBILE NAVIGATION
+============================================================================
+*/
+.mobile-nav {
+  position: fixed;
+  z-index: 1;
+}
+
+a.menu-link {
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-nav nav[role=navigation] {
+  max-height: none;
+}
+
+nav[role=navigation] {
+  display: none;
+}
+nav[role=navigation] ul {
+  margin: 0;
+  border: 0;
+}
+nav[role=navigation] ul li {
+  display: inline-block;
+  margin: 0px;
+}
+nav[role=navigation] ul li:first-child {
+  margin-left: 5px;
 }
 
 /* ---------------------------------- FRAMEWORK --------------------------------- */
@@ -764,6 +858,7 @@ SECTION SEARCH FORM
   break-inside: avoid-column;
   display: inline-block;
   width: 100%;
+  word-break: break-word;
 }
 .main-framework .framework-wrapper .main-wrapper .main-content-wrapper .inner-wrapper .inner-container section.section-deal-promotions .image-control {
   margin-bottom: 60px;
@@ -1552,7 +1647,7 @@ SOCIAL MEDIA
   right: 0;
   top: 300px;
 }
-.social-link-list div {
+.social-link-list .social-text-title {
   display: none;
 }
 .social-link-list ul li {
@@ -1616,7 +1711,7 @@ Media queries
   }
 }
 /* Desktop S  ----------- */
-@media all and (max-width: 1710px) {
+@media all and (max-width: 1710px) and (min-width: 1041px) {
   /* BOX CONTROL */
   .box-control {
     position: relative !important;
@@ -1672,18 +1767,53 @@ Media queries
     /* Language menu */
   }
   .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form {
-    height: 98px;
+    height: 87px;
     padding-top: 40px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now {
+    font-size: 13px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-book-date:last-child {
+    padding-left: 10px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-book-date input[type='text'] {
+    font-size: 13px;
+    height: 30px;
+    width: 108px;
+    margin-right: 12px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-book-date .icon-calendar {
+    width: 30px;
+    height: 32px;
+    -webkit-mask-size: 30px 32px;
+    mask-size: 30px 32px;
+    shape-rendering: optimizeSpeed;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-guests, .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-rooms {
+    padding-left: 10px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-guests .select-wrapper, .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-rooms .select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-guests .select-wrapper select, .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-rooms .select-wrapper select {
+    font-size: 13px;
+    width: 32px;
+    height: 32px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-button {
+    margin-left: 5px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-button .button {
+    font-size: 13px;
+    padding: 0 32px;
+    height: 32px;
   }
   .main-framework .framework-wrapper .header-wrapper header .block-right .header-language nav {
     display: none;
-  }
-  .main-framework .framework-wrapper .header-wrapper header .block-right .header-language nav ul li {
-    display: inline-block;
-    padding: 0 6px;
-  }
-  .main-framework .framework-wrapper .header-wrapper header .block-right .header-language nav ul li span, .main-framework .framework-wrapper .header-wrapper header .block-right .header-language nav ul li a {
-    font-size: 13px;
   }
   .main-framework .framework-wrapper .header-wrapper header .block-right .header-language .language-wrapper {
     position: relative;
@@ -1696,27 +1826,27 @@ Media queries
   }
   .main-framework .framework-wrapper .header-wrapper header .block-right .header-language .language-wrapper:after {
     content: "";
-    background-repeat: no-repeat;
-    background-position: right;
-    width: 11px;
-    height: 7px;
     display: inline-block;
     margin-top: 0px;
     position: absolute;
     right: 0;
-    top: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    /* TODO: something goes wrong with svg */
+    top: 50%;
+    margin-top: -10px;
     background-color: #7a7c7b;
-    -webkit-mask-image: url("../images/icons/icon-arrow-down.svg");
-    mask-image: url("../images/icons/icon-arrow-down.svg");
+    width: 11px;
+    height: 7px;
+    /* better square */
+    width: 20px;
+    height: 20px;
+    -webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg");
+    mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg.svg");
     -webkit-mask-position: center;
     mask-position: center;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 11px 7px;
     mask-size: 11px 7px;
+    pointer-events: none;
   }
   .main-framework .framework-wrapper .header-wrapper header .block-right .header-language .language-dropdown {
     font-family: "Brandon_med", Arial;
@@ -1783,6 +1913,7 @@ Media queries
     margin-right: 0;
   }
 
+  /* EOF BOX CONTROL */
   /* SOCIAL MEDIA */
   .social-link-list {
     position: relative;
@@ -1795,7 +1926,7 @@ Media queries
     text-align: center;
     margin: 0px auto;
   }
-  .social-link-list div {
+  .social-link-list .social-text-title {
     display: block;
   }
   .social-link-list ul {
@@ -1818,11 +1949,123 @@ Media queries
     height: 45px;
   }
 
+  /* EOF SOCIAL MEDIA */
+  /* NAVIGATION */
+  a.menu-link {
+    float: right;
+    display: block;
+    color: transparent;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+  }
+  a.menu-link .text-bars {
+    display: block;
+    font-family: "Brandon_bld", Arial;
+    font-size: 16px;
+    color: #7a7c7b;
+    text-transform: uppercase;
+  }
+  a.menu-link .text-bars:before {
+    content: "Menu";
+    display: block;
+  }
+  a.menu-link .icon {
+    content: "";
+    display: inline-block;
+    background-color: #7a7c7b;
+    width: 45px;
+    height: 45px;
+    -webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/menu-bar.svg");
+    mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/menu-bar.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 45px 45px;
+    mask-size: 45px 45px;
+  }
+  a.menu-link.active .text-bars:before {
+    content: "Close";
+    display: block;
+  }
+  a.menu-link.active .icon {
+    -webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/close.svg");
+    mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/close.svg");
+  }
+
+  #menu {
+    display: block;
+  }
+
+  .menu-nav nav[role=navigation] {
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  nav[role=navigation] {
+    clear: both;
+  }
+  nav[role=navigation].active {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: #f7f7f7;
+    padding-top: 53px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-height: 100%;
+    z-index: 99999;
+    border-left: 1px solid #dedede;
+    margin-top: 175px;
+  }
+  nav[role=navigation] ul li {
+    display: inline;
+    line-height: 20px;
+    position: relative;
+  }
+  nav[role=navigation] ul li a {
+    font-family: "Brandon_reg", Arial;
+    font-size: 20px;
+    color: #7a7c7b;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+  }
+  nav[role=navigation] ul li:after {
+    content: "";
+    display: block;
+    padding-bottom: 30px;
+  }
+  nav[role=navigation] ul li.active, nav[role=navigation] ul li.current-menu-item, nav[role=navigation] ul li:hover {
+    color: #cd700b;
+  }
+  nav[role=navigation] ul li.active a, nav[role=navigation] ul li.current-menu-item a, nav[role=navigation] ul li:hover a {
+    color: #cd700b;
+  }
+  nav[role=navigation] ul li.active:before, nav[role=navigation] ul li.current-menu-item:before, nav[role=navigation] ul li:hover:before {
+    content: "";
+    border-bottom: 1px solid #cd700b;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+  }
+
+  /* EOF NAVIGATION */
   .main-framework {
     height: initial;
   }
   .main-framework .framework-wrapper {
     /*------ HEADER WRAPPER ------*/
+    /* EOF HEADER WRAPPER */
   }
   .main-framework .framework-wrapper .header-wrapper header {
     padding: 0px;
@@ -1835,10 +2078,11 @@ Media queries
     display: block;
     width: 100%;
     position: relative;
+    padding: 0px 30px;
   }
   .main-framework .framework-wrapper .header-wrapper header .block-left {
     border-bottom: 1px solid #dedede;
-    padding: 0px 30px;
+    padding-bottom: 30px;
     /* Logo */
     /* Description-Contact */
   }
@@ -1857,6 +2101,7 @@ Media queries
     padding-left: 0px;
     vertical-align: bottom;
     line-height: initial;
+    margin-right: 200px;
   }
   .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact span {
     font-size: 16px;
@@ -1868,12 +2113,112 @@ Media queries
     display: none;
   }
   .main-framework .framework-wrapper .header-wrapper header .block-right {
-    display: none;
+    right: 0px;
     /* Search form */
     /* Language menu */
   }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form {
+    height: auto;
+    padding-top: 20px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now {
+    padding-left: 0px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter {
+    width: 100%;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    column-gap: 60px;
+    height: 60px;
+    display: block;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item {
+    margin: 0;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -o-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-book-date:last-child {
+    padding-left: 0px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-book-date input {
+    width: calc(100% - 60px);
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    clear: right;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-book-date .icon-calendar {
+    text-align: right;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-guests,
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item .section-rooms {
+    text-align: right;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-button button {
+    width: 100%;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-language {
+    position: absolute;
+    top: -64px;
+    right: 30px;
+  }
   .main-framework .framework-wrapper .header-wrapper header .block-right .header-language nav {
     display: none;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-language .language-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-language .language-wrapper label {
+    font-family: "Brandon_reg", Arial;
+    font-size: 13px;
+    color: #7a7c7b;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-language .language-wrapper:after {
+    content: "";
+    display: inline-block;
+    margin-top: 0px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+    background-color: #7a7c7b;
+    width: 11px;
+    height: 7px;
+    /* better square */
+    width: 20px;
+    height: 20px;
+    -webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg");
+    mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 11px 7px;
+    mask-size: 11px 7px;
+    pointer-events: none;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-language .language-dropdown {
+    font-family: "Brandon_med", Arial;
+    font-size: 13px;
+    color: #7a7c7b;
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 50px;
+    z-index: 1;
   }
   .main-framework .framework-wrapper .main-wrapper {
     margin-bottom: 0px;
@@ -2245,6 +2590,47 @@ Media queries
     clear: left;
   }
 
+  .main-framework .framework-wrapper {
+    /*------ HEADER WRAPPER ------*/
+    /* EOF HEADER WRAPPER */
+  }
+  .main-framework .framework-wrapper .header-wrapper header {
+    padding: 0px;
+    height: auto;
+    display: block;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left {
+    /* Logo */
+    /* Description-Contact */
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-left .header-contact {
+    margin-right: 108px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right {
+    /* Search form */
+    /* Language menu */
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form {
+    font-size: 12px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter:last-child {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    column-gap: 60px;
+    height: 60px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-guests, .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-rooms {
+    padding-left: 0px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-guests span, .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-rooms span {
+    position: absolute;
+    left: 0;
+    top: 8px;
+  }
+  .main-framework .framework-wrapper .header-wrapper header .block-right .header-search-form .section-book-now .col-counter .col-item.section-button.mask {
+    display: none;
+  }
   .main-framework .framework-wrapper .main-wrapper {
     margin-bottom: 0px;
     padding-bottom: 0px;

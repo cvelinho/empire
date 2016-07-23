@@ -21,7 +21,7 @@ Media queries
 }
 
 /* Desktop S  ----------- */
-@media all and (max-width : 1710px) {
+@media all and (max-width : 1710px) and (min-width: 1041px) {
 	/* BOX CONTROL */
 	.box-control { position: relative !important;
 		.box-item { float: left; display: block; margin-right: 3.57866%; width: 30.94756%; 
@@ -33,7 +33,6 @@ Media queries
 			}
 		}
 	}
-
 
     .main-framework { 
         .framework-wrapper {
@@ -58,30 +57,51 @@ Media queries
 
 					.block-right { 
 						/* Search form */
-						.header-search-form { height: 98px; padding-top: 40px; }
+						.header-search-form { height: 87px; padding-top: 40px;
+							.section-book-now { font-size: $body-font-size-small;
+								.col-counter { 
+                                    .col-item {
+										&.section-book-date {
+											&:last-child { padding-left: 10px; }
+											input[type='text'] { font-size: $body-font-size-small; height: 30px; width: 108px; margin-right: 12px;}
+											.icon-calendar { width: 30px; height: 32px; -webkit-mask-size: 30px 32px; mask-size: 30px 32px; shape-rendering: optimizeSpeed; }
+										}
+
+										&.section-guests,
+										&.section-rooms { padding-left: 10px;
+											.select-wrapper { position: relative; display: inline-block; width: 32px; height: 32px; margin-left: 15px;
+												select { font-size: $body-font-size-small; width: 32px; height: 32px; }
+											}
+										}
+
+										&.section-button { margin-left: 5px;
+											.button { font-size: 13px; padding: 0 32px; height: 32px; }
+										}
+									}
+                                }
+							}
+						}
             
 						/* Language menu */
 						.header-language { 
-							nav { display: none;
-								ul {
-									li { display: inline-block; padding: 0 6px; 
-										span, a { font-size: 13px; }
-									}
-								}
-							}
+							nav { display: none; }
 							.language-wrapper { position: relative; display: inline-block; 
 								label { font-family: $body-font-family-regular; font-size: $body-font-size-small; color: #7a7c7b; }
-								&:after { content: ""; background-repeat: no-repeat; background-position: right; width: 11px; height: 7px; display: inline-block; margin-top: 0px; position: absolute; right: 0; top: 8px; margin-left: auto; margin-right: auto;
-									/* TODO: something goes wrong with svg */
-									background-color: #7a7c7b;
-									-webkit-mask-image: url("../images/icons/icon-arrow-down.svg");
-									mask-image: url("../images/icons/icon-arrow-down.svg");
+								&:after { content: "";  display: inline-block; margin-top: 0px; position: absolute; right: 0; top: 50%; margin-top: -10px;
+									background-color: $accent-darker-color; 
+									width: 11px; 
+									height: 7px;			
+									/* better square */
+									 width: 20px; height: 20px;
+									-webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg");
+									mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg.svg");
 									-webkit-mask-position: center;
 									mask-position: center;
 									-webkit-mask-repeat: no-repeat;
 									mask-repeat: no-repeat;
 									-webkit-mask-size: 11px 7px;
 									mask-size: 11px 7px;
+									pointer-events: none;
 								}
 							}
 							.language-dropdown { font-family: $body-font-family-medium; font-size: $body-font-size-small; color: $form-font-color; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; width: 50px; z-index: 1; }
@@ -150,18 +170,69 @@ Media queries
 				margin-right: 0;
 			}
 		}
-	}
+	}/* EOF BOX CONTROL */
 
     /* SOCIAL MEDIA */
     .social-link-list { position: relative; right: 0px; top: 0px; bottom: 0px; top: -249px; z-index: 1; width: 100%; text-align: center; margin: 0px auto;
-        div { display: block; }
+        .social-text-title { display: block; }
         ul { display: -webkit-box; margin: 0px auto; display: block; /* width: 100%; */ text-align: center; height: 45px; display: table;
             li { height: 45px; position: relative; display: table-cell;
 		        a { display: inline-block; width: 45px; height: 45px; }	
 	        }
-        }
-	    	
+        }	    	
+    }/* EOF SOCIAL MEDIA */
+
+	/* NAVIGATION */
+	a.menu-link { float: right; display: block; color: transparent; position: fixed; top: 30px; right: 30px;
+        .text-bars { display: block; font-family: $body-font-family-bold; font-size: 16px; color: $body-font-color; text-transform: uppercase;
+			&:before {
+				content: "Menu";
+				display: block;
+			}
+		}
+		.icon { content: "";  display: inline-block; background-color: $accent-darker-color; width: 45px; height: 45px; 
+			-webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/menu-bar.svg");
+			mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/menu-bar.svg");
+			-webkit-mask-position: center;
+			mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			-webkit-mask-size: 45px 45px;
+			mask-size: 45px 45px;
+		}
+
+		&.active {
+			.text-bars {
+				&:before {
+					content: "Close";
+					display: block;
+				}
+			}
+			.icon {
+				-webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/close.svg");
+				mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/close.svg");
+			}
+		}
     }
+
+	#menu { display: block; }
+    .menu-nav nav[role=navigation] { overflow: hidden; max-height: 0; }
+
+    nav[role=navigation] { clear: both; 
+        &.active { width: 50%; padding: 0; margin: 0; position: fixed; top: 0; right: 0; bottom: 0; overflow: auto; background-color: #f7f7f7; padding-top: 53px; padding-left: 15px; padding-right: 15px; max-height: 100%; z-index: 99999; border-left: 1px solid #dedede; margin-top: 175px; }
+
+		ul {
+            li { display: inline; line-height: 20px; position: relative;
+                a { font-family: $sidebar-box-font-family; font-size: $sidebar-box-font-size; color: $sidebar-box-font-color; text-transform: $sidebar-box-font-transform; cursor: pointer; text-decoration: $link-text-decoration; position: relative; }
+                &:after { content: ""; display: block; padding-bottom: $sidebar-link-margin-bottom; }
+                &.active, &.current-menu-item, &:hover { color: $sidebar-box-active-font-color;
+                    a { color: $sidebar-box-active-font-color; }
+                    &:before { content: ""; border-bottom: 1px solid $selected-light-color; display: inline-block; vertical-align: middle; position: absolute; width: 100%; bottom: 0px; }
+                }
+            }
+        }
+    }/* EOF NAVIGATION */
+	
 
     .main-framework { height: initial;
 
@@ -172,15 +243,15 @@ Media queries
 				header { padding: 0px; height: auto; display: block;
 
 					.block-left,
-					.block-right { height: auto; display: block; width: 100%; position: relative;}
+					.block-right { height: auto; display: block; width: 100%; position: relative; padding: 0px 30px; }
 
-					.block-left { border-bottom: $hr-border-width $hr-border-style $hr-border-color; padding: 0px 30px;
+					.block-left { border-bottom: $hr-border-width $hr-border-style $hr-border-color; padding-bottom: 30px;
 						/* Logo */
 						.header-logo { width: 80px; padding-top: 30px; padding-bottom: 0px; vertical-align: middle; display: block;
 							img { margin-top: 0px; }
 						}    
 						/* Description-Contact */
-						.header-contact { display: block; padding-left: 0px; vertical-align: bottom; line-height: initial;
+						.header-contact { display: block; padding-left: 0px; vertical-align: bottom; line-height: initial; margin-right: 200px;
 							span { font-size: $body-font-size;
 								&:first-child { display: none; }
 								&.contact-address {
@@ -190,28 +261,58 @@ Media queries
 						}
 					}
 
-					.block-right { display: none;
+					.block-right { right: 0px;
 						/* Search form */
-						.header-search-form {  }
-            
-						/* Language menu */
-						.header-language { 
-							nav { display: none;
-								ul {
-									li { 
-										span, a { }
+						.header-search-form { height: auto; padding-top: 20px;
+
+							.section-book-now { padding-left: 0px;
+								.col-counter { width: 100%; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px; height: 60px; display: block;
+                                    .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; position: relative;
+										
+										&.section-book-date {
+											&:last-child { padding-left: 0px; }
+											input { width: calc(100% - 60px); padding: 0; margin: 0; position: absolute; bottom: 0; left: 0; clear: right; }
+											.icon-calendar { text-align: right; }
+										}
+
+										&.section-guests,
+										.section-rooms { text-align: right; }
+
+										&.section-button {
+											button { width: 100%; }
+										}
 									}
+                                }
+							}
+						}
+
+						/* Language menu */
+						.header-language { position: absolute; top: -64px; right: 30px;
+							nav { display: none; }
+							.language-wrapper { position: relative; display: inline-block; 
+								label { font-family: $body-font-family-regular; font-size: $body-font-size-small; color: #7a7c7b; }
+								&:after { content: "";  display: inline-block; margin-top: 0px; position: absolute; right: 0; top: 50%; margin-top: -10px;
+									background-color: $accent-darker-color; 
+									width: 11px; 
+									height: 7px;			
+									/* better square */
+									 width: 20px; height: 20px;
+									-webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg");
+									mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg.svg");
+									-webkit-mask-position: center;
+									mask-position: center;
+									-webkit-mask-repeat: no-repeat;
+									mask-repeat: no-repeat;
+									-webkit-mask-size: 11px 7px;
+									mask-size: 11px 7px;
+									pointer-events: none;
 								}
 							}
-							.language-wrapper { 
-								label { }
-								&:after { }
-							}
-							.language-dropdown { }
+							.language-dropdown { font-family: $body-font-family-medium; font-size: $body-font-size-small; color: $form-font-color; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; width: 50px; z-index: 1; }
 						}
 					}
 				}
-			}
+			}/* EOF HEADER WRAPPER */
 
 
             .main-wrapper { margin-bottom: 0px; padding-bottom: 0px;
@@ -316,7 +417,7 @@ Media queries
 									.heading-control { display: none; }
 									.heading-control { padding: 0px; }
 									.col-counter { 
-										&.booking-button { 
+										&.booking-button {
 											.block-btn { 
 												button { width: 100%; }
 											}
@@ -423,14 +524,51 @@ Media queries
 
         .framework-wrapper {
 
-            .header-wrapper {
-                header {
-                    .header-language {
+            /*------ HEADER WRAPPER ------*/
+			.header-wrapper {
+				header { padding: 0px; height: auto; display: block;
 
-                       
-                    }
-                }
-            }
+					.block-left,
+					.block-right {}
+
+					.block-left { 
+						/* Logo */
+						.header-logo { 
+							img {}
+						}    
+						/* Description-Contact */
+						.header-contact { margin-right: 108px; }
+					}
+
+					.block-right { 
+						/* Search form */
+						.header-search-form { font-size: 12px;
+
+							.section-book-now { 
+								.col-counter {
+									&:last-child { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; column-gap: 60px; height: 60px; }
+
+                                    .col-item {
+										&.section-book-date {}
+
+										&.section-guests,
+										&.section-rooms { padding-left: 0px;
+											span { position: absolute; left: 0; top: 8px; }
+										}
+
+										&.section-button {
+											&.mask { display: none; }
+										}
+									}
+                                }
+							}
+						}
+
+						/* Language menu */
+						.header-language {}
+					}
+				}
+			}/* EOF HEADER WRAPPER */
 
             .main-wrapper { margin-bottom: 0px; padding-bottom: 0px;
 

@@ -5,21 +5,47 @@ SECTION SEARCH FORM
 */
 
 .section-book-now { padding-left: 70px; font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; 
+	.col-counter { display: inline-block; }
+
 	img { width: auto; vertical-align: bottom; }
-	svg { width: 36px; height: 36px; }
 
 	.section-book-date { display: inline-block;
-		&:nth-child(2) { padding-left: 25px; }
+		&:last-child { padding-left: 25px; }
 	}
 
 	input[type='text'] { font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; height: 36px; width: 180px; margin-right: 12px;
 		&::-webkit-input-placeholder { color: $form-font-color; text-transform: $form-text-transform; }
 	}
 
+	.icon-calendar { content: ""; display: inline-block; vertical-align: bottom; 	
+		background-color: $accent-darker-color; 
+		width: 36px; 
+		height: 38px;
+		-webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/calendar.svg");
+		mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/calendar.svg");
+		-webkit-mask-position: center;
+		mask-position: center;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 36px 38px;
+		mask-size: 36px 38px;
+	}
+
 	.section-guests,
 	.section-rooms { position: relative; display: inline-block; padding-left: 26px; color: $form-font-color; text-transform: $form-text-transform;
 		.select-wrapper { position: relative; display: inline-block; width: 36px; height: 36px; margin-left: 15px;
-			&:after { content: ""; background-image: url("../images/icons/icon-arrow-down.png"); background-repeat: no-repeat; background-position: right; width: 7px; height: 3px; display: inline-block; margin-top: -7px; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto;
+			&:after { content: ""; display: inline-block; margin-top: -8px; position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto;
+				background-color: $accent-darker-color; 
+				width: 7px; 
+				height: 4px;			
+				-webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg");
+				mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/arrow-down.svg.svg");
+				-webkit-mask-position: center;
+				mask-position: center;
+				-webkit-mask-repeat: no-repeat;
+				mask-repeat: no-repeat;
+				-webkit-mask-size: 7px 4px;
+				mask-size: 7px 4px;
 			}
 		}
 	}

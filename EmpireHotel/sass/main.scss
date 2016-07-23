@@ -9,7 +9,6 @@ Version: 1.0
 /* reset style */
 @import "compass/reset";
 
-/* import config sass*/
 /* ------------------------------- DEFAULT CONFIG ------------------------------- */
 @import "config_default";
 
@@ -20,6 +19,7 @@ Version: 1.0
 
 /* image path */
 $imgPath: "../images/";
+
 
 /* ------------------------------------ CUSTOM ---------------------------------- */
 * { outline: none !important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -79,11 +79,20 @@ select { text-align: center; text-align-last: center; }
 	
 .strong { font-family: $body-font-family-medium; }
 
+/* --------------------------------- SCROLLBAR  --------------------------------- */
+::-webkit-scrollbar { width: 7px; height: 10px; margin-left: 2px; background-clip: padding-box; }
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {  }
+::-webkit-scrollbar-track-piece { background-color: $accent-dark-color; }
+::-webkit-scrollbar-thumb:vertical { height: 50px; background-color: $accent-darker-color; width: 7px; border-top: 2px solid $hr-border-color; border-bottom: 2px solid $hr-border-color; border-right: 1px solid $hr-border-color; border-left: 1px solid $hr-border-color; }
+::-webkit-scrollbar-thumb:horizontal { height: 50px; background-color: $accent-darker-color; width: 7px; border-top: 2px solid $hr-border-color; border-bottom: 2px solid $hr-border-color; border-right: 1px solid $hr-border-color; border-left: 1px solid $hr-border-color; }
 
+.modal-no-scroll { overflow: hidden !important; }
 
 /* import search form partial sass*/
 @import "form";
 
+/* import navigation partial sass*/
+@import "navigation";
 
 /* ---------------------------------- FRAMEWORK --------------------------------- */
 
@@ -117,7 +126,7 @@ select { text-align: center; text-align-last: center; }
 							}
 							&:after { content: ""; border-right: 1px solid $accent-darker-color; padding-left: 10px; height: 17px; display: inline-block; vertical-align: middle; }
 							&:before { content: ""; padding-right: 5px; }
-						} 
+						}
 					}
 				}
 
@@ -243,7 +252,7 @@ select { text-align: center; text-align-last: center; }
                             &.section-deal-promotions,
                             &.section-info {
                                 .col-counter { /*display: table;*/ width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px;
-                                    .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
+                                    .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; word-break: break-word; }
                                 }
                             }
 							&.section-deal-promotions {
