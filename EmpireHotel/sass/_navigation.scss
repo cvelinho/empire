@@ -3,16 +3,17 @@
 MOBILE NAVIGATION
 ============================================================================
 */
-	.mobile-nav { position: fixed; z-index: 1; }
 
-	a.menu-link { display: none; }
+.mobile-nav { position: fixed; z-index: 1; }
 
-	#menu { display: none;  }
-	.menu-nav nav[role=navigation] { max-height: none; }
-	nav[role=navigation] {  display: none;
-		ul { margin: 0; border: 0;
-			li { display: inline-block; margin: 0px;
-				&:first-child { margin-left: 5px; }
-			}
+a.menu-link { display: none; }
+
+#menu { display: none;  }
+.menu-nav nav[role=navigation] { max-height: none; }
+nav[role=navigation] {  display: none;
+	ul { margin: 0; border: 0;
+		li { display: inline-block; margin: 0px;
+			&:first-child { margin-left: 5px; }
 		}
 	}
+}
