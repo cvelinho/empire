@@ -241,6 +241,32 @@ MEDIA QUERIES
 								}/* EOF SECTION PACKAGES */
 
 
+								/** SECTION TODO **/
+								&.section-todo { display: inline-block;
+									article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 30px; padding-bottom: 30px;
+										&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+
+										&.col-counter { width: 100%; columns: 2; column-count: 2; column-gap: 60px; display: flex;
+											.image-control,
+											.side-control { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
+
+											.image-control { height: initial; width: 270px;
+												img { object-fit: cover; display: block; height: 180px; max-height: 180px; width: 270px; }
+											}
+
+											.side-control { flex: auto; padding-left: 60px; position: relative;
+												.heading-control {
+													h2 { font-size: 30px; }
+													h3 { font-size: 24px; line-height: 36px; }
+												}
+												.p1 { font-size: 20px; line-height: 27px; }
+												.link-control {}
+											}                           
+										}
+									}
+								}/* EOF SECTION TODO */
+
+
                             }
                         }
                     }
@@ -619,6 +645,36 @@ MEDIA QUERIES
 								}
 
 
+								&.section-todo {
+									article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 30px; padding: 0px 30px;
+										&:last-of-type { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+
+										&.col-counter { display: none; }
+
+										&.col-hidden { display: block;
+											&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+
+											.heading-control { margin-bottom: 10px;
+												h2 {}
+												h3 {}
+											}
+
+											.col-counter { width: 100%; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px; margin-top: 30px; margin-bottom: 30px;
+												.col-item { margin: 0px; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
+													.image-control { 
+														img { height: 300px; max-height: 300px; }
+													}
+
+													.side-control { position: relative; height: 300px; max-height: 300px;
+														.p1 { font-size: 20px; line-height: 30px; }
+													}
+												}
+											}
+										}
+									}
+								}
+
+
 
                             }
                         }
@@ -838,7 +894,7 @@ MEDIA QUERIES
 										&.col-counter { display: none; }
 
 										&.col-hidden { display: block;
-											&:last-child
+											&:last-child,
 											&:last-of-type,
 											&:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 
@@ -851,6 +907,42 @@ MEDIA QUERIES
 													}
 													.side-control { position: relative; height: auto; max-height: auto;
 														.booking-button { position: relative; margin-top: 30px; }
+													}
+												}
+											}
+										}
+									}
+								}
+
+
+								&.section-todo {
+									article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 30px; padding-bottom: 30px;
+										&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+
+										&.col-counter { display: none; }
+
+
+
+										&.col-hidden { display: block;
+											&:last-child,
+											&:last-of-type,
+											&:nth-last-child(2) { border-bottom: none; margin-bottom: 30px; padding-bottom: 30px; }
+
+
+											.heading-control { margin-bottom: 10px;
+												h2 {}
+												h3 {}
+											}
+
+											.heading-control { margin-bottom: 10px; }
+
+											.col-counter {display: -webkit-box;
+												.col-item {
+													.image-control { margin-bottom: 10px;
+														img { height: auto; max-height: none; }
+													}
+													.side-control { position: relative; height: auto; max-height: auto;
+													
 													}
 												}
 											}

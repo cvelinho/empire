@@ -394,9 +394,57 @@ select { text-align: center; text-align-last: center; }
 								}
 							}
 							
+
+
 							/*------ PAGE: THINGS TO DO ------*/
 							/** SECTION TODO **/
-							&.section-todo { margin-bottom: 0; display: block;
+							&.section-todo { display: inline-block;
+								.alm-reveal {
+									&:last-child {
+										article {
+											&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+										}
+									}
+								}
+
+								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+                                    &:last-child
+									&:last-of-type,
+									&:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+
+									&.col-hidden { display: none;
+										&:last-child
+										&:last-of-type,
+										&:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+									}
+
+									&.col-counter { width: 100%; columns: 2; column-count: 2; column-gap: 60px; display: flex;
+
+										.image-control,
+										.side-control { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%; }
+
+										.image-control { height: initial; width: 640px;
+											img { object-fit: cover; display: block; height: 400px; max-height: 400px; width: 640px; }
+										}
+
+										.side-control { flex: auto; position: relative; padding-left: 60px;
+											.heading-control { margin-bottom: 40px;
+												&:first-child { margin-bottom: 0px; }
+											}
+											.link-control { float: right; margin-top: 50px;
+												a { text-decoration: $link-text-decoration; }
+											}
+										}                           
+									}
+								}
+							}
+
+
+
+
+							/*------ PAGE: THINGS TO DO ------*/
+							/** SECTION TODO **/
+							/*&.section-todo { margin-bottom: 0; display: block;
 								.alm-reveal {
 									&:last-child {
 										article {
@@ -419,7 +467,7 @@ select { text-align: center; text-align-last: center; }
 										}                           
 									}
 								}
-							}
+							}*/
 
 							/*------ PAGE: EAT & DRINK ------*/
 							/** SECTION EAT **/

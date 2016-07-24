@@ -4,8 +4,12 @@
     <title>The Empire Hotel</title>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="stylesheets/main.css" rel="stylesheet" media="all"/>
 
-    <link href="stylesheets/main.css" rel="stylesheet" media="all" />
+    <script src="scripts/jquery-2.1.3.min.js"></script>
+    <script src="scripts/menu.js"></script>
+
 </head>
 
 <body>
@@ -31,18 +35,16 @@
                             <span class="contact-phone">Tel: 212.265.7400</span>
                             <span class="contact-fax">Fax: 212.265.7401</span>
                         </div>
-                    </div>
 
-                    <div class="block-right">
-                        <!-- TODO: create for mobile navigation; on default hide/ media query job :) -->
-                        <!-- BARS -->
-                        <a href="#menu" class="menu-link" style="display: none;">
-                            <i class="fa fa-bars text-bars"></i>
+
+                        <!-- NAVIGATION RESPONSIVE -->
+                        <a href="#menu" class="menu-link">
+                            <span class="icon"></span>
+                            <span class="text-bars"></span>
                         </a>
-                        <!-- NAVIGATION MENU -->
-                        <nav id="menu" role="navigation" style="display: none;">
+                        <nav id="menu" role="navigation" >
                             <ul>
-                                <li><a href="home.html">Home</a></li>
+                                <li class="active"><a href="home.html">Home</a></li>
                                 <li><a href="rooms.html">Rooms</a></li>
                                 <li><a href="packages.html">Packages</a></li>
                                 <li><a href="specials.html">Specials</a></li>
@@ -56,10 +58,53 @@
                             </ul>
                         </nav>
 
+                    </div>
+
+                    <div class="block-right">
+                        
+
                         <!-- SEARCH FORM -->
                         <div class="header-search-form">
-                            <div class="block-btn">
-                                <button class="button right">Book room</button>
+                            <div class="section-book-now">
+                                <form>
+                                    <div class="section-form-inner col-counter">
+                                        <div class="section-book-date col-item">
+                                            <input type="text" value="" placeholder="Check In" class="center" />
+                                            <span class="icon-calendar"></span>
+                                        </div>
+
+                                        <div class="section-book-date col-item">
+                                            <input type="text" value="" placeholder="Check Out" class="center" />
+                                            <span class="icon-calendar"></span>
+                                        </div>
+					                </div>
+                                    <div class="section-form-inner col-counter">
+                                         <div class="section-guests col-item">
+                                            <span>NO. OF GUESTS</span>
+                                            <div class="select-wrapper center">
+                                                <select>
+                                                    <option>2</option>
+                                                    <option>22</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="section-rooms col-item">
+                                            <span>NO. OF ROOMS</span>
+                                            <div class="select-wrapper center">
+                                                <select>
+                                                    <option>2</option>
+                                                    <option>22</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-form-inner col-counter">
+                                        <div class="section-button col-item mask"></div>
+                                        <div class="section-button col-item">
+                                            <button class="button">Book room</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
@@ -68,7 +113,7 @@
                             <nav>
                                 <ul>
                                     <li><span>Language:</span></li>
-                                    <li><a class="active">English</a></li>
+                                    <li class="active"><a>English</a></li>
                                     <li><a>Française</a></li>
                                     <li><a>Español</a></li>
                                     <li><a>Deutsch</a></li>
@@ -77,6 +122,19 @@
                                     <li><a>中文</a></li>
                                 </ul>
                             </nav>
+
+                            <div class="language-wrapper right">
+                                <label>
+                                    Language:
+                                </label>
+                                <select class="language-dropdown">
+                                    <option>EN</option>
+                                    <option>FR</option>
+                                    <option>IT</option>
+                                    <option>DE</option>
+                                    <option>IT</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -94,7 +152,7 @@
                             <li><a href="rooms.html" >Rooms</a></li>
                             <li><a href="packages.html">Packages</a></li>
                             <li><a href="specials.html">Specials</a></li>
-                            <li><a href="todo.html" class="active">Things to do</a></li>
+                            <li class="active"><a href="todo.html">Things to do</a></li>
                             <li><a href="eat-drink.html">Eat & drink</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="pool.html">Pool deck</a></li>
@@ -122,8 +180,232 @@
                                 </div>
                             </section>
 
-                            <!-- SECTION PACKAGES -->
+                            <!-- SECTION TODO -->
                             <section class="section-todo">
+                                <article class="col-counter">
+                                    <div class="image-control">
+                                        <img src="images/todo-img-1.jpg"/>
+                                    </div>
+                                    <div class="side-control">
+                                        <div class="heading-control">
+                                            <h2>CONCERT AT ALICE TULLY HALL</h2>
+                                        </div>
+                                        <div class="heading-control">
+                                            <h3>World famous for Chamber Music and home to the New York Film Festival</h3>
+                                        </div>
+                                        <div class="p1">
+                                            Since it opened in 1969, Alice Tully Hall has been home to the New York Film Festival and the Chamber Music Society of Lincoln Center. In addition to world-class chamber music, Alice Tully Hall hosts numerous virtuoso concerts on its cathedral-sized, Swiss-made pipe organ.
+                                            <br/>
+                                            The hall now has a three-story glass lobby which features a café and bar, and a cantilevered extension juts out over a sunken plaza at the corner of Broadway and 65th Street, now a meeting place for Lincoln Center visitors and the general public.
+                                        </div>
+                                        <div class="link-control">
+                                            <a href="http://www.lincolncenter.org/venue/alice-tully-hall">http://www.lincolncenter.org/venue/alice-tully-hall</a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="col-hidden">
+                                    <div class="heading-control">
+                                        <h2>CONCERT AT ALICE TULLY HALL</h2>
+                                    </div>
+                                    <div class="col-counter">
+                                        <div class="col-item">
+                                            <div class="image-control">
+                                                <img src="images/todo-img-1.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-item mask"></div>
+                                    </div>
+                                    <div class="heading-control">
+                                        <h3>World famous for Chamber Music and home to the New York Film Festival</h3>
+                                    </div>
+                                    <div class="p1">
+                                        Since it opened in 1969, Alice Tully Hall has been home to the New York Film Festival and the Chamber Music Society of Lincoln Center. In addition to world-class chamber music, Alice Tully Hall hosts numerous virtuoso concerts on its cathedral-sized, Swiss-made pipe organ.
+                                        <br/>
+                                        The hall now has a three-story glass lobby which features a café and bar, and a cantilevered extension juts out over a sunken plaza at the corner of Broadway and 65th Street, now a meeting place for Lincoln Center visitors and the general public.
+                                    </div>
+                                    <div class="link-control">
+                                        <a href="http://www.lincolncenter.org/venue/alice-tully-hall">http://www.lincolncenter.org/venue/alice-tully-hall</a>
+                                    </div>
+                                </article>
+
+                                <!-- 2nd -->
+                                <article class="col-counter">
+                                    <div class="image-control">
+                                        <img src="images/todo-img-2.jpg"/>
+                                    </div>
+                                    <div class="side-control">
+                                        <div class="heading-control">
+                                            <h2>NIGHT AT THE METROPOLITAN OPERA</h2>
+                                        </div>
+                                        <div class="heading-control">
+                                            <h3>Enjoy 2016 Season favorites; Aida, La Boheme, Barber of Seville</h3>
+                                        </div>
+                                        <div class="p1">
+                                            Acoustically amongst the most famous and well known in the world under the musical direction of James Levine. Everyone should experience an Opera at The Met just once. Take a picture in front of the Revson Fountain which has performed cameo roles in many blockbuster films including The Producers, Annie Hall, Moonstruck and Ghostbusters (the original).
+                                        </div>
+                                        <div class="link-control">
+                                            <a href="http://www.lincolncenter.org/venue/metropolitan-opera-house">http://www.lincolncenter.org/venue/metropolitan-opera-house</a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="col-hidden">
+                                    <div class="heading-control">
+                                        <h2>NIGHT AT THE METROPOLITAN OPERA</h2>
+                                    </div>
+                                    <div class="col-counter">
+                                        <div class="col-item">
+                                            <div class="image-control">
+                                                <img src="images/todo-img-2.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-item mask"></div>
+                                    </div>
+                                    <div class="heading-control">
+                                        <h3>Enjoy 2016 Season favorites; Aida, La Boheme, Barber of Seville</h3>
+                                    </div>
+                                    <div class="p1">
+                                        Acoustically amongst the most famous and well known in the world under the musical direction of James Levine. Everyone should experience an Opera at The Met just once. Take a picture in front of the Revson Fountain which has performed cameo roles in many blockbuster films including The Producers, Annie Hall, Moonstruck and Ghostbusters (the original).
+                                    </div>
+                                    <div class="link-control">
+                                        <a href="http://www.lincolncenter.org/venue/metropolitan-opera-house">http://www.lincolncenter.org/venue/metropolitan-opera-house</a>
+                                    </div>
+                                </article>
+
+                                <article class="col-counter">
+                                    <div class="image-control">
+                                        <img src="images/todo-img-3.jpg"/>
+                                    </div>
+                                    <div class="side-control">
+                                        <div class="heading-control">
+                                            <h2>SHOPPING AT TIME WARNER CENTER</h2>
+                                        </div>
+                                        <div class="heading-control">
+                                            <h3>The Shops at Columbus Circle; Armani Exchange, Stuart Weitzman, Thomas Pink, Tourneau et al.</h3>
+                                        </div>
+                                        <div class="p1">
+                                            Prime Shopping in the heart of Manhattan in the Time Warner Center across the street from the resplendent Central Park.
+                                        </div>
+                                        <div class="link-control">
+                                            <a href="http://www.theshopsatcolumbuscircle.com">http://www.theshopsatcolumbuscircle.com</a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="col-hidden">
+                                    <div class="heading-control">
+                                        <h2>SHOPPING AT TIME WARNER CENTER</h2>
+                                    </div>
+                                    <div class="col-counter">
+                                        <div class="col-item">
+                                            <div class="image-control">
+                                                <img src="images/todo-img-3.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-item mask"></div>
+                                    </div>
+                                    <div class="heading-control">
+                                        <h3>The Shops at Columbus Circle; Armani Exchange, Stuart Weitzman, Thomas Pink, Tourneau et al.</h3>
+                                    </div>
+                                    <div class="p1">
+                                        Prime Shopping in the heart of Manhattan in the Time Warner Center across the street from the resplendent Central Park.
+                                    </div>
+                                    <div class="link-control">
+                                        <a href="http://www.theshopsatcolumbuscircle.com">http://www.theshopsatcolumbuscircle.com</a>
+                                    </div>
+                                </article>
+
+                                <article class="col-counter">
+                                    <div class="image-control">
+                                        <img src="images/todo-img-4.jpg"/>
+                                    </div>
+                                    <div class="side-control">
+                                        <div class="heading-control">
+                                            <h2>GO TO CARNEGIE HALL</h2>
+                                        </div>
+                                        <div class="heading-control">
+                                            <h3>Experience where greatness has performed at Carnegie Hall</h3>
+                                        </div>
+                                        <div class="p1">
+                                            The hallowed performance stage at Carnegie Hall has been graced over its storied life by the greatest of greats from the Big Band and Jazz era featuring  Count Basie and Billie Holiday to rock legends such as The Beatles and Led Zeppelin along with world famous lectures given by the likes of Mark Twain no less.
+                                        </div>
+                                        <div class="link-control">
+                                            <a href="http://www.carnegiehall.org">http://www.carnegiehall.org</a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="col-hidden">
+                                    <div class="heading-control">
+                                        <h2>GO TO CARNEGIE HALL</h2>
+                                    </div>
+                                    <div class="col-counter">
+                                        <div class="col-item">
+                                            <div class="image-control">
+                                                <img src="images/todo-img-4.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-item mask"></div>
+                                    </div>
+                                    <div class="heading-control">
+                                        <h3>Experience where greatness has performed at Carnegie Hall</h3>
+                                    </div>
+                                    <div class="p1">
+                                        The hallowed performance stage at Carnegie Hall has been graced over its storied life by the greatest of greats from the Big Band and Jazz era featuring  Count Basie and Billie Holiday to rock legends such as The Beatles and Led Zeppelin along with world famous lectures given by the likes of Mark Twain no less.
+                                    </div>
+                                    <div class="link-control">
+                                        <a href="http://www.carnegiehall.org">http://www.carnegiehall.org</a>
+                                    </div>
+                                </article>
+
+                                <article class="col-counter">
+                                    <div class="image-control">
+                                        <img src="images/todo-img-5.jpg"/>
+                                    </div>
+                                    <div class="side-control">
+                                        <div class="heading-control">
+                                            <h2>PICNIC IN CENTRAL PARK</h2>
+                                        </div>
+                                        <div class="heading-control">
+                                            <h3>Enjoy a sunny day in the beautifully verdant Central Park New York</h3>
+                                        </div>
+                                        <div class="p1">
+                                            Grab a picnic basket from Whole Foods Market in the Time Warner Center and head over to Sheep Meadow to lounge in the grass or over to Strawberry Fields where someone is always playing a tribute to John Lennon.
+                                        </div>
+                                        <div class="link-control">
+                                            <a href="http://www.centralpark.com">http://www.centralpark.com</a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="col-hidden">
+                                    <div class="heading-control">
+                                        <h2>PICNIC IN CENTRAL PARK</h2>
+                                    </div>
+                                    <div class="col-counter">
+                                        <div class="col-item">
+                                            <div class="image-control">
+                                                <img src="images/todo-img-5.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-item mask"></div>
+                                    </div>
+                                    <div class="heading-control">
+                                        <h3>Enjoy a sunny day in the beautifully verdant Central Park New York</h3>
+                                    </div>
+                                    <div class="p1">
+                                        Grab a picnic basket from Whole Foods Market in the Time Warner Center and head over to Sheep Meadow to lounge in the grass or over to Strawberry Fields where someone is always playing a tribute to John Lennon.
+                                    </div>
+                                    <div class="link-control">
+                                        <a href="http://www.centralpark.com">http://www.centralpark.com</a>
+                                    </div>
+                                </article>
+                            </section>
+
+
+                            <!-- SECTION PACKAGES -->
+                            <section class="section-todo" style="display: none;">
                                 <article>
                                     <div class="col-item">
                                         <div class="items">
@@ -273,10 +555,8 @@
                 <footer>
                     <!-- FOOTER CONTAINER -->
                     <div class="footer-container">
-
                         <!-- SECTION FOOTER NAV -->
                         <section class="section-footer-nav">
-
                             <article class="col-counter">
                                 <div class="col-item">
                                     <div class="items">
@@ -314,7 +594,7 @@
                                     <div class="items">
                                         <nav>
                                             <ul>
-                                                <li><a href="home.html" class="">Faq</a></li>
+                                                <li><a href="faq.html" class="">Faq</a></li>
                                                 <li><a href="home.html" class="">Site map</a></li>
                                             </ul>
                                         </nav>
@@ -331,20 +611,18 @@
                                     </div>
                                 </div>
                             </article>
-
                         </section>
-
                     </div>
                     <!-- EOF FOOTER CONTAINER -->
                 </footer>
+
+                <!-- COPYRIGHT CONTAINER -->
+                <div class="copyright-container">
+                    <p>© Copyright Amsterdam Hospitality 2016</p>
+                </div>
+                <!-- EOF COPYRIGHT CONTAINER -->
             </div>
             <!-- EOF FOOTER WRAPPER -->
-
-            <!-- COPYRIGHT WRAPPER -->
-            <div class="copyright-wrapper">
-                <p>© Copyright Amsterdam Hospitality 2016</p>
-            </div>
-            <!-- EOF COPYRIGHT WRAPPER -->
         
         </div>
         <!-- EOF FRAMEWORK WRAPPER -->
@@ -354,7 +632,9 @@
 
     <!-- SOCIAL ICONS -->
     <div class="social-link-list">
+        <div class="social-text-title">Connect with us</div>
         <ul>
+            <li></li>
             <li class="facebook">
                 <a href="http://www.facebook.com" target="_blank" title="facebook"><span class="icon-facebook"></span></a>
             </li>
