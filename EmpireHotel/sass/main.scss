@@ -221,6 +221,10 @@ select { text-align: center; text-align-last: center; }
 								img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
 							}
                         }
+
+						&.pool-deck-intro {
+							.intro-article { border-bottom: none !important; }
+						}
                     }
 					/* INSTEAD OF...HMMM WHAT SHOULD I DO :) REFACTOR TODO */
                     /* WELCOME CONTAINER */
@@ -416,7 +420,8 @@ select { text-align: center; text-align-last: center; }
 							
 							/*------ PAGE: THINGS TO DO ------*/
 							/** SECTION TODO **/
-							&.section-todo { display: inline-block;
+							&.section-todo,
+							&.section-pool-deck { display: inline-block;
 								.alm-reveal {
 									&:last-child {
 										article {
@@ -480,7 +485,7 @@ select { text-align: center; text-align-last: center; }
 					
 							/*------ PAGE: POOL DECK ------*/
 							/** SECTION POOL DECK **/
-							&.section-pool-deck { margin-bottom: 0; display: block; margin-top: 180px;
+							/*&.section-pool-deck { margin-bottom: 0; display: block; margin-top: 180px;
 								article {
 									.items { display: -webkit-box; width: 100%; 
 										.image-control { width: 640px; height: 430px; display: table-cell;
@@ -493,7 +498,7 @@ select { text-align: center; text-align-last: center; }
 										}                           
 									}
 								}
-							}
+							}*/
 
 							/*------ PAGE: MEETING & EVENTS ------*/
 							/** SECTION MEETINGS & EVENTS **/

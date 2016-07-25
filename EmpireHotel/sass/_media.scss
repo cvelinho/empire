@@ -509,10 +509,12 @@ MEDIA QUERIES
 						/* INTRO CONTAINER */
 						.intro-container {
                             .intro-wrapper {
-								.inner-container { border-bottom: $hr-border-width $hr-border-style $hr-border-color; padding: 0 30px; margin-bottom: 60px;
-									.intro-heading-control { margin-bottom: 30px; }
+								.inner-container { padding: 0 30px; margin-bottom: 60px;
+									&:last-child { border-bottom: $hr-border-width $hr-border-style $hr-border-color;  }
+									.intro-heading-control { margin-bottom: 30px; }	
 									.intro-article { border-bottom: none; padding-bottom: 30px; margin-bottom: 30px; }
 								}
+								.image-control { padding: 0 30px; }
                             }
                         }
 
@@ -689,7 +691,8 @@ MEDIA QUERIES
 								}
 
 
-								&.section-todo {
+								&.section-todo,
+								&.section-pool-deck {
 									article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 30px; padding: 0px 30px;
 										&:last-of-type { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 
@@ -988,7 +991,8 @@ MEDIA QUERIES
 								}
 
 
-								&.section-todo {
+								&.section-todo,
+								&.section-pool-deck {
 									article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 30px; padding-bottom: 30px;
 										&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 
