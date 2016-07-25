@@ -41,7 +41,10 @@ MEDIA QUERIES
 		}
 	}
 
-    .main-framework { 
+	/*------ MAIN FRAMEWORK ------*/
+    .main-framework {
+
+		/*------ FRAMEWORK WRAPPER ------*/
         .framework-wrapper {
 
 			/*------ HEADER WRAPPER ------*/
@@ -117,7 +120,8 @@ MEDIA QUERIES
 				}
 			}/* EOF HEADER WRAPPER */
 
-			/* MAIN WRAPPER */
+
+			/*------ MAIN WRAPPER ------*/
             .main-wrapper { margin-bottom: 495px;
                 /* SIDEBAR WRAPPER */
 				.sidebarbox-wrapper { 
@@ -131,9 +135,25 @@ MEDIA QUERIES
 					}
 				}/* EOF SIDEBAR WRAPPER */
 
+				/* MAIN CONTENT WRAPPER */
                 .main-content-wrapper {
+					/* INNER WRAPPER */
                     .inner-wrapper {
+						
+						/* INTRO CONTAINER */
+						.intro-container {
+                            .intro-wrapper {
+                                .intro-image-control { line-height: 0px;
+                                    img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
+                                }
+                                .intro-heading-control { margin-bottom: 30px; /*padding: 0px 15px;*/ }
+                                .intro-article { /*padding: 0px 15px;*/
+                                    &.col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
+                                }
+                            }
+                        }
 
+						/* WELCOME CONTAINER */
                         .welcome-container {
                             .welcome-wrapper {
                                 .welcome-image-control { line-height: 0px;
@@ -145,7 +165,8 @@ MEDIA QUERIES
                                 }
                             }
                         }
-                        
+
+                        /* ROOM CONTAINER */
 						.room-container {
 							.room-wrapper {
 								.heading-control { padding: 0px 15px; margin-bottom: 50px; }
@@ -155,6 +176,17 @@ MEDIA QUERIES
 							}
 						}
 
+						/* EAT-DRINK CONTAINER */
+						.eat-drink-container {
+							.eat-drink-wrapper {
+								.heading-control { margin-bottom: 50px; }
+								.image-control {
+									img { display: block; width: 100%; max-height: 550px; object-fit: cover; }
+								}
+							}
+						}
+
+						/* INNER CONTAINER */
                         .inner-container { padding: 0px 15px;
                             .heading-control { margin-bottom: 50px; }
 
@@ -176,17 +208,6 @@ MEDIA QUERIES
 
 								/*------ PAGE: ROOMS ------*/
 								/** SECTION ROOMS **/
-								/*&.section-rooms { border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-top: 60px; margin-bottom: 60px; padding-bottom: 60px;
-									&.last { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
-									.heading-control { padding: 0px; }
-									.col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
-										&.booking-button { padding-top: 90px;
-											.block-btn { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
-												button { }
-											}
-										}
-									}
-								}*/
 								/** SECTION SISTER HOTELS **/
 								&.section-sister-hotels { 
 									.col-counter { width: 100%; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
@@ -471,7 +492,7 @@ MEDIA QUERIES
 				}
 			}/* EOF HEADER WRAPPER */
 
-
+			/* MAIN WRAPPER */
             .main-wrapper { margin-bottom: 0px; padding-bottom: 0px;
                 
                 .sidebarbox-wrapper { display: none; }
@@ -482,13 +503,18 @@ MEDIA QUERIES
 					    img { display: block; width: 100%; max-height: 400px; object-fit: cover; }
 				    }
 
-                    .room-control { margin-bottom: 90px; padding-bottom: 90px;
-                        &:after { content: ""; border-bottom: none; position: absolute; width: 100%; bottom: 2px; }
-                        
-                        .room-wrapper { padding: 0px 30px ; position: relative; }
-                    }
-
+					/* INNER WRAPPER */
                     .inner-wrapper { width: 100%; position: relative;
+
+						/* INTRO CONTAINER */
+						.intro-container {
+                            .intro-wrapper {
+								.inner-container { border-bottom: $hr-border-width $hr-border-style $hr-border-color; padding: 0 30px; margin-bottom: 60px;
+									.intro-heading-control { margin-bottom: 30px; }
+									.intro-article { border-bottom: none; padding-bottom: 30px; margin-bottom: 30px; }
+								}
+                            }
+                        }
 
                         .welcome-container { margin-bottom: 90px; position: relative; 
                             &:after { content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
@@ -506,6 +532,7 @@ MEDIA QUERIES
                             }
                         }
 
+						/* ROOM CONTAINER */
 						.room-container { border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px;
 							.room-wrapper {
 								.heading-control,
@@ -526,7 +553,24 @@ MEDIA QUERIES
 							}
 						}
 
+						/* EAT-DRINK CONTAINER */
+						.eat-drink-container { border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+							&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+							.eat-drink-wrapper { padding: 0px 30px; border-bottom: none; 
 
+								.eat-drink-image-control { 
+									img { display: block; width: 100%; max-height: 480px; object-fit: cover; }
+								}
+
+								.inner-container {
+									.booking-button {
+										.button { text-align: center; }
+									}
+								}
+							}
+						}
+
+						/* INNER CONTAINER */
                         .inner-container { padding: 0px; display: table; width: 100%;
                             .heading-control {  }
 
@@ -572,7 +616,7 @@ MEDIA QUERIES
                                 }
 
 
-								&.section-rooms { border-bottom: none; 
+								&.section-room { border-bottom: none; 
 									&.last { border-bottom: none; margin-bottom: 90px; }
 									.heading-control { display: none; }
 									.heading-control { padding: 0px; }
@@ -674,6 +718,20 @@ MEDIA QUERIES
 									}
 								}
 
+
+								/*------ PAGE: EAT & DRINK ------*/
+								/** SECTION EAT-DRINK **/
+								&.section-eat-drink { border-bottom: none; margin-top: 60px; margin-bottom: 0px; padding-bottom: 0px;
+									&.last { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+									.heading-control { margin-bottom: 40px; padding: 0px; }
+									.col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
+										&.booking-button { padding-top: 60px;
+											.block-btn { margin: 0px; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
+												button {}
+											}
+										}
+									}
+								}
 
 
                             }
@@ -794,6 +852,17 @@ MEDIA QUERIES
                 .main-content-wrapper { float: none; width: 100%; padding: 60px 0px 0 0px; margin: 0px;
                     .inner-wrapper { width: 100%; position: relative;
 
+						/* INTRO CONTAINER */
+						.intro-container {
+                            .intro-wrapper {
+								.inner-container {
+									.intro-article {
+										&.col-counter { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
+									}
+								}
+                            }
+                        }/* EOF INTRO CONTAINER */
+
                         .welcome-container { margin-bottom: 60px; position: relative; 
                             &:after { content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
                             
@@ -810,6 +879,11 @@ MEDIA QUERIES
                             }
                         }
 
+						.eat-drink-container {
+							&:last-child { border-bottom: none; margin-bottom: 90px; padding-bottom: 90px; }
+						}
+
+
                         .inner-container { padding: 0px; display: table; width: 100%;
 
                             section {
@@ -824,7 +898,6 @@ MEDIA QUERIES
                                 }
                                 &.section-deal-promotions { position: relative; margin-bottom: 0px; padding-bottom: 0px;
                                     &:after { display: none; content: ""; border-bottom: $hr-border-width $hr-border-style $hr-border-color; position: absolute; width: 100%; bottom: 2px; }
-
 
                                     .col-counter { padding: 0px 0px; }
                                     .col-counter { 
@@ -850,7 +923,7 @@ MEDIA QUERIES
                                     }
                                 }
 
-                                &.section-rooms { margin-top: 30px;
+                                &.section-room { margin-top: 30px;
                                     .heading-control { display: none; }
                                     .col-counter {  -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; column-gap: 60px;
                                         &.booking-button { padding-top: 30px;
@@ -949,6 +1022,19 @@ MEDIA QUERIES
 										}
 									}
 								}
+
+								&.section-eat-drink { margin-top: 30px;
+									&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+
+                                    .heading-control { display: none; }
+                                    .col-counter {  -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; column-gap: 60px;
+                                        &.booking-button { padding-top: 30px;
+                                            .block-btn { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
+                                                button { width: 100%; }
+                                            }
+                                        }
+                                    }
+							    }
                                 
                             }
                         }

@@ -152,8 +152,8 @@ select { text-align: center; text-align-last: center; }
 				}
             }
         }/* EOF HEADER WRAPPER */
-
-        /* MAIN WRAPPER */
+   
+		/*------ MAIN WRAPPER ------*/
         .main-wrapper { width: 100%; padding: 0px; margin: 0px; position: relative; display: table; width: 100%; background-color: $framework-full-background; margin-bottom: $main-wrapper-margin-botttom; padding-bottom: $main-wrapper-padding-bottom; border-bottom: $hr-border-width $hr-border-style $accent-lighter-color;
             /* SIDEBAR WRAPPER */
             .sidebarbox-wrapper { width: $sidebar-box-width; float: left; padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left;
@@ -203,22 +203,26 @@ select { text-align: center; text-align-last: center; }
 						}
                     }
 				}
-               
-                /* EAT-DRINK CONTROL */
-                .eat-drink-control { border: 0; margin-bottom: 90px; padding-bottom: 90px;
-                    &:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
-
-                    .eat-drink-wrapper {
-                        .eat-drink-container { position: relative;
-                            &:before { content: ""; border-bottom: 1px solid $selected-light-color; position: absolute; width: 100%; bottom: 2px; }
-                        }
-                    }
-
-                }
 
                 /* INNER WRAPPER */
                 .inner-wrapper { width: 100%; position: relative;
+					
+					/* INTRO CONTAINER */
+					.intro-container { margin-bottom: 0px;
+                        .intro-wrapper {
+							.inner-container {
+								.intro-heading-control { margin-bottom: 60px; }
+								.intro-article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+									&.col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px; }
+								}
+							}
 
+							.intro-image-control { line-height: 0px;
+								img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
+							}
+                        }
+                    }
+					/* INSTEAD OF...HMMM WHAT SHOULD I DO :) REFACTOR TODO */
                     /* WELCOME CONTAINER */
                     .welcome-container { margin-bottom: 180px;
                         .welcome-wrapper {
@@ -237,6 +241,22 @@ select { text-align: center; text-align-last: center; }
                         .room-wrapper {
                             .heading-control { padding: 0px 30px; margin-bottom: 50px; }
                             .room-image-control {
+								img { display: block; width: 100%; max-height: 680px; object-fit: cover; }
+							}
+                        }
+                    }
+
+					/* EAT-DRINK CONTAINER */
+                    .eat-drink-container {
+						&:last-child {
+							.section-eat-drink { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; 
+								&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+							}
+						}
+
+                        .eat-drink-wrapper {
+                            .heading-control { margin-bottom: 60px; }
+                            .image-control {
 								img { display: block; width: 100%; max-height: 680px; object-fit: cover; }
 							}
                         }
@@ -282,8 +302,8 @@ select { text-align: center; text-align-last: center; }
 							}
 
 							/*------ PAGE: ROOMS ------*/
-							/** SECTION ROOMS **/
-							&.section-rooms { border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-top: 60px; margin-bottom: 60px; padding-bottom: 60px;
+							/** SECTION ROOM **/
+							&.section-room { border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-top: 60px; margin-bottom: 60px; padding-bottom: 60px;
 								&.last { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 								.heading-control { padding: 0px; }
                                 .col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
@@ -394,8 +414,6 @@ select { text-align: center; text-align-last: center; }
 								}
 							}
 							
-
-
 							/*------ PAGE: THINGS TO DO ------*/
 							/** SECTION TODO **/
 							&.section-todo { display: inline-block;
@@ -439,39 +457,19 @@ select { text-align: center; text-align-last: center; }
 								}
 							}
 
-
-
-
-							/*------ PAGE: THINGS TO DO ------*/
-							/** SECTION TODO **/
-							/*&.section-todo { margin-bottom: 0; display: block;
-								.alm-reveal {
-									&:last-child {
-										article {
-											&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
-										}
-									}
-								}
-								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
-                                    &:last-child {  }
-									.items { display: -webkit-box; width: 100%; 
-										.image-control { width: 640px; height: 430px; display: table-cell;
-											img { height: 100%; object-fit: cover; display: block; }
-										}
-
-										.side-control { vertical-align: top; display: table-cell; padding-left: 60px;
-											.heading-control { margin-bottom: 40px !important; }
-											.link-control { float: right; margin-top: 50px;
-												a { text-decoration: $link-text-decoration; }
-											}
-										}                           
-									}
-								}
-							}*/
-
 							/*------ PAGE: EAT & DRINK ------*/
-							/** SECTION EAT **/
-							&.section-eat { margin-top: 60px; }
+							/** SECTION EAT-DRINK **/
+							&.section-eat-drink { border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-top: 60px; margin-bottom: 60px; padding-bottom: 60px;
+								&.last { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+								.heading-control { margin-bottom: 40px; padding: 0px; }
+                                .col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
+									&.booking-button { padding-top: 60px;
+										.block-btn { margin: 0px; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; width: 100%;
+											button {}
+										}
+									}
+								}
+							}
 
 							/*------ PAGE: GALLERY ------*/
 							/** SECTION GALLERY LIST **/
