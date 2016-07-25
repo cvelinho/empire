@@ -222,26 +222,20 @@ select { text-align: center; text-align-last: center; }
 							}
                         }
 
+						&.home-intro,
 						&.pool-deck-intro {
 							.intro-article { border-bottom: none !important; }
 						}
                     }
-					/* INSTEAD OF...HMMM WHAT SHOULD I DO :) REFACTOR TODO */
-                    /* WELCOME CONTAINER */
-                    .welcome-container { margin-bottom: 180px;
-                        .welcome-wrapper {
-                            .welcome-image-control { line-height: 0px;
-                                img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
-                            }
-                            .welcome-heading-control { margin-bottom: 50px; padding: 0px 30px; }
-                            .welcome-article { padding: 0px 30px 0 30px;
-                                &.col-counter {  -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px; }
-                            }
-                        }
-                    }
 
                     /* ROOM CONTAINER */
                     .room-container {
+						&:nth-last-child(2) {
+							.section-room { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; 
+								&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+							}
+						}
+
                         .room-wrapper {
                             .heading-control { padding: 0px 30px; margin-bottom: 50px; }
                             .room-image-control {
@@ -289,7 +283,7 @@ select { text-align: center; text-align-last: center; }
                             &.section-deal-promotions { margin-bottom: 180px; }
                             &.section-deal-promotions,
                             &.section-info {
-                                .col-counter { /*display: table;*/ width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px;
+                                .col-counter { width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px;
                                     .col-item { margin: 0px; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: block; width: 100%; word-break: break-word; }
                                 }
                             }
@@ -308,7 +302,7 @@ select { text-align: center; text-align-last: center; }
 							/*------ PAGE: ROOMS ------*/
 							/** SECTION ROOM **/
 							&.section-room { border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-top: 60px; margin-bottom: 60px; padding-bottom: 60px;
-								&.last { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+								
 								.heading-control { padding: 0px; }
                                 .col-counter { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px;
 									&.booking-button { padding-top: 90px;
@@ -419,7 +413,9 @@ select { text-align: center; text-align-last: center; }
 							}
 							
 							/*------ PAGE: THINGS TO DO ------*/
+							/*------ PAGE: POOL DECK ------*/
 							/** SECTION TODO **/
+							/** SECTION POOL-DECK **/
 							&.section-todo,
 							&.section-pool-deck { display: inline-block;
 								.alm-reveal {
@@ -479,8 +475,16 @@ select { text-align: center; text-align-last: center; }
 							/*------ PAGE: GALLERY ------*/
 							/** SECTION GALLERY LIST **/
 							&.section-gallery-list {
-								img { max-height: 310px; }
-								h3 { font-size: $body-font-size; color: $body-font-color; margin-bottom: 30px; margin-top: 15px; display: block; line-height: inherit; }
+								.col-counter { width: 100%; -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; column-gap: 60px;
+                                    .col-item { margin: 0px; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: block; width: 100%; word-break: break-word;
+										.image-control { margin-bottom: 10px;
+											img { height: 100%; object-fit: cover; display: block; max-height: 310px;  }
+										}
+										.heading-control { margin-top: 0px; margin-bottom: 0px;
+											h3 { font-size: $body-font-size; color: $body-font-color; margin-bottom: 30px; margin-top: 0px; display: block; line-height: inherit; }
+										}
+									}
+                                }
 							}
 					
 							/*------ PAGE: POOL DECK ------*/
@@ -502,10 +506,17 @@ select { text-align: center; text-align-last: center; }
 
 							/*------ PAGE: MEETING & EVENTS ------*/
 							/** SECTION MEETINGS & EVENTS **/
-							&.section-events { /*display: table;*/ width: 100%;
-                                .col-counter { width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px;
-                                    .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; }
+							&.section-meetings-events { display: table; width: 100%;
+                                .col-counter { width: 100%; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; column-gap: 60px; display: table;
+                                    .col-item { margin: 0; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: inline-block; display: table-cell; }
                                 }
+
+								/** GALLERY SLIDER CONTROL **/
+								.gallery-slider-control { position: relative; display: block; width: 500px;
+									img { width: 500px; }
+									
+								}
+
 
 								.heading-control {
 									&.last { margin-bottom: 0px; }
@@ -540,8 +551,7 @@ select { text-align: center; text-align-last: center; }
 								a { text-decoration: $link-text-decoration; }
 							}
 
-							/** GALLERY SLIDER CONTROL **/
-							.gallery-slider-control { position: relative; }
+							
 
 							/*------ PAGE: CONTACT ------*/
 							/** SECTION CONTACT **/

@@ -4,7 +4,7 @@
     <title>The Empire Hotel</title>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     
 
     <link rel='stylesheet' id='ajax-load-more-css' href='http://empire.hotelsny.com/wp-content/plugins/ajax-load-more/core/css/ajax-load-more.min.css?ver=4.5.3' type='text/css' media='all' />
@@ -21,6 +21,8 @@
     <script type='text/javascript' src='http://empire.hotelsny.com/wp-content/themes/nychotels/assets/js/jquery-ui.min.js?ver=20151215'></script>
     <script type='text/javascript' src='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js?ver=20151215'></script>
     <script type='text/javascript' src='http://empire.hotelsny.com/wp-content/themes/nychotels/assets/js/main.js?ver=20151215'></script>
+
+    <script src="scripts/menu.js"></script>
 
 </head>
 
@@ -50,15 +52,14 @@
                     </div>
 
                     <div class="block-right">
-                        <!-- TODO: create for mobile navigation; on default hide/ media query job :) -->
-                        <!-- BARS -->
-                        <a href="#menu" class="menu-link" style="display: none;">
-                            <i class="fa fa-bars text-bars"></i>
+                        <!-- NAVIGATION RESPONSIVE -->
+                        <a href="#menu" class="menu-link">
+                            <span class="icon"></span>
+                            <span class="text-bars"></span>
                         </a>
-                        <!-- NAVIGATION MENU -->
-                        <nav id="menu" role="navigation" style="display: none;">
+                        <nav id="menu" role="navigation" >
                             <ul>
-                                <li><a href="home.html">Home</a></li>
+                                <li class="active"><a href="home.html">Home</a></li>
                                 <li><a href="rooms.html">Rooms</a></li>
                                 <li><a href="packages.html">Packages</a></li>
                                 <li><a href="specials.html">Specials</a></li>
@@ -74,8 +75,46 @@
 
                         <!-- SEARCH FORM -->
                         <div class="header-search-form">
-                            <div class="block-btn">
-                                <button class="button right">Book room</button>
+                            <div class="section-book-now">
+                                <form>
+                                    <div class="section-form-inner col-counter">
+                                        <div class="section-book-date col-item">
+                                            <input type="text" value="" placeholder="Check In" class="center" />
+                                            <span class="icon-calendar"></span>
+                                        </div>
+
+                                        <div class="section-book-date col-item">
+                                            <input type="text" value="" placeholder="Check Out" class="center" />
+                                            <span class="icon-calendar"></span>
+                                        </div>
+					                </div>
+                                    <div class="section-form-inner col-counter">
+                                         <div class="section-guests col-item">
+                                            <span>NO. OF GUESTS</span>
+                                            <div class="select-wrapper center">
+                                                <select>
+                                                    <option>2</option>
+                                                    <option>22</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="section-rooms col-item">
+                                            <span>NO. OF ROOMS</span>
+                                            <div class="select-wrapper center">
+                                                <select>
+                                                    <option>2</option>
+                                                    <option>22</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-form-inner col-counter">
+                                        <div class="section-button col-item mask"></div>
+                                        <div class="section-button col-item">
+                                            <button class="button">Book room</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
@@ -84,7 +123,7 @@
                             <nav>
                                 <ul>
                                     <li><span>Language:</span></li>
-                                    <li><a class="active">English</a></li>
+                                    <li class="active"><a>English</a></li>
                                     <li><a>Française</a></li>
                                     <li><a>Español</a></li>
                                     <li><a>Deutsch</a></li>
@@ -93,6 +132,19 @@
                                     <li><a>中文</a></li>
                                 </ul>
                             </nav>
+
+                            <div class="language-wrapper right">
+                                <label>
+                                    Language:
+                                </label>
+                                <select class="language-dropdown">
+                                    <option>EN</option>
+                                    <option>FR</option>
+                                    <option>IT</option>
+                                    <option>DE</option>
+                                    <option>IT</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -114,7 +166,7 @@
                             <li><a href="eat-drink.html">Eat & drink</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="pool.html">Pool deck</a></li>
-                            <li><a href="meetings.html" class="active">Meetings & events</a></li>
+                            <li class="active"><a href="meetings.html">Meetings & events</a></li>
                             <li><a href="weedings.html">Weedings & celebrations</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
@@ -128,128 +180,106 @@
                     <!-- INNER WRAPPER -->
                     <div class="inner-wrapper">
                         
-                        <!-- PRODUCT CONTROL -->
-                        <div class="product-control">
-                            <!-- INNER CONTAINER -->
-                            <div class="inner-container">
-                                <!-- SECTION DEFAULT-->
-                                <section class="section-default">
-                                    <div class="heading-control">
-                                        <h1>Meetings & events</h1>
-                                    </div>
-                                    <div class="heading-control">
-                                        <h3>Host Your Next Event at The Empire Hotel</h3>
-                                    </div>
-                                </section>
+                        <!-- INNER CONTAINER -->
+                        <div class="inner-container">
 
-                                <!-- SECTION MEETINGS & EVENTS -->
-                                <section class="section-events">
-                                    <article class="col-counter">
-                                        <div class="col-item">
-                                            <div class="items">
-                                                <div class="heading-control">
-                                                    <h2>CRYSTAL ROOMS</h2>
-                                                </div>
-
-                                                <!-- GALLERY SLIDER CONTROL -->
-                                                <div class="gallery-slider-control">
-                                                    <div class="gallery-slick">
-                                                        <div><img src="images/meetings-img-1.jpg" /></div>
-                                                        <div><img src="images/meetings-img-2.jpg" /></div>
-                                                    </div>
-
-                                                    <!--<div class="image-control">
-                                                        <img src="images/meetings-img-1.jpg"/>
-                                                    </div>
-                                                    <div class="nav-dots right">
-                                                        <label for="" class="nav-dot" id=""></label>
-                                                        <label for="" class="nav-dot active" id=""></label>
-                                                        <label for="" class="nav-dot" id=""></label>
-                                                        <label for="" class="nav-dot" id=""></label>
-                                                        <label for="" class="nav-dot" id=""></label>
-                                                    </div>-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-item">
-                                            <div class="items">
-                                                <div class="heading-control">
-                                                    <h2>THE POOL DECK</h2>
-                                                </div>
-
-                                                <!-- GALLERY SLIDER CONTROL -->
-                                                <div class="gallery-slider-control">
-                                                    <div class="gallery-slick">
-                                                        <div><img src="images/meetings-img-1.jpg" /></div>
-                                                        <div><img src="images/meetings-img-2.jpg" /></div>
-                                                    </div>
-
-                                                    <!--<div class="image-control">
-                                                        <img src="images/meetings-img-2.jpg"/>
-                                                    </div>
-                                                    <div class="nav-dots right">
-                                                        <label for="" class="nav-dot active" id=""></label>
-                                                        <label for="" class="nav-dot" id=""></label>
-                                                        <label for="" class="nav-dot" id=""></label>
-                                                    </div>-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </section>
-
-                                <div class="scrollto-control">
-                                    <div class="scrollto-content">
-                                        <div class="scrollto-text">Scroll down</div>
-                                        <div class="scrollto-icon center"></div>
-                                    </div>
+                            <!-- SECTION DEFAULT-->
+                            <section class="section-default">
+                                <div class="heading-control">
+                                    <h1>Meetings & events</h1>
                                 </div>
+                                <div class="heading-control">
+                                    <h3>Host Your Next Event at The Empire Hotel</h3>
+                                </div>
+                            </section>
 
-                                <section class="section-events">
-                                    <article class="col-counter">
-                                        <div class="col-item">
-                                            <div class="items center">
-                                                <div class="heading-control">
-                                                    <h2>CRYSTAL ROOMS</h2>
-                                                </div>
+                            <!-- SECTION MEETINGS & EVENTS -->
+                            <section class="section-meetings-events">
+                                <article class="col-counter">
+                                    <div class="col-item">
+                                        <div class="items">
+                                            <div class="heading-control">
+                                                <h2>CRYSTAL ROOMS</h2>
+                                            </div>
 
-                                                <div class="image-control">
-                                                    <figure>
-                                                        <img src="images/img-plan-1.png" alt="" />
-                                                    </figure>
-                                                </div>
-
-                                                <div class="heading-control last">
-                                                    <a href="#">View Crystal Ballroom Floor Plan and Capacity Information</a>
+                                            <!-- GALLERY SLIDER CONTROL -->
+                                            <div class="gallery-slider-control" >
+                                                <div class="gallery-slick">
+                                                    <div><img src="images/meetings-img-1.jpg" /></div>
+                                                    <div><img src="images/meetings-img-2.jpg" /></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-item">
-                                            <div class="items center">
-                                                <div class="heading-control">
-                                                    <h2>THE POOL DECK</h2>
-                                                </div>
-
-                                                <div class="image-control">
-                                                    <figure>
-                                                        <img src="images/img-plan-2.png" alt="" />
-                                                    </figure>
-                                                </div>
-
-                                                <div class="heading-control last">
-                                                    <a href="#">View Pool Deck Floor Plan and Capacity Information</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                
-                                    <div class="event-info center p2">
-                                        An experienced staff member will assist you with every aspect of your next event. Please email: <a href="mailto:">Events@EmpireHotelNYC.com</a> for more information.
                                     </div>
-                                </section>      
+                                    <div class="col-item">
+                                        <div class="items">
+                                            <div class="heading-control">
+                                                <h2>THE POOL DECK</h2>
+                                            </div>
+
+                                            <!-- GALLERY SLIDER CONTROL -->
+                                            <div class="gallery-slider-control">
+                                                <div class="gallery-slick">
+                                                    <div><img src="images/meetings-img-1.jpg" /></div>
+                                                    <div><img src="images/meetings-img-2.jpg" /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+
+                            <div class="scrollto-control">
+                                <div class="scrollto-content">
+                                    <div class="scrollto-text">Scroll down</div>
+                                    <div class="scrollto-icon center"></div>
+                                </div>
                             </div>
-                            <!-- EOF INNER CONTAINER -->
+
+                            <!--<section class="section-events">
+                                <article class="col-counter">
+                                    <div class="col-item">
+                                        <div class="items center">
+                                            <div class="heading-control">
+                                                <h2>CRYSTAL ROOMS</h2>
+                                            </div>
+
+                                            <div class="image-control">
+                                                <figure>
+                                                    <img src="images/img-plan-1.png" alt="" />
+                                                </figure>
+                                            </div>
+
+                                            <div class="heading-control last">
+                                                <a href="#">View Crystal Ballroom Floor Plan and Capacity Information</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-item">
+                                        <div class="items center">
+                                            <div class="heading-control">
+                                                <h2>THE POOL DECK</h2>
+                                            </div>
+
+                                            <div class="image-control">
+                                                <figure>
+                                                    <img src="images/img-plan-2.png" alt="" />
+                                                </figure>
+                                            </div>
+
+                                            <div class="heading-control last">
+                                                <a href="#">View Pool Deck Floor Plan and Capacity Information</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <div class="event-info center p2">
+                                    An experienced staff member will assist you with every aspect of your next event. Please email: <a href="mailto:">Events@EmpireHotelNYC.com</a> for more information.
+                                </div>
+                            </section>  -->    
                         </div>
+                        <!-- EOF INNER CONTAINER -->
                         
                     </div>
                     <!-- EOF INNER WRAPPER -->
@@ -266,10 +296,8 @@
                 <footer>
                     <!-- FOOTER CONTAINER -->
                     <div class="footer-container">
-
                         <!-- SECTION FOOTER NAV -->
                         <section class="section-footer-nav">
-
                             <article class="col-counter">
                                 <div class="col-item">
                                     <div class="items">
@@ -307,7 +335,7 @@
                                     <div class="items">
                                         <nav>
                                             <ul>
-                                                <li><a href="home.html" class="">Faq</a></li>
+                                                <li><a href="faq.html" class="">Faq</a></li>
                                                 <li><a href="home.html" class="">Site map</a></li>
                                             </ul>
                                         </nav>
@@ -324,20 +352,18 @@
                                     </div>
                                 </div>
                             </article>
-
                         </section>
-
                     </div>
                     <!-- EOF FOOTER CONTAINER -->
                 </footer>
+
+                <!-- COPYRIGHT CONTAINER -->
+                <div class="copyright-container">
+                    <p>© Copyright Amsterdam Hospitality 2016</p>
+                </div>
+                <!-- EOF COPYRIGHT CONTAINER -->
             </div>
             <!-- EOF FOOTER WRAPPER -->
-
-            <!-- COPYRIGHT WRAPPER -->
-            <div class="copyright-wrapper">
-                <p>© Copyright Amsterdam Hospitality 2016</p>
-            </div>
-            <!-- EOF COPYRIGHT WRAPPER -->
         
         </div>
         <!-- EOF FRAMEWORK WRAPPER -->
@@ -347,7 +373,9 @@
 
     <!-- SOCIAL ICONS -->
     <div class="social-link-list">
+        <div class="social-text-title">Connect with us</div>
         <ul>
+            <li></li>
             <li class="facebook">
                 <a href="http://www.facebook.com" target="_blank" title="facebook"><span class="icon-facebook"></span></a>
             </li>
