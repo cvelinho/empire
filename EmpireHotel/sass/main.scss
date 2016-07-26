@@ -343,12 +343,12 @@ select { text-align: center; text-align-last: center; }
 							/** SECTION PACKAGES **/
 							&.section-packages { display: inline-block;
 								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
-                                    &:last-child
+                                    &:last-child,
 									&:last-of-type,
 									&:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 
 									&.col-hidden { display: none;
-										&:last-child
+										&:last-child,
 										&:last-of-type,
 										&:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 									}
@@ -375,13 +375,27 @@ select { text-align: center; text-align-last: center; }
 							/*------ PAGE: SPECIALS ------*/
 							/** SECTION SPECIALS **/
 							&.section-specials {
-								.step-content { 
-									.step-number { font-family: $body-font-family-medium; font-size: $step-font-size; background-color: $step-number-background-color; color: $step-number-font-color; border-radius: $step-number-border-radius; display: inline-block; line-height: 46px; height: 46px; width: 46px; text-align: center; margin-bottom: 50px; }
-									.step-title { font-family: $body-font-family-medium; font-size: $step-font-size; color: $selected-dark-color; padding-left: 20px; }
+								.step-content {
+									article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+										&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+									}
+
+									.step-number { font-family: $body-font-family-medium; font-size: $step-font-size; background-color: $step-number-background-color; color: $step-number-font-color; border-radius: $step-number-border-radius; display: inline-block; line-height: 46px; height: 46px; width: 46px; text-align: center; margin-bottom: 50px; margin-right: 20px; }
+									.step-title { font-family: $body-font-family-medium; font-size: $step-font-size; color: $selected-dark-color; }
+
+
+									.section-special-offer {
+										.special-offer-content { background-color: $accent-dark-color; padding: 30px 70px; display: table; width: 100%; margin-bottom: 30px;
+											&:last-child { margin-bottom: 0px; }
+											.col-item { display: table-cell;
+												&:last-child { vertical-align: bottom; text-align: right; }
+											}
+										}
+									}
 								}
 							}
 							/** SECTION BOOK NOW **/
-							.section-book-now { padding-left: 70px; font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; 
+							/*.section-book-now { padding-left: 70px; font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; 
 								img { width: auto; vertical-align: bottom; }
 
 								.section-book-date { display: inline-block;
@@ -401,16 +415,9 @@ select { text-align: center; text-align-last: center; }
 								}
 
 								select { font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; width: 36px; height: 36px; -webkit-appearance: none; -moz-appearance: none; }
-							}
+							}*/
 							/** SECTION SPECIAL OFFERS **/
-							.section-special-offers {
-								.special-offer-content { background-color: $accent-dark-color; padding: 30px 30px 30px 70px; display: table; width: 100%; margin-bottom: 30px;
-									&:last-child { margin-bottom: 0px; }
-									.col-item { display: table-cell;
-										&:last-child { vertical-align: bottom; text-align: right; }
-									}
-								}
-							}
+							
 							
 							/*------ PAGE: THINGS TO DO ------*/
 							/*------ PAGE: POOL DECK ------*/
@@ -487,23 +494,6 @@ select { text-align: center; text-align-last: center; }
                                 }
 							}
 					
-							/*------ PAGE: POOL DECK ------*/
-							/** SECTION POOL DECK **/
-							/*&.section-pool-deck { margin-bottom: 0; display: block; margin-top: 180px;
-								article {
-									.items { display: -webkit-box; width: 100%; 
-										.image-control { width: 640px; height: 430px; display: table-cell;
-											img { height: 100%; object-fit: cover; display: block; }
-										}
-
-										.side-control { vertical-align: top; display: table-cell; padding-left: 60px;
-											.heading-control { margin-bottom: 40px !important; }
-											a { text-decoration: $link-text-decoration; position: relative; }
-										}                           
-									}
-								}
-							}*/
-
 							/*------ PAGE: MEETING & EVENTS ------*/
 							/** SECTION MEETINGS & EVENTS **/
 							&.section-meetings-events { display: table; width: 100%;
@@ -516,7 +506,6 @@ select { text-align: center; text-align-last: center; }
 									img { width: 500px; }
 									
 								}
-
 
 								.heading-control {
 									&.last { margin-bottom: 0px; }
@@ -555,29 +544,21 @@ select { text-align: center; text-align-last: center; }
 
 							/*------ PAGE: CONTACT ------*/
 							/** SECTION CONTACT **/
-							&.section-contact { display: table; width: 100%;
+							&.section-contact { 
 								article {
-									.items { display: -webkit-box; width: 100%; 
-										.image-control { display: table-cell;
-											img { height: auto; object-fit: cover; display: block; }
+									.items { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
+										.side-control { width: 33.3333%; flex: none; 
+											.heading-control {
+												h1 {
+													&:before { border: 0; }
+												}
+											}
+											.col-item { margin-bottom: 35px; }
 										}
-
-										.side-control { width: 640px; vertical-align: top; display: table-cell; padding-right: 60px;
-											.heading-control { margin-bottom: 40px !important; }
-											.booking-button { float: right; margin-top: 60px; }
-										}                           
-									}
-								}
-
-								.col-item { margin-bottom: 35px; }
-								.heading-control { margin-bottom: 50px;
-									&.last { margin-bottom: 40px; }
-								}
-
-								.image-control { line-height: 0px; margin-bottom: 5px;
-                                    img { height: 100%; object-fit: cover; display: block; }
-									figure { position: relative;
-										img { width: auto; margin: 0 auto; }
+									
+										.map-control { -webkit-box-flex: 1; -webkit-flex: 1;-ms-flex: 1; flex: 1; padding-left: 60px;
+											img { height: auto; object-fit: cover; display: block; }
+										}                     
 									}
 								}
 								p { margin-top: 30px; }
@@ -588,23 +569,21 @@ select { text-align: center; text-align-last: center; }
 							/** SECTION FAQ **/
 							&.section-faq { display: table; width: 100%;
 								article {
-									.items { display: -webkit-box; width: 100%; 
-									
-										.side-control { max-width: 840px; vertical-align: top; display: table-cell; padding-right: 60px;
-											.heading-control { margin-bottom: 40px !important; }
-											.booking-button { float: right; margin-top: 60px; }
+									&.col-counter { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
+										.block-faq { width: 33.3333%; flex: none; padding-right: 60px;
+											&.mask { -webkit-box-flex: 1; -webkit-flex: 1;-ms-flex: 1; flex: 1; }
+										}
 
-                                            .faq-item {  margin-bottom: $faq-margin-bottom;
-                                                .question { font-size: $faq-question-font-size; margin-bottom: $faq-margin-bottom; display: block; }
-                                                .answer { font-size: $faq-answer-font-size; color: $body-font-color; margin-bottom: $faq-margin-bottom; display: block;
-                                                    .additional-info { margin-top:$faq-margin-bottom; margin-bottom: $faq-margin-bottom; display: block; font-family: $body-font-family-medium; }
-                                                }
+										.faq-item {  margin-bottom: $faq-margin-bottom;
+                                            .question { font-size: $faq-question-font-size; margin-bottom: $faq-margin-bottom; display: block; }
+                                            .answer { font-size: $faq-answer-font-size; color: $body-font-color; margin-bottom: $faq-margin-bottom; display: block;
+                                                .additional-info { margin-top:$faq-margin-bottom; margin-bottom: $faq-margin-bottom; display: block; font-family: $body-font-family-medium; }
                                             }
-										}                           
+                                        }
+
+										a { text-decoration: $link-text-decoration; }
 									}
 								}
-
-								a { text-decoration: $link-text-decoration; }
 							}
                         }
                     }
