@@ -10,12 +10,14 @@ MEDIA QUERIES
 /* Desktop S  ----------- */
 @media all and (max-width : 1710px) and (min-width: 1041px) {
 	/* HEADINGS need size */
-	/*h1 { font-size: 36px; line-height: 36px; }
-	h2 { font-size: 30px; line-height: 30px; }
-	h3 { font-size: 24px; line-height: 24px; }
-	.p1 { font-size: 18px; }
-	.p2 { font-size: 15px; }
-	.p3 { font-size: 12px; }*/
+	h1 { font-size: $h1-font-size-large; line-height: $h1-line-height-large; }
+	h2 { font-size: $h2-font-size-large; line-height: $h2-line-height-large; }
+	h3 { font-size: $h3-font-size-large; line-height: $h3-line-height-large; }
+	.p1 { font-size: $p1-font-size-large; }
+	.p2 { font-size: $p2-font-size-large; }
+	.p3 { font-size: $p3-font-size-large; }
+
+	.button { font-size: $button-font-size-large; }
 
 	/*------ MAIN FRAMEWORK ------*/
     .main-framework {
@@ -37,26 +39,26 @@ MEDIA QUERIES
 						}    
 						/* Description-Contact */
 						.header-contact { display: inline-block; padding-left: 30px; vertical-align: bottom; line-height: initial;
-							span { font-size: $body-font-size-small; } 
+							span { font-size: $description-font-size-large; }
 						}
 					}
 
 					.block-right { 
 						/* Search form */
 						.header-search-form { height: 87px; padding-top: 40px;
-							.section-book-now { font-size: $body-font-size-small;
+							.section-book-now { font-size: $body-font-size-large;
 								.col-counter { 
                                     .col-item {
 										&.section-book-date {
 											&:last-child { padding-left: 10px; }
-											input[type='text'] { font-size: $body-font-size-small; height: 30px; width: 108px; margin-right: 12px;}
+											input[type='text'] { font-size: $body-font-size-large; height: 30px; width: 108px; margin-right: 12px;}
 											.icon-calendar { width: 30px; height: 32px; -webkit-mask-size: 30px 32px; mask-size: 30px 32px; shape-rendering: optimizeSpeed; }
 										}
 
 										&.section-guests,
 										&.section-rooms { padding-left: 10px;
 											.select-wrapper { position: relative; display: inline-block; width: 32px; height: 32px; margin-left: 15px;
-												select { font-size: $body-font-size-small; width: 32px; height: 32px; }
+												select { font-size: $body-font-size-large; width: 32px; height: 32px; }
 											}
 										}
 
@@ -72,7 +74,7 @@ MEDIA QUERIES
 						.header-language { 
 							nav { display: none; }
 							.language-wrapper { position: relative; display: inline-block; 
-								label { font-family: $body-font-family-regular; font-size: $body-font-size-small; color: #7a7c7b; }
+								label { font-family: $body-font-family-regular; font-size: $body-font-size-large; color: #7a7c7b; }
 								&:after { content: "";  display: inline-block; margin-top: 0px; position: absolute; right: 0; top: 50%; margin-top: -10px;
 									background-color: $accent-darker-color; 
 									width: 11px; 
@@ -90,7 +92,7 @@ MEDIA QUERIES
 									pointer-events: none;
 								}
 							}
-							.language-dropdown { font-family: $body-font-family-medium; font-size: $body-font-size-small; color: $form-font-color; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; width: 50px; z-index: 1; }
+							.language-dropdown { font-family: $body-font-family-medium; font-size: $body-font-size-large; color: $form-font-color; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; width: 50px; z-index: 1; }
 						}
 					}
 				}
@@ -104,7 +106,7 @@ MEDIA QUERIES
 					aside { 
 						ul {
 							li { display: inline; line-height: 20px; position: relative;
-								a { font-size: 16px; }
+								a { font-size: $sidebar-box-font-size-large; }
 								&:after { content: ""; display: block; padding-bottom: 20px; }
 							}
 						}
@@ -113,6 +115,16 @@ MEDIA QUERIES
 
 				/* MAIN CONTENT WRAPPER */
                 .main-content-wrapper {
+
+					/* SCROLLTO CONTROL */
+					.scrollto-control { 
+						.scrollto-content { 
+							.scrollto-text { font-size: $scrollto-font-size-large; }
+							.scrollto-icon { 
+								.icon-arrow { }
+							}
+						}
+					}
 
 					/* INNER WRAPPER */
                     .inner-wrapper {
@@ -180,7 +192,7 @@ MEDIA QUERIES
 
 									article { margin-top: 35px;
 										.heading-control { margin-bottom: 10px !important;
-											h3 { position: relative; font-size: 24px;
+											h3 { position: relative; font-size: $h3-font-size-large;
 												&:after { content: ""; position: absolute; top: 2px; background-color: $selected-dark-color; width: 15px; height: 15px;
 													-webkit-mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/icon-new-window.svg");
 													mask-image: url("http://empire.hotelsny.com/wp-content/themes/nychotels/assets/images/icons/icon-new-window.svg");
@@ -221,10 +233,10 @@ MEDIA QUERIES
 
 											.side-control { flex: auto; padding-left: 60px; position: relative;
 												.heading-control {
-													h2 { font-size: 30px; }
-													h3 { font-size: 24px; line-height: 36px; }
+													h2 { font-size: $h2-font-size-large; }
+													h3 { font-size: $h3-font-size-large; line-height: 36px; }
 												}
-												.p1 { font-size: 20px; line-height: 27px; }
+												.p1 { font-size: $p1-font-size-large; line-height: 27px; }
 												.link-control {}
 
 												.booking-button { position: relative; margin-top: 20px; }
@@ -250,7 +262,17 @@ MEDIA QUERIES
 								/*------ PAGE: GALLERY ------*/
 								/** SECTION GALLERY LIST **/
 								&.section-gallery-list {
-									.col-counter { width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px; }
+									.col-counter { width: 100%; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; column-gap: 60px; 
+										.col-item {
+											.image-control { 
+												img {}
+											}
+											.heading-control { 
+												h3 { font-size: $body-font-size-large; }
+											}
+										}
+									}
+
 								}/* EOF GALLERY LIST */
 
 
@@ -260,6 +282,11 @@ MEDIA QUERIES
 											.block-faq { -webkit-box-flex: 1; -webkit-flex: 1;-ms-flex: 1; flex: 1;
 												&.mask { width: 33.3333%; flex: none; }
 											}
+
+											.faq-item {  
+												.question { font-size: $p1-font-size-large; }
+												.answer { font-size: $p2-font-size-large; }
+											}
 										}
 									}
 								}
@@ -268,35 +295,35 @@ MEDIA QUERIES
                         }
                     }
                 }
-            }
+            }/* EOF MAIN WRAPPER */
 
+			/*------ FOOTER WRAPPER ------*/
 			.footer-wrapper { height: 495px;
 				footer { 
-					.footer-container { font-size: 16px; padding: 60px 75px 60px 15px;
+					.footer-container { font-size: $footer-font-size-large; padding: 60px 75px 60px 15px;
                     
 						section { 
 							&.section-footer-nav { 
 								.items { 
-									h2 { font-size: 16px; }
+									h2 { font-size: $footer-font-size-large; }
 								}
 							}
 						}
                 
 						ul {
 							li {
-								a { font-size: 16px; }
+								a { font-size: $nav-font-size-large; }
 							}
 						}
 
 						form {
-							input[type="text"] { font-size: 16px; }
-							button { font-size: 16px; }
+							input[type="text"] { font-size: $p2-font-size-large; }
+							button { font-size: $p2-font-size-large; }
 						}
 					}	
 				}
 				/*------ COPYRIGHT CONTAINER ------*/
-				.copyright-container { font-size: 16px; height: 120px;
-				}
+				.copyright-container { font-size: $p2-font-size-large; height: 120px; }
 			}
         }
     }
@@ -307,12 +334,14 @@ MEDIA QUERIES
 /* Tablet Design  ----------- */
 @media all and (max-width : 1040px) {
 	/* HEADINGS */
-	/*h1 { font-size: 36px; line-height: $h1-line-height; }
-	h2 { font-size: 30px; line-height: $h2-line-height; }
-	h3 { font-size: 24px; line-height: $h3-line-height; }
-	.p1 { font-size: 18px; }
-	.p2 { font-size: 15px; }
-	.p3 { font-size: 12px; }*/
+	h1 { font-size: $h1-font-size-medium; line-height: $h1-line-height-medium; }
+	h2 { font-size: $h2-font-size-medium; line-height: $h2-line-height-medium; }
+	h3 { font-size: $h3-font-size-medium; line-height: $h3-line-height-medium;; }
+	.p1 { font-size: $p1-font-size-medium; }
+	.p2 { font-size: $p2-font-size-medium; }
+	.p3 { font-size: $p3-font-size-medium; }
+
+	.button { font-size: $button-font-size-medium; }
 
     /* SOCIAL MEDIA */
     .social-link-list { position: relative; right: 0px; top: 0px; bottom: 0px; top: -249px; z-index: 1; width: 100%; text-align: center; margin: 0px auto;
@@ -365,7 +394,7 @@ MEDIA QUERIES
 
 		ul {
             li { display: inline; line-height: 20px; position: relative;
-                a { font-family: $sidebar-box-font-family; font-size: $sidebar-box-font-size; color: $sidebar-box-font-color; text-transform: $sidebar-box-font-transform; cursor: pointer; text-decoration: $link-text-decoration; position: relative; }
+                a { font-family: $sidebar-box-font-family; font-size: $sidebar-box-font-size-medium; color: $sidebar-box-font-color; text-transform: $sidebar-box-font-transform; cursor: pointer; text-decoration: $link-text-decoration; position: relative; }
                 &:after { content: ""; display: block; padding-bottom: $sidebar-link-margin-bottom; }
                 &.active, &.current-menu-item, &:hover { color: $sidebar-box-active-font-color;
                     a { color: $sidebar-box-active-font-color; }
@@ -394,7 +423,7 @@ MEDIA QUERIES
 						}    
 						/* Description-Contact */
 						.header-contact { display: block; padding-left: 0px; vertical-align: bottom; line-height: initial; margin-right: 105px;
-							span { font-size: $body-font-size;
+							span { font-size: $description-font-size-medium;
 								&:first-child { display: none; }
 								&.contact-address {
 									&:before { display: none; }
@@ -432,7 +461,7 @@ MEDIA QUERIES
 						.header-language { position: absolute; top: -64px; right: 30px;
 							nav { display: none; }
 							.language-wrapper { position: relative; display: inline-block; 
-								label { font-family: $body-font-family-regular; font-size: $body-font-size-small; color: #7a7c7b; }
+								label { font-family: $body-font-family-regular; font-size: $body-font-size-medium; color: #7a7c7b; }
 								&:after { content: "";  display: inline-block; margin-top: 0px; position: absolute; right: 0; top: 50%; margin-top: -10px;
 									background-color: $accent-darker-color; 
 									width: 11px; 
@@ -450,7 +479,7 @@ MEDIA QUERIES
 									pointer-events: none;
 								}
 							}
-							.language-dropdown { font-family: $body-font-family-medium; font-size: $body-font-size-small; color: $form-font-color; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; width: 50px; z-index: 1; }
+							.language-dropdown { font-family: $body-font-family-medium; font-size: $body-font-size-medium; color: $form-font-color; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; width: 50px; z-index: 1; }
 						}
 					}
 				}
@@ -720,7 +749,7 @@ MEDIA QUERIES
 
             .footer-wrapper { position: relative; width: 100%; z-index: 1; height: auto;
 	            footer { position: relative; padding-left: 0px;
-		            .footer-container { padding: 90px 30px; font-size: $footer-font-size;
+		            .footer-container { padding: 90px 30px; font-size: $footer-font-size-medium;
 			
 			            section { position: relative;
 				            &.section-footer-nav { 
@@ -744,12 +773,14 @@ MEDIA QUERIES
 /* Smartphone Design  ----------- */
 @media all and (max-width : 630px) {
 	/* HEADINGS */
-	/*h1 { font-size: 24px; line-height: $h1-line-height; }
-	h2 { font-size: 21px; line-height: $h2-line-height; }
-	h3 { font-size: 18px; line-height: $h3-line-height; }
-	.p1 { font-size: 15px; }
-	.p2 { font-size: 12px; }
-	.p3 { font-size: 12px; }*/
+	h1 { font-size: $h1-font-size-small; line-height: $h1-line-height-small; }
+	h2 { font-size: $h2-font-size-small; line-height: $h2-line-height-small; }
+	h3 { font-size: $h3-font-size-small; line-height: $h3-line-height-small; }
+	.p1 { font-size: $p1-font-size-small; line-height: $p1-line-height-small; }
+	.p2 { font-size: $p2-font-size-small; line-height: $p2-line-height-small; }
+	.p3 { font-size: $p3-font-size-small; line-height: $p3-line-height-small; }
+
+	.button { font-size: $button-font-size-small; }
 
 	/* NAVIGATION */
 	a.menu-link .icon {
@@ -786,9 +817,9 @@ MEDIA QUERIES
 	}
 
 
-    /*nav[role=navigation] { clear: both; 
-        &.active { width: 100%; margin-top: 198px; text-align: left; }
-    }*//* EOF NAVIGATION */
+    nav[role=navigation] { clear: both; 
+        &.active { width: 100%; text-align: left; }
+    }/* EOF NAVIGATION */
 
 
     .main-framework { 
@@ -824,7 +855,7 @@ MEDIA QUERIES
 							opacity: 1;
 
 
-							span { font-family: $description-font-family; font-size: $description-font-size; color: $description-font-color;
+							span { font-family: $description-font-family; font-size: $description-font-size-small; color: $description-font-color;
 								font-size: 11px; line-height: 18px;
 
 								&.contact-address { display: block;
@@ -1088,7 +1119,7 @@ MEDIA QUERIES
 
             .footer-wrapper { position: relative; width: 100%; z-index: 1; height: auto;
 	            footer { position: relative; padding-left: 0px;
-		            .footer-container { padding: 60px 30px; font-size: $footer-font-size;
+		            .footer-container { padding: 60px 30px; font-size: $footer-font-size-small;
 			
 			            section { position: relative;
 				            &.section-footer-nav { 
@@ -1098,7 +1129,23 @@ MEDIA QUERIES
 										&:last-child { padding-top: 35px; }
 						            }
 					            }
+
+								.items {
+									h2 { font-size: $footer-font-size-small; }
+								}
+
 				            }
+
+							ul {
+								li { 
+									a { font-size: $nav-font-size-small; }
+								}
+							}
+
+							form {
+								input[type="text"] { font-size: $p2-font-size-small; }
+								button { font-size: $p2-font-size-small; }
+							}
 			            }
 		
 		            }	

@@ -4,7 +4,7 @@ SECTION SEARCH FORM
 ============================================================================
 */
 
-.section-book-now { padding-left: 70px; font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; 
+.section-book-now { padding-left: 70px; font-family: $body-font-family-medium; font-size: $body-font-size-xlarge; color: $form-font-color; 
 	.col-counter { display: inline-block; }
 
 	img { width: auto; vertical-align: bottom; }
@@ -13,7 +13,7 @@ SECTION SEARCH FORM
 		&:last-child { padding-left: 25px; }
 	}
 
-	input[type='text'] { font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; height: 36px; width: 180px; margin-right: 12px;
+	input[type='text'] { font-family: $body-font-family-medium; font-size: $body-font-size-xlarge; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; height: 36px; width: 180px; margin-right: 12px;
 		&::-webkit-input-placeholder { color: $form-font-color; text-transform: $form-text-transform; }
 	}
 
@@ -52,5 +52,5 @@ SECTION SEARCH FORM
 
 	.section-button { display: inline-block; margin-left: 20px; }
 
-	select { font-family: $body-font-family-medium; font-size: $body-font-size; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; width: 36px; height: 36px; -webkit-appearance: none; -moz-appearance: none; }
+	select { font-family: $body-font-family-medium; font-size: $body-font-size-xlarge; color: $form-font-color; background-color: $form-background-color; border: $form-border-width $hr-border-style $form-border; width: 36px; height: 36px; -webkit-appearance: none; -moz-appearance: none; }
 }
