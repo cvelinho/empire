@@ -1,0 +1,11 @@
+/*
+============================================================================
+IMAGE SLIDER
+============================================================================
+*/
+
+.flickity-page-dots { text-align: right; bottom: -10px;
+	.dot { width: 6px; height: 6px; margin: 0 3px 0 0; position: relative; border-radius: $global-rounded-corners; display: inline-block; background-color: $selected-dark-color; opacity: 1;
+		&.is-selected { background-color: $selected-light-color;  }
+	}
+}

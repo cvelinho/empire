@@ -1,1 +1,10 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500.1 309.02"><defs><style>.cls-1{fill:#010101;}</style></defs><title>arrow-down</title><path class="cls-1" d="M59,0,250.05,191.08,441.13,0l59,59L250.05,309,0,59Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500.1 309" style="enable-background:new 0 0 500.1 309;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#7A7C7B;}
+</style>
+<title>arrow-down</title>
+<path class="st0" d="M59,0l191.1,191.1L441.1,0l59,59L250.1,309L0,59L59,0z"/>
+</svg>

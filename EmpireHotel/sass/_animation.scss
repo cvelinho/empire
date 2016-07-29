@@ -1,0 +1,22 @@
+/*
+============================================================================
+ANIMATION
+============================================================================
+*/
+
+@mixin single-transition($set) {
+    -webkit-transition: $set;
+    -moz-transition: $set;
+    -ms-transition: $set;
+    -o-transition: $set;
+    transition: $set;
+}
+
+@mixin mix-transition($set, $set-two) {
+    -webkit-transition: $set, $set-two;
+    -moz-transition: $set, $set-two;
+    -ms-transition: $set, $set-two;
+    -o-transition: $set, $set-two;
+    transition: $set, $set-two;
+}
+

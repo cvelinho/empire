@@ -10,7 +10,7 @@ SOCIAL MEDIA
         li { height: 45px; position: relative;
 		    a { display: inline-block; width: 45px; height: 45px;
 			    span {
-				    &:before { content: ''; display: block; top: 0; left: 0; height: 45px; width: 45px; background: url(../images/icons/sprite-icon-social.png) no-repeat; cursor: pointer; }
+				    &:before { content: ''; display: block; top: 0; left: 0; height: 45px; width: 45px; background-image:url("#{$imgPath}icons/sprite-icon-social.png"); cursor: pointer; }
 
 				    &.icon-facebook {
 					    &:before {
@@ -42,4 +42,15 @@ SOCIAL MEDIA
 	    }
     }
 		
+}
+
+
+/* THE NEW ONE*/
+.aps-social-icon-wrapper {
+	.aps-group-vertical { width: 45px; }
+	.aps-each-icon { display: block; width: 45px; height: 45px; 
+		a { 
+			img {}
+		}
+	}
 }

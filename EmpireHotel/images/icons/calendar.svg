@@ -1,1 +1,33 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.34 382.54"><title>calendar</title><rect x="0.03" y="20.55" width="362.31" height="19.12"/><rect x="0.03" y="363.29" width="362.31" height="19.12"/><rect x="0.03" y="20.55" width="19.12" height="361.86"/><rect x="343.22" y="20.55" width="19.09" height="361.99"/><rect y="100.96" width="362.31" height="19.12"/><rect x="80.95" width="19.12" height="60.29"/><rect x="262.4" width="19.12" height="60.29"/><rect x="110.73" y="171.05" width="19.8" height="19.8"/><rect x="171.73" y="171.05" width="19.8" height="19.8"/><rect x="231.73" y="171.05" width="19.8" height="19.8"/><rect x="292.73" y="171.05" width="19.8" height="19.8"/><rect x="110.73" y="292.22" width="19.8" height="19.8"/><rect x="171.73" y="292.22" width="19.8" height="19.8"/><rect x="231.73" y="292.22" width="19.8" height="19.8"/><rect x="292.73" y="292.22" width="19.8" height="19.8"/><rect x="110.73" y="231.84" width="19.8" height="19.8"/><rect x="171.73" y="231.84" width="19.8" height="19.8"/><rect x="292.73" y="231.84" width="19.8" height="19.8"/><rect x="50.43" y="231.84" width="19.8" height="19.8"/><rect x="50.43" y="292.22" width="19.8" height="19.8"/><rect x="211.45" y="211.64" width="19.12" height="60.24"/><rect x="252.84" y="211.64" width="19.12" height="60.19"/><rect x="211.67" y="211.59" width="60.29" height="19.12"/><rect x="211.48" y="252.76" width="60.47" height="19.12"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 362.3 382.5" style="enable-background:new 0 0 362.3 382.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#7A7C7B;}
+</style>
+<title>calendar</title>
+<rect x="0" y="20.5" class="st0" width="362.3" height="19.1"/>
+<rect x="0" y="363.3" class="st0" width="362.3" height="19.1"/>
+<rect x="0" y="20.5" class="st0" width="19.1" height="361.9"/>
+<rect x="343.2" y="20.5" class="st0" width="19.1" height="362"/>
+<rect y="101" class="st0" width="362.3" height="19.1"/>
+<rect x="80.9" class="st0" width="19.1" height="60.3"/>
+<rect x="262.4" class="st0" width="19.1" height="60.3"/>
+<rect x="110.7" y="171.1" class="st0" width="19.8" height="19.8"/>
+<rect x="171.7" y="171.1" class="st0" width="19.8" height="19.8"/>
+<rect x="231.7" y="171.1" class="st0" width="19.8" height="19.8"/>
+<rect x="292.7" y="171.1" class="st0" width="19.8" height="19.8"/>
+<rect x="110.7" y="292.2" class="st0" width="19.8" height="19.8"/>
+<rect x="171.7" y="292.2" class="st0" width="19.8" height="19.8"/>
+<rect x="231.7" y="292.2" class="st0" width="19.8" height="19.8"/>
+<rect x="292.7" y="292.2" class="st0" width="19.8" height="19.8"/>
+<rect x="110.7" y="231.8" class="st0" width="19.8" height="19.8"/>
+<rect x="171.7" y="231.8" class="st0" width="19.8" height="19.8"/>
+<rect x="292.7" y="231.8" class="st0" width="19.8" height="19.8"/>
+<rect x="50.4" y="231.8" class="st0" width="19.8" height="19.8"/>
+<rect x="50.4" y="292.2" class="st0" width="19.8" height="19.8"/>
+<rect x="211.4" y="211.6" class="st0" width="19.1" height="60.2"/>
+<rect x="252.8" y="211.6" class="st0" width="19.1" height="60.2"/>
+<rect x="211.7" y="211.6" class="st0" width="60.3" height="19.1"/>
+<rect x="211.5" y="252.8" class="st0" width="60.5" height="19.1"/>
+</svg>

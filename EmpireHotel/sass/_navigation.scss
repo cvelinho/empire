@@ -12,8 +12,6 @@ a.menu-link { display: none; }
 .menu-nav nav[role=navigation] { max-height: none; }
 nav[role=navigation] {  display: none;
 	ul { margin: 0; border: 0;
-		li { display: inline-block; margin: 0px;
-			&:first-child { margin-left: 5px; }
-		}
+		li { display: inline-block; margin: 0px; }
 	}
 }

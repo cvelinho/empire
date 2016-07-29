@@ -13,7 +13,7 @@ $hr-border-style:                       solid;
 $hr-border-color:                       #dedede;
 
 
-/* 
+/*
 	>>> SMALL		----> Smartphone
 	>>> MEDIUM		----> Tablet
 	>>> LARGE		----> Desktop Small
@@ -132,7 +132,8 @@ $p3-line-height-xlarge:					27px;
 /* ----------------------------- SPECIAL FONT COLORS ---------------------------- */
 $font-transform-capitalize:             capitalize;
 $font-transform-uppercase:				uppercase;
-	
+
+$step-font-size-small:					24px;	
 $step-font-size:						27px;
 $step-number-font-color:				#fff;
 $step-number-background-color:			#cd700b;
@@ -149,6 +150,9 @@ $selected-light-color:					#cd700b;
 $selected-dark-color:					#402107;
 
 /* ------------------------------------ HEADER ---------------------------------- */
+$header-font-size-small:				12px;
+$header-font-size-medium:				12px;
+
 $header-large-height:					208px;
 $header-large-padding:					60px;
 
@@ -157,7 +161,7 @@ $header-text-line-height:				initial;
 $header-search-form-height:				148px;
 $header-search-form-margin-top:			84px;
 
-$description-font-size-small:			12px;
+$description-font-size-small:			11px;
 $description-font-size-medium:			12px;
 $description-font-size-large:			13px;
 $description-font-size-xlarge:			16px;
@@ -166,7 +170,7 @@ $description-font-color:                $body-font-color;
 
 /* ------------------------------------ FOOTER ---------------------------------- */
 $footer-font-size-small:				12px;
-$footer-font-size-medium:				20px;
+$footer-font-size-medium:				15px;
 $footer-font-size-large:				16px;
 $footer-font-size-xlarge:				20px;
 
@@ -254,8 +258,8 @@ $form-placeholder-color:                $accent-lighter-color;
 /* --------------------------------- SIDEBAR BOX -------------------------------- */
 $sidebar-box-width:                     405px;
 
-$sidebar-box-font-size-small:			16px;
-$sidebar-box-font-size-medium:			16px;
+$sidebar-box-font-size-small:			18px;
+$sidebar-box-font-size-medium:			18px;
 $sidebar-box-font-size-large:			16px;
 $sidebar-box-font-size-xlarge:			20px;
 
