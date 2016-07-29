@@ -118,7 +118,7 @@ select { text-align: center; text-align-last: center; }
 				.block-left {
 					/* Logo */
 					.header-logo { width: 100px; padding-top: 35px; padding-bottom: 10px; display: table-cell; vertical-align: bottom;
-						img { width: 100%; height: auto; }
+						img { width: 100%; height: auto; max-height: none; }
 					}    
 					/* Description-Contact */
 					.header-contact { line-height: $header-text-line-height; 
@@ -183,7 +183,7 @@ select { text-align: center; text-align-last: center; }
 
                 /* IMAGE CONTROL */
 				.image-control { line-height: 0px; /* instead of img block display */
-					img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
+					img { display: block; width: 100%; height: auto; max-height: none; object-fit: cover; }
 				}
 
                 /* SCROLLTO CONTROL */
@@ -210,7 +210,7 @@ select { text-align: center; text-align-last: center; }
 							}
 
 							.intro-image-control { line-height: 0px;
-								img { display: block; width: 100%; max-height: 990px; object-fit: cover; }
+								img { display: block; width: 100%; height: auto; max-height: none; object-fit: cover; }
 							}
                         }
 
@@ -231,7 +231,7 @@ select { text-align: center; text-align-last: center; }
                         .room-wrapper {
                             .heading-control { padding: 0px 30px; margin-bottom: 50px; }
                             .room-image-control {
-								img { display: block; width: 100%; max-height: 680px; object-fit: cover; }
+								img { display: block; width: 100%; height: auto; max-height: none; object-fit: cover; }
 							}
                         }
                     }
@@ -247,7 +247,7 @@ select { text-align: center; text-align-last: center; }
                         .eat-drink-wrapper {
                             .heading-control { margin-bottom: 60px; }
                             .image-control {
-								img { display: block; width: 100%; max-height: 680px; object-fit: cover; }
+								img { display: block; width: 100%; height: auto;max-height: none; object-fit: cover; }
 							}
                         }
                     }
@@ -259,7 +259,7 @@ select { text-align: center; text-align-last: center; }
 
                         section { 
 							
-							&.section-default {}
+							&.section-default { width: 100%; }
 
 							/*------ PAGE: HOME ------*/
                             /** SECTION AMENTITIES **/
@@ -274,12 +274,12 @@ select { text-align: center; text-align-last: center; }
                             &.section-deal-promotions,
                             &.section-info {
                                 .col-counter { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0px 0px 0px -60px;
-                                    .col-item { -webkit-flex-basis: 33.3333%; flex-basis: 33.3333%; padding: 0px 0px 0px 60px; margin-bottom: 60px; }
+                                    .col-item { -webkit-flex-basis: 33.3333%; flex-basis: 33.3333%; max-width: 33.3333%; padding: 0px 0px 0px 60px; margin-bottom: 60px; }
                                 }
                             }
 							&.section-deal-promotions {
 								.image-control { margin-bottom: 60px;
-                                    img { height: 100%; object-fit: cover; display: block; }
+                                    img { height: 100%; object-fit: cover; display: block; height: auto;max-height: none; }
 								}
 								.title-control { margin-bottom: 10px; }
 								.heading-control { margin-bottom: 50px; }
@@ -318,9 +318,9 @@ select { text-align: center; text-align-last: center; }
 
 								article { margin-top: 35px;
 									&.col-counter { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0px 0px 0px -60px;
-										.col-item { -webkit-flex-basis: 33.3333%; flex-basis: 33.3333%; padding: 0px 0px 0px 60px; margin-bottom: 60px;
+										.col-item { -webkit-flex-basis: 33.3333%; flex-basis: 33.3333%; max-width: 33.3333%; padding: 0px 0px 0px 60px; margin-bottom: 60px;
 											.image-control { margin-bottom: 35px;
-												img { height: 100%; object-fit: cover; display: block; }
+												img { object-fit: cover; display: block; height: auto; max-height: none; }
 											}
 
 											.heading-control { margin-bottom: 40px;
@@ -336,7 +336,7 @@ select { text-align: center; text-align-last: center; }
 
 							/*------ PAGE: PACKAGES ------*/
 							/** SECTION PACKAGES **/
-							&.section-packages { display: inline-block;
+							&.section-packages { width: 100%;
 								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
                                     &:last-child,
 									&:last-of-type,
@@ -350,7 +350,7 @@ select { text-align: center; text-align-last: center; }
 
 									&.col-counter { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
 										.image-control { height: initial; width: 33.3333%;
-											img { object-fit: cover; display: block; height: 400px; max-height: 400px; }
+											img { object-fit: cover; display: block; height: auto; max-height: none; }
 										}
 
 										.side-control { flex: 1; position: relative; padding-left: 60px;
@@ -413,7 +413,7 @@ select { text-align: center; text-align-last: center; }
 							/** SECTION TODO **/
 							/** SECTION POOL-DECK **/
 							&.section-todo,
-							&.section-pool-deck { display: inline-block;
+							&.section-pool-deck { width: 100%;
 								.alm-reveal {
 									&:last-child {
 										article {
@@ -423,19 +423,16 @@ select { text-align: center; text-align-last: center; }
 								}
 
 								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
-                                    &:last-child
-									&:last-of-type,
-									&:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 
 									&.col-hidden { display: none;
-										&:last-child
+										&:last-child,
 										&:last-of-type,
 										&:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
 									}
 
 									&.col-counter { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
 										.image-control { height: initial; width: 33.3333%;
-											img { object-fit: cover; display: block; height: 400px; max-height: 400px; }
+											img { object-fit: cover; display: block; height: auto; max-height: none; }
 										}
 
 										.side-control { flex: 1; position: relative; padding-left: 60px;
@@ -476,8 +473,21 @@ select { text-align: center; text-align-last: center; }
 										}	
 									}
 								}
-								
+							}
+							&.section-pool-deck { 
+								.alm-reveal {
+									&:last-child {
+										article {
+											&:last-child { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+										}
+									}
+								}
 
+								article { border: 0; border-bottom: $hr-border-width $hr-border-style $hr-border-color; margin-bottom: 90px; padding-bottom: 90px;
+                                    &:last-child,
+									&:last-of-type,
+									&:nth-last-child(2) { border-bottom: none; margin-bottom: 0px; padding-bottom: 0px; }
+								}
 							}
 
 
@@ -501,7 +511,7 @@ select { text-align: center; text-align-last: center; }
 								.col-counter { width: 100%; -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; column-gap: 60px;
                                     .col-item { margin: 0px; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; -o-column-break-inside: avoid; -ms-column-break-inside: avoid; column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: block; width: 100%; word-break: break-word;
 										.image-control { margin-bottom: 10px;
-											img { height: 100%; object-fit: cover; display: block; max-height: 310px;  }
+											img { height: 100%; object-fit: cover; display: block; height: auto; max-height: none; }
 										}
 										.heading-control { margin-top: 0px; margin-bottom: 0px;
 											h3 { font-size: $body-font-size-xlarge; color: $body-font-color; margin-bottom: 30px; margin-top: 0px; display: block; line-height: inherit; }
@@ -514,7 +524,7 @@ select { text-align: center; text-align-last: center; }
 							/** SECTION MEETINGS & EVENTS **/
 							/** SECTION WEEDINGS **/
 							&.section-meetings-events,
-							&.section-weedings {
+							&.section-weedings { width: 100%;
 								article { 
                                     &:last-child,
 									&:last-of-type,
@@ -527,19 +537,20 @@ select { text-align: center; text-align-last: center; }
 									}
 
 									&.col-counter { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
-										.col-item { width: 50%; padding-right: 30px; word-break: break-word;
+										.col-item { -webkit-flex-basis: 50%; flex-basis: 50%; width: 50%; max-width: 50%; padding-right: 30px; word-break: break-word;
 											&:last-child { padding-right: 0px; padding-left: 30px; }
 
 											.items {
 												.heading-control {
+													h2 { font-size: $h2-font-size-xlarge; line-height: $h2-line-height-xlarge; }
 													&.last { margin-bottom: 0px; }
 													a { font-size: $p1-font-size-xlarge; margin-top: 50px; display: inline-block; text-decoration: $link-text-decoration; }
 												}
 
 												.image-control { line-height: 0px; margin-bottom: 5px;
-													img { height: 100%; object-fit: cover; display: block; }
+													img { object-fit: cover; display: block; height: auto; max-height: none; }
 													figure { position: relative;
-														img { width: auto; margin: 0 auto; }
+														img { width: auto; margin: 0 auto; height: auto; max-height: none; }
 													}
 												}
 											}
@@ -553,7 +564,7 @@ select { text-align: center; text-align-last: center; }
 
 								p, 
 								h3 { display: block; margin-top: 30px; }
-
+								h3 { font-size: $h3-font-size-xlarge; line-height: $h3-line-height-xlarge; }
 								a { text-decoration: $link-text-decoration; }
 							}
 
@@ -564,7 +575,7 @@ select { text-align: center; text-align-last: center; }
 									.items { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
 										.side-control { width: 33.3333%; flex: none; 
 											.heading-control {
-												h1 {
+												h1 { font-size: $h1-font-size-xlarge; line-height: $h1-line-height-xlarge;
 													&:before { border: 0; }
 												}
 											}
@@ -572,7 +583,7 @@ select { text-align: center; text-align-last: center; }
 										}
 									
 										.map-control { -webkit-box-flex: 1; -webkit-flex: 1;-ms-flex: 1; flex: 1; padding-left: 60px;
-											img { height: auto; object-fit: cover; display: block; }
+											img { object-fit: cover; display: block; height: auto; max-height: none; }
 										}                     
 									}
 								}
@@ -585,12 +596,12 @@ select { text-align: center; text-align-last: center; }
 							&.section-faq { display: table; width: 100%;
 								article {
 									&.col-counter { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
-										.block-faq { width: 33.3333%; flex: none; padding-right: 60px;
+										.block-faq { width: 50%; flex: none; padding-right: 60px;
 											&.mask { -webkit-box-flex: 1; -webkit-flex: 1;-ms-flex: 1; flex: 1; }
 										}
 
 										.faq-item {  margin-bottom: $faq-margin-bottom;
-                                            .question { font-size: $p1-font-size-xlarge; margin-bottom: $faq-margin-bottom; display: block; }
+                                            .question { font-size: $h3-font-size-xlarge; margin-bottom: $faq-margin-bottom; display: block; }
                                             .answer { font-size: $p2-font-size-xlarge; color: $body-font-color; margin-bottom: $faq-margin-bottom; display: block;
                                                 .additional-info { margin-top:$faq-margin-bottom; margin-bottom: $faq-margin-bottom; display: block; font-family: $body-font-family-medium; }
                                             }
